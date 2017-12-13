@@ -534,16 +534,16 @@ bot.login(data.key);
 
 //Message Response -- Responds to messages and sets commands or variables
 bot.on('message', msg => {
-
-	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
 	
 	if (msg.content == data.reset) process.exit(1);	//restart system
 
+	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
+
 	var arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
-	var date = new Date(); //current date
-	var sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
-	var sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
-	var com = arg[0].toLowerCase().slice(sPre.length); //command value
+		date = new Date(); //current date
+		sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
+		sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
+		com = arg[0].toLowerCase().slice(sPre.length); //command value
 	
 	if(!msg.content.startsWith(sPre)) return;
 	
