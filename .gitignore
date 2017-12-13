@@ -61,3 +61,5 @@ data.json
 lang.json
 pre.json
 CMan/
+*.url
+Area 51/
