@@ -535,15 +535,15 @@ bot.login(data.key);
 //Message Response -- Responds to messages and sets commands or variables
 bot.on('message', msg => {
 
+	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
+	
 	if (msg.content == data.reset) process.exit(1);	//restart system
 
-	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
-
 	var arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
-		date = new Date(); //current date
-		sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
-		sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
-		com = arg[0].toLowerCase().slice(sPre.length); //command value
+	var date = new Date(); //current date
+	var sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
+	var sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
+	var com = arg[0].toLowerCase().slice(sPre.length); //command value
 	
 	if(!msg.content.startsWith(sPre)) return;
 	
@@ -608,7 +608,7 @@ bot.on('message', msg => {
 
 	//-------DEUTSCHER-BOT------
 	else if (sLang == "de") {
-		var r = require("./de.json"); //uses responses from de.json
+		var r = require("./de.json"); //nutzt Antworten von de.json
 		//hilfe (wohl der wichtigste Befehl)
 		if (com == "help" || com == "hilfe") {
 			msg.author.send(`*Hallo, ${msg.author.username}. Ich bin Herr Weegee, dein treuer Discordbot. Ich habe folgende Befehle:*`);
@@ -661,7 +661,7 @@ bot.on('message', msg => {
 				"\nrechne [Operation] # rechnet mit Zahlen und Operationen 🔢```" +
 				"\nWähle jetzt einen Befehl aus, sonst wirst du sterben! https://discord.gg/HudQcWh");
 			msg.channel.send("Die Befehlsliste wurde privat durch eine PN geschickt! ✅");
-			cmdLog("hilfe", msg);
+			cmdLog("help", msg);
 		}
 	}
 
@@ -816,13 +816,11 @@ bot.on('message', msg => {
 			if (arg.length != 3) msg.channel.send(r.battleError);
 			else if (arg[1] <= 0 || arg[2] <= 0) msg.channel.send(r.battleError1); //if any army lacks soldiers
 			else {
-				var str1 = parseInt(arg[1]) ^ 2;
-				var str2 = parseInt(arg[2]) ^ 2;
-				if (Math.floor(Math.random() * (str1 + str2)) <= parseInt(str1)) {
-					msg.channel.send(r.victory1);
-				} else {
-					msg.channel.send(r.victory2);
-				}
+				var str1 = parseInt(arg[1]) ^ 2; //strength of army 1
+				var str2 = parseInt(arg[2]) ^ 2; //strength of army 2
+				
+				if (Math.floor(Math.random() * (str1 + str2)) <= parseInt(str1)) msg.channel.send(r.victory1);
+				else msg.channel.send(r.victory2);
 				cmdLog("battle", msg);
 			}
 			break;
@@ -858,12 +856,12 @@ bot.on('message', msg => {
 			}
 			cmdLog("boobs", msg);
 			break;
-		//date
+		//date - current date & time
 		case r.date:
 			msg.channel.send(r.date1 + date);
 			cmdLog("date", msg);
 			break;
-		//whois
+		//whois - user info
 		case r.whois:
 			if(msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
 			else{
