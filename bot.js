@@ -649,7 +649,7 @@ bot.on('message', msg => {
 			//Utility-Hilfe
 			msg.author.send("```ini\nUtility-Befehle = die ach so nützlichen Befehle, ohne sie kann man einfach nicht leben!" +
 				"\nbotinfo            # ergibt die Botinfos" +
-				"\nsupport            # zeigt dir Weegeebots Server und Sourceforge-Seite an" +
+				"\nsupport            # zeigt dir Weegeebots Server und Projektseite an" +
 				"\ntest               # testet, ob Weegeebot aktiv ist oder nicht" +
 				"\ndatum              # ergibt das aktuelle Datum und die aktuelle Uhrzeit" +
 				"\nspende             # postet einen Link zur Patreon-Seite" +

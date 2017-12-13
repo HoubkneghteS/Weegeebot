@@ -60,7 +60,7 @@
 	"scpError":"Falsch Richtige Syntax: ``&scp [Nummer 000-4000]``",
 	"scp":"http://www.scp-wiki.net/scp-",
 	"server":"Weegeebot-Discordserver: https://discord.gg/HudQcWh",
-	"project":"Weegeebot-Projektseite: https://sourceforge.net/projects/weegeebot/",
+	"project":"Weegeebot-Projektseite: https://github.com/HoubkneghteS/Weegeebot/tree/master",
 	"calc":"rechne",
 	"calcHelp":["Folgende Operationen sind vorhanden:",
 	"Addition",
