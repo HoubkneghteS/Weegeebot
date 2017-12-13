@@ -59,6 +59,7 @@ typings/
 
 data.json
 lang.json
+desktop.ini
 pre.json
 CMan/
 *.url
