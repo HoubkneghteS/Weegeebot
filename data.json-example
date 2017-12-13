@@ -1,4 +1,5 @@
 {
-		"pre":"&",
-		"key":"your bot's key"
+	"pre":"&",
+	"key":"your bot's key",
+	"reset":"a password you can message to your bot to make it reset at any time"
 }
