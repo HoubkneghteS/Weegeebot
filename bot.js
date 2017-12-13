@@ -562,13 +562,13 @@ bot.on('message', msg => {
 				"\ncoin                   # flips a *totally* fair coin" +
 				"\nweegee                 # posts a random Weegee meme" +
 				"\ncancer                 # infects the channel with toxic, cringy pictures and videos" +
-				"\nnuke [place]           # nukes the bad guys! (Use '&nuke help' for a list of places)" +
+				"\nnuke [place]           # throws a real bomb at the given place!" +
 				"\nscp [number]           # posts an SCP entry! (001-4000)" +
 				"\nroll [number]          # rolls a fair 6-sided-die (or with more sides if you wish)" +
-				"\nask [question]         # asks me a yes/no question" +
+				"\nask [question]         # asks a yes/no question" +
 				"\navatar [@user]         # posts the avatar of that user, or yourself if no user is mentioned" +
 				"\nfraktur [text]         # makes your text into 𝔣𝔯𝔞𝔨𝔱𝔲𝔯" +
-				"\nbtext [message]        # changes all instances of `b` to the 🅱 emote" +
+				"\nbtext [message]        # changes all instances of 'b' to the 🅱 emote" +
 				"\ninfo [pagename]        # displays info from that YTP Wiki page" +
 				"\neflag [country]        # displays the flag of a country with emojis" +
 				"\nvapor [message]        # makes your text into a ｖａｐｏｒｔｅｘｔ" +
@@ -625,21 +625,21 @@ bot.on('message', msg => {
 				"\nfrage [Frage]           # fragt mich eine Satzfrage" +
 				"\neflagge [Land]          # postet eine Nationalflagge aus Emojis" +
 				"\nfraktur [Text]          # verwandelt deinen Text in 𝔣𝔯𝔞𝔨𝔱𝔲𝔯" +
-				"\nwürfel  [Seiten]        # lässt einen fairen 6-seitigen Würfel rollen. Der Befehl kann auch mit mehr Seiten verwendet werden" +
+				"\nwürfel  [Seiten]        # lässt einen fairen 6-seitigen Würfel rollen. (kann auch mit mehr Seiten verwendet werden)" +
 				"\natomisiere [Ort]        # wirft eine echte Atombombe auf den gegebenen Ort" +
 				"\nvapor [Nachricht]       # macht deine Nachricht zum ｖａｐｏｒｔｅｘｔ" +
 				"\nbtext [Nachricht]       # macht aus allen Bs ein 🅱" +
 				"\ninfo [Seitenname]       # gibt Infos aus einer YTP-Wiki-Seite aus" +
-				"\navatar [@Nutzer]        # postet das Profilbild des erwähnten Benutzers (oder deines, wenn niemand erwähnt wird)" +
+				"\navatar [@Nutzer]        # postet das Profilbild des erwähnten Benutzers, oder deines, wenn niemand erwähnt wird" +
 				"\nkampf [Armee1] [Armee2] # simuliert einen Kampf zwischen 2 Armeen```");
 			//Adminhilfe
 			msg.author.send("```ini\nAdminbefehle = Man braucht Admin-Berechtigungen, um sie zu verwenden" +
 				"\nsprache [de/en]               # wechselt die Sprache zwischen Deutsch und Englisch" +
 				"\nlösche [Nummer]               # löscht Nachrichten" +
 				"\nprefix [Prefix]               # ändert den Bot-Prefix" +
-				"\nwarn [@Nutzer] [Grund]        # warnt den Benutzer, indem dir und ihm eine PN geschickt wird" +
-				"\nbann [@Nutzer] [Grund]        # sperrt den erwähnten Benutzer, und schickt ihm und dir eine Nachricht" +
-				"\nkick [@Nutzer] [Grund]        # kickt den erwähnten Benutzer; er kann aber zurückkommen" +
+				"\nwarn [@Nutzer] [Grund]        # warnt den erwähnten Benutzer, indem dir und ihm eine PN geschickt wird" +
+				"\nbann [@Nutzer] [Grund]        # bannt den Benutzer, und schickt ihm und dir eine Nachricht" +
+				"\nkick [@Nutzer] [Grund]        # kickt den Benutzer; er kann aber sofort zurückkommen" +
 				"\nwiederhole [Male] [Nachricht] # wiederholt die gleiche Nachricht x-mal```");
 			//NSFW-Hilfe
 			msg.author.send("```ini\nNSFW-Befehle = Man muss in einem 'NSFW'-Kanal sein, um sie zu verwenden" +
