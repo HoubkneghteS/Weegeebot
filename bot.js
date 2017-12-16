@@ -8,7 +8,7 @@ const pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
 const langList = "``en`` (English), ``de`` (Deutsch)"; //list of languages
 
 //arrays for random commands
-var weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
+const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
 	"http://i0.kym-cdn.com/photos/images/original/000/039/362/Demotivational__Weegee_by_LinkMasterXP.jpg",
 	"Weegeeboard:\nhttps://www.novacorp-online.net/blog/wp-content/uploads/2014/06/Weegee-Board-small.png",
 	"http://www.mypokecard.com/en/Gallery/my/galery/scQa4DXB4BGK.jpg",
@@ -48,12 +48,12 @@ var weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-
 	"https://i.ytimg.com/vi/5Wk4gVuNMng/maxresdefault.jpg",
 	"http://orig04.deviantart.net/9b0b/f/2009/196/e/a/weegee_and_vegeta_by_auragiratina.png",
 	"https://cdn.discordapp.com/attachments/298993914126270464/358419983270936576/IMG_1732.JPG"];
-var nuke = ["https://upload.wikimedia.org/wikipedia/commons/c/c7/Explosions.jpg",
+const nuke = ["https://upload.wikimedia.org/wikipedia/commons/c/c7/Explosions.jpg",
 	"https://upload.wikimedia.org/wikipedia/commons/3/31/NTS_-_BEEF_-_WATUSI.jpg",
 	"http://dailyreckoning.com/dr-content/uploads/2013/11/Nuke-650x360.jpg",
 	"https://i.ytimg.com/vi/6JKUf8GrX3w/maxresdefault.jpg",
 	"https://i.ytimg.com/vi/fNRACDfCYZk/maxresdefault.jpg"];
-var boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
+const boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
 	"https://i.imgur.com/5vAhNye.jpg?1",
 	"https://i.imgur.com/3nSy4NI.jpg",
 	"https://i.imgur.com/DlzGBBe.jpg",
@@ -73,7 +73,7 @@ var boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
 	"https://i.imgur.com/na6ss0K.jpg",
 	"https://i.imgur.com/k495Tso.jpg",
 	"https://i.redd.it/8hjwyohojlxz.png"];
-var ecchi = ["http://i.imgur.com/waPnfdJ.png",
+const ecchi = ["http://i.imgur.com/waPnfdJ.png",
 	"http://imgur.com/r/ecchi/8Mj6C",
 	"http://imgur.com/r/ecchi/Z9B4SG4",
 	"http://i.imgur.com/QVVSj42.jpg",
@@ -109,7 +109,7 @@ var ecchi = ["http://i.imgur.com/waPnfdJ.png",
 	"https://cdn.awwni.me/ykjj.jpg",
 	"https://i.redd.it/u8n19klpwbbz.png",
 	"https://i.redd.it/z81q8hwj95bz.jpg"];
-var pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwEQdhsrGE/s1600/cute-penguin1.jpg",
+const pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwEQdhsrGE/s1600/cute-penguin1.jpg",
 	"http://images5.fanpop.com/image/photos/26400000/PENGUINS-OF-FACE-MEMES-penguins-of-madagascar-26462995-500-281.png",
 	"http://www.natureart.cz/images/gallery/01-2009-5825.jpg",
 	"http://www.desktopwallpaperhd.net/wallpapers/14/0/landscapes-background-penguin-animal-143248.jpg",
@@ -124,7 +124,7 @@ var pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwE
 	"http://tierbildergalerie.com/data/media/96/lustig_pinguin.jpg",
 	"http://www.tierbildergalerie.com/data/media/96/witzige_pinguin.jpg",
 	"http://1.bp.blogspot.com/-b-lDZrTyrAU/Tv293VXBRjI/AAAAAAAAEFA/THo6V_1Vwlg/s1600/Emperor-Penguin-05.jpg"];
-var flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵🔵🔵🔵🔵🔵🔵\n⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪", //finland
+const flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵🔵🔵🔵🔵🔵🔵\n⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪", //finland
 	"🔵🔵🔵🔴🔴🔴🔴🔴🔴\n🔵🔵🔵⚪⚪⚪⚪⚪⚪\n🔵🔵🔵🔴🔴🔴🔴🔴🔴\n⚪⚪⚪⚪⚪⚪⚪⚪⚪\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n⚪⚪⚪⚪⚪⚪⚪⚪⚪", //usa
 	"🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴", //france
 	"⚫⚫⚫⚫⚫⚫⚫⚫⚫\n⚫⚫⚫⚫⚫⚫⚫⚫⚫\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n🔶🔶🔶🔶🔶🔶🔶🔶🔶\n🔶🔶🔶🔶🔶🔶🔶🔶🔶", //germany
@@ -143,7 +143,7 @@ var flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵🔵�
 	"⚪⚪⚪⚪⚪⚪\n⚪⚪⚪⚪⚪⚪\n🔴🔴🔴🔴🔴🔴\n🔴🔴🔴🔴🔴🔴", //poland
 	"⚪⚪⚪⚪⚪⚪⚪⚪\n⚪⚪⚪🔴🔴⚪⚪⚪\n⚪⚪🔴🔴🔴🔴⚪⚪\n⚪⚪🔴🔴🔴🔴⚪⚪\n⚪⚪⚪🔴🔴⚪⚪⚪\n⚪⚪⚪⚪⚪⚪⚪⚪" //japan
 ];
-var ass = ["https://i.imgur.com/sX6Raen.jpg",
+const ass = ["https://i.imgur.com/sX6Raen.jpg",
 	"http://i.imgur.com/5Za9QY5.jpg",
 	"https://i.redd.it/2w1g207j39yz.jpg",
 	"https://i.imgur.com/hONKsBo.jpg?1",
@@ -163,7 +163,7 @@ var ass = ["https://i.imgur.com/sX6Raen.jpg",
 	"http://i.imgur.com/0SWRNrw.jpg?1",
 	"http://i.imgur.com/u72N1zt.jpg",
 	"http://i.imgur.com/ZmeFH5G.jpg"];
-var cancer = ["https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeline_pic/abe14ab8ffd/818c9b73ece81a8a5b194/med_1470851871_image.jpg",
+const cancer = ["https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeline_pic/abe14ab8ffd/818c9b73ece81a8a5b194/med_1470851871_image.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_2a6dc4_5456948.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_a38706_5518614.jpg",
 	"https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/13187990_1716864618575897_1185520412_n.jpg?ig_cache_key=MTI1MzczMTI2NDY5MTE5NjY3Mw%3D%3D.2",
@@ -202,7 +202,7 @@ var cancer = ["https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeli
 	"http://media.japanpowered.com/images/desu-meme.jpg",
 	"https://i.pinimg.com/736x/85/49/9f/85499f071ff46849df2ec5cc668af2a8--google-search-weeaboo-cringe.jpg",
 	"https://i.ytimg.com/vi/5QvgLlFyeok/hqdefault.jpg"];
-var ascii = [
+const ascii = [
 	"\n░█████░░░░░█████░" +
 	"\n█░░░░░█░░░█░░░░░█" +
 	"\n░░███░░░░░░░███░░█" +
@@ -448,11 +448,6 @@ var ascii = [
 	"\n[█▓]"+
 	"\n[█▓]"];
 
-//Message Checker -- defines if a code is a valid command
-function cmd(a, msg) {
-	return msg.content.toLowerCase().startsWith(data.pre + a);
-}
-
 //Role Checker -- Checks if a user has a role
 function role(msg, r) {
 	if (msg.member.hasPermission(r)) return true; //has the role admin or other needed role
@@ -469,7 +464,7 @@ function rdm(array) {
 	return array[Math.floor(Math.random() * (array.length))];
 }
 
-//Error handler
+//Error handlers
 bot.on("error", (e) => console.error(e));
 bot.on("warn", (e) => console.warn(e));
 
@@ -479,17 +474,17 @@ function tf(o1, o2) {
 	else return o2;
 }
 
-//Mem -- converts to  m e m e t e x t
+//mem -- converts to  m e m e t e x t
 function mem(text) {
 	return text.split("").join(" ");
 }
 
-//bText -- converts to btext
+//btext -- converts to b emoji
 function btext(text) {
 	return text.replace(/b/gi, "🅱");
 }
 
-//Vapor -- converts text to vaporwave
+//vapor -- converts text to vaporwave
 function vapor(text) {
 	var startText = [/a/gi, /b/gi, /c/gi, /d/gi, /e/gi, /f/gi, /g/gi, /h/gi, /i/gi, /j/gi, /k/gi, /l/gi, /m/gi, /n/gi, /o/gi, /p/gi, /q/gi, /r/gi, /s/gi, /t/gi, /u/gi, /v/gi, /w/gi, /x/gi, /y/gi, /z/gi, /1/g, /2/g, /3/g, /4/g, /5/g, /6/g, /7/g, /8/g, /9/g, /0/g]; //starting letters
 	var endText = ["ａ", "ｂ", "ｃ", "ｄ", "ｅ", "ｆ", "ｇ", "ｈ", "ｉ", "ｊ", "ｋ", "ｌ", "ｍ", "ｎ", "ｏ", "ｐ", "ｑ", "ｒ", "ｓ", "ｔ", "ｕ", "ｖ", "ｗ", "ｘ", "ｙ", "ｚ", "１", "２", "３", "４", "５", "６", "７", "８", "９", "０"]; //resulting letters
@@ -511,7 +506,7 @@ function fraktur(text) {
 	return text;
 }
 
-//add - merges arguments
+//add -- merges arguments into one
 function add(start, msg) {
 	return msg.content.split(" ").slice(start).join(" ").replace(/@everyone/g, "@\u200Beveryone").replace(/@here/g, "@\u200Bhere");
 }
@@ -707,7 +702,7 @@ bot.on('message', msg => {
 			msg.channel.send(rdm(weegee));
 			cmdLog('weegee', msg);
 			break;
-		//Bot invite link
+		//invite (posts invite link)
 		case r.invite:
 			msg.channel.send("https://discordapp.com/oauth2/authorize?client_id=239261914918682624&scope=bot&permissions=0");
 			cmdLog("invite", msg);
@@ -905,6 +900,10 @@ bot.on('message', msg => {
 					case r.usa:
 						msg.channel.send(r.nukeUSA);
 						msg.channel.send("http://www.slate.com/content/dam/slate/articles/news_and_politics/politics/2016/12/161229_POL_Sad-Trump.jpg.CROP.promo-xlarge2.jpg");
+						break;
+					case r.russia:
+						msg.channel.send(r.nukeRussia);
+						msg.channel.send("http://www.cubanet.org/wp-content/uploads/2015/06/putin-sad.jpg");
 						break;
 					case r.me:
 						msg.channel.send(r.nukeMe);
