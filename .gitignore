@@ -65,3 +65,13 @@ CMan/
 *.url
 Area 51/
 .dropbox
+
+# Ignore code
+
+data.json
+lang.json
+pre.json
+CMan.bat
+bot.js
+de.json
+en.json
