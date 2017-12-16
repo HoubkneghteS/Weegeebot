@@ -905,6 +905,9 @@ bot.on('message', msg => {
 						msg.channel.send(r.nukeRussia);
 						msg.channel.send("http://www.cubanet.org/wp-content/uploads/2015/06/putin-sad.jpg");
 						break;
+					case r.weegee:
+						msg.channel.send(r.nukeWeegee);
+						break;
 					case r.me:
 						msg.channel.send(r.nukeMe);
 						break;
