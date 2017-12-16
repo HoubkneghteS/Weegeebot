@@ -531,7 +531,7 @@ bot.on('ready', () => {
 	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, { type: 'WATCHING' }); //watching message
 	
 	//logs servercount -- not necessary for standard use
-	snekfetch.post("https://discordbots.org/api/bots/239261914918682624/stats")
+	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
 	  .set('Authorization', data.botlist)
 	  .send({ server_count: bot.guilds.array().length })
 	  .catch(err => console.error(`Fuck look at this: ${err.body}`));
