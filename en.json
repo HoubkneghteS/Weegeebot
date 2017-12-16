@@ -145,7 +145,7 @@
 	"whoisError":"Wrong! Syntax: ``&whois [@User]``",
 	"username":"Username",
 	"bot":"Bot",
-	"joindate":"Account-Age",
+	"joindate":"Account Age",
 	"status":"Status",
 	"userID":"User-ID"
 }
