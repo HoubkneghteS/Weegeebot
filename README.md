@@ -17,23 +17,23 @@ To use this program, you will need Node.js. Once you get that, type "npm install
 ```json
 {
 	"key" : "bot token",
- "name" : "bot name"
+	 "name" : "bot name"
 }`
 ```
 Modifying the code for your own use will also be important. Here are a few simple changes you can add. To add a simple command, the following code should be added (replace "command name" with the thing that people will type to reach your command, and replace "command text" with the bot's response"):
 
 ```js
 case "command name":
-  msg.channel.send("responce");
-  console.log(cmdLog("command name", msg));
-  break;
+	msg.channel.send("responce");
+	console.log(cmdLog("command name", msg));
+	break;
  ```
 A slightly more complex command would be one with two options of response for the bot, to add it, here is the template:
 ```js
 case "command name":
- msg.channel.send(tf("option1", "option2"));
- console.log(cmdLog("command name", msg));
- break;
+	msg.channel.send(tf("option1", "option2"));
+	console.log(cmdLog("command name", msg));
+	break;
 ```
 ## CMan
 
