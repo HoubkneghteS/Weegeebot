@@ -1,6 +1,6 @@
 ﻿const Discord = require("discord.js");
 const bot = new Discord.Client();
-const request = require("request"); //allows usage of other APIs
+const request = require("snekfetch"); //allows usage of other APIs
 const fs = require("fs"); //file system
 const data = require("./data.json"); //general data
 const lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")); //language data Daenk U adam
@@ -531,11 +531,10 @@ bot.on('ready', () => {
 	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, { type: 'WATCHING' }); //watching message
 	
 	//logs servercount -- not necessary for standard use
-	request.post({
-		url: "https://discordbots.org/api/bots/239261914918682624/stats",
-		headers: { "Authorization": data.botlist, "Content-Type": "application/json" },
-		json: { server_count: bot.guilds.array().length }
-	});
+	snekfetch.post("https://discordbots.org/api/bots/239261914918682624/stats")
+	  .set('Authorization', data.botlist)
+	  .send({ server_count: bot.guilds.array().length })
+	  .catch(err => console.error(`Fuck look at this: ${err.body}`));
 });
 
 //Login -- Logs code into Weegeebot (please no touchy)
