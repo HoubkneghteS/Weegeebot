@@ -729,30 +729,35 @@ bot.on('message', msg => {
 					"\nx root y - " + r.calcHelp[6] +
 					"\nln x - " + r.calcHelp[7] + "```\n" + r.calcHelp[8]); //help command
 			} else {
-				if (arg[1] != 'ln') {
-					var a = parseFloat(arg[1]);
-				} else {
+				if (arg[1] == 'ln') {
 					var a = parseFloat(arg[2]);
-				}
-				var b = parseFloat(arg[3]);
-				//Operator plucker
-				if (arg[2] == '+') {
-					msg.channel.send(rdm(r.quote) + `\n${a} + ${b} = ${a + b}`); //Addition
-				} else if (arg[2] == '-') {
-					msg.channel.send(rdm(r.quote) + `\n${a} - ${b} = ${a - b}`); //Subtraction
-				} else if (arg[2] == '*') {
-					msg.channel.send(rdm(r.quote) + `\n${a} * ${b} = ${a * b}`); //Multiplication
-				} else if (arg[2] == '/') {
-					msg.channel.send(rdm(r.quote) + `\n${a} / ${b} = ${a / b}`); //Division
-				} else if (arg[2] == '^') {
-					msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${parseFloat(Math.pow(a, b))}`); //Power
-				} else if (arg[2] == 'root') {
-					if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(Math.pow(b, 1 / a))}`); //Root
-					else msg.channel.send(rdm(r.quote) + `\n${a} √ ${b} = ${parseFloat(Math.pow(b, 1 / a))}`);
-				} else if (arg[1] == 'ln') {
 					msg.channel.send(rdm(r.quote) + `\nln ${a} = ${parseFloat(Math.log(a))}`); //Log
 				} else {
-					msg.channel.send(r.calcError); //error
+					var a = parseFloat(arg[1]);
+					var b = parseFloat(arg[3]);
+					//Operator plucker
+					switch(arg[2]) {
+						case "+":
+							msg.channel.send(rdm(r.quote) + `\n${a} + ${b} = ${a + b}`); //Addition
+							break;
+						case "-":
+							msg.channel.send(rdm(r.quote) + `\n${a} - ${b} = ${a - b}`); //Subtraction
+							break;
+						case "*":
+							msg.channel.send(rdm(r.quote) + `\n${a} * ${b} = ${a * b}`); //Multiplication
+							break;
+						case "/":
+							msg.channel.send(rdm(r.quote) + `\n${a} / ${b} = ${a / b}`); //Division
+							break;
+						case "^":
+							msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${parseFloat(Math.pow(a, b))}`); //Power
+							break;
+						case "root":
+							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(Math.pow(b, 1 / a))}`); //Root
+							else msg.channel.send(rdm(r.quote) + `\n${a} √ ${b} = ${parseFloat(Math.pow(b, 1 / a))}`);
+							break;
+					}
+
 				}
 				cmdLog("calc", msg);
 			}
