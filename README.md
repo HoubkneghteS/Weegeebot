@@ -18,7 +18,7 @@ In other words: this is not your typical plug-and-play Discord bot. It requires 
 
 ## Instructions:
 
-To use this program, you will need Node.js. Once you get that, type "npm install --save discord.js". Once you get these two things, run the batch file `Cman.bat`. But first there is one thing you need to do. If you don't already have a bot account set up, set one up [https://discordapp.com/developers/applications/me here]. After that, create a JSON file with the name data.json in the bot folder and include your bot's real infos (only name and password are needed). Two other jsons with language and prefix data should be created called `lang.json` and `pre.json` Example:
+To use this program, you will need Node.js. Once you get that, type "npm install --save discord.js". Once you get these two things, run the batch file `Cman.bat`. But first there is one thing you need to do. If you don't already have a bot account set up, set one up [[https://discordapp.com/developers/applications/me here]]. After that, create a JSON file with the name data.json in the bot folder and include your bot's real infos (only name and password are needed). Two other jsons with language and prefix data should be created called `lang.json` and `pre.json` Example:
 
 **Data.json:**
 ```json
