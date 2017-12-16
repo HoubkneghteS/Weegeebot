@@ -65,3 +65,6 @@ CMan/
 *.url
 Area 51/
 .dropbox
+
+# ignore actual code
+CMan.bat
