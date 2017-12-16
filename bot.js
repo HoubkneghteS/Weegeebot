@@ -834,7 +834,7 @@ bot.on('message', msg => {
 			msg.channel.send(rdm(cancer));
 			cmdLog("cancer", msg);
 			break;
-		//ecchi
+		//ecchi (anime titties)
 		case "ecchi":
 			if (msg.channel.nsfw == true) {
 				msg.channel.send(rdm(ecchi));
@@ -861,21 +861,21 @@ bot.on('message', msg => {
 			}
 			cmdLog("boobs", msg);
 			break;
-		//date - current date & time
+		//date (current date & time)
 		case r.date:
 			msg.channel.send(r.date1 + date);
 			cmdLog("date", msg);
 			break;
-		//whois - user info
+		//whois (results in user infos)
 		case r.whois:
 			if(msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
 			else{
 				msg.channel.send(`**${r.whoisEntry} ${msg.mentions.users.first().username}**`+"\n```md"+
-				`\n# ${r.username} \n* ${msg.mentions.users.first().tag }`+	
-				`\n# ${r.bot} \n* ${msg.mentions.users.first().bot}`+
-				`\n# ${r.joindate} \n* ${msg.mentions.users.first().createdAt}`+
-				`\n# ${r.status} \n* ${msg.mentions.users.first().presence.status}`+
-				`\n# ${r.userID} \n* ${msg.mentions.users.first().id}`+
+				`\n# ${r.username} \n ${msg.mentions.users.first().tag }`+	
+				`\n# ${r.bot} \n ${msg.mentions.users.first().bot}`+
+				`\n# ${r.joindate} \n ${msg.mentions.users.first().createdAt}`+
+				`\n# ${r.status} \n ${msg.mentions.users.first().presence.status}`+
+				`\n# ${r.userID} \n ${msg.mentions.users.first().id}`+
 				"```");
 			}
 			cmdLog("whois", msg);
