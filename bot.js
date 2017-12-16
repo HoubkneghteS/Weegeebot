@@ -870,12 +870,12 @@ bot.on('message', msg => {
 		case r.whois:
 			if(msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
 			else{
-				msg.channel.send(`**${r.whoisEntry} ${msg.mentions.users.first().username}**`+"\n```ini"+
-				`\n${r.username} = ${msg.mentions.users.first().username}`+	
-				`\n${r.bot} = ${msg.mentions.users.first().bot}`+
-				`\n${r.joindate} = ${msg.mentions.users.first().createdAt}`+
-				`\n${r.status} = ${msg.mentions.users.first().presence.status}`+
-				`\n${r.userID} = ${msg.mentions.users.first().id}`+
+				msg.channel.send(`**${r.whoisEntry} ${msg.mentions.users.first().username}**`+"\n```md"+
+				`\n# ${r.username} \n* ${msg.mentions.users.first().tag }`+	
+				`\n# ${r.bot} \n* ${msg.mentions.users.first().bot}`+
+				`\n# ${r.joindate} \n* ${msg.mentions.users.first().createdAt}`+
+				`\n# ${r.status} \n* ${msg.mentions.users.first().presence.status}`+
+				`\n# ${r.userID} \n* ${msg.mentions.users.first().id}`+
 				"```");
 			}
 			cmdLog("whois", msg);
@@ -932,7 +932,7 @@ bot.on('message', msg => {
 			} else {
 				msg.channel.send(msg.author.avatarURL); //posts author's avatar if there is no argument
 			}
-			cmdLog('avatar of ' + arg[1], msg);
+			cmdLog('avatar', msg);
 			break;
 		//ask
 		case r.ask:
