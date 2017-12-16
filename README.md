@@ -18,12 +18,17 @@ In other words: this is not your typical plug-and-play Discord bot. It requires 
 
 ## Instructions:
 
-To use this program, you will need Node.js. Once you get that, type "npm install --save discord.js" and "npm install -g nodemon" into the command prompt to get discord.js and nodemon (make sure that the folder node_modules is within your bot folder). Nodemon is a special module by @rem that will allow your code to automatically refresh when you update it. Once you get these two things, run the batch file bot.bat. But first there is one thing you need to do. If you don't already have a bot account set up, set one up here. After that, create a JSON file with the name data.json in the bot folder and include your bot's real infos (only name and password are needed). Exmaple:
+To use this program, you will need Node.js. Once you get that, type "npm install --save discord.js". Once you get these two things, run the batch file `Cman.bat`. But first there is one thing you need to do. If you don't already have a bot account set up, set one up [https://discordapp.com/developers/applications/me here]. After that, create a JSON file with the name data.json in the bot folder and include your bot's real infos (only name and password are needed). Two other jsons with language and prefix data should be created called `lang.json` and `pre.json` Example:
+**Data.json:**
 ```json
 {
 	"key" : "bot token",
 	"name" : "bot name"
 }`
+```
+**lang.json and pre.json:**
+```json
+{}
 ```
 Modifying the code for your own use will also be important. Here are a few simple changes you can add. To add a simple command, the following code should be added (replace "command name" with the thing that people will type to reach your command, and replace "command text" with the bot's response"):
 
