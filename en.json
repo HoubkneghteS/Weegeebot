@@ -147,5 +147,12 @@
 	"bot":"Bot",
 	"joindate":"Account Age",
 	"status":"Status",
-	"userID":"User-ID"
+	"userID":"User-ID",
+	"serverinfo":"serverinfo",
+	"serverEntry":"Server Infos for",
+	"membercount":"Member Count",
+	"owner":"Owner",
+	"region":"Region",
+	"serverage":"Server Age",
+	"serverID":"Server ID"
 }

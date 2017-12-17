@@ -603,6 +603,7 @@ bot.on('message', msg => {
 				"\ndate             # posts the date and time" +
 				"\ninvite           # gets you the bot invite link" +
 				"\ndonate           # posts a link to the Patreon page" +
+				"\nserverinfo       # posts the serverinfo of the current server" +
 				"\nwhois [@user]    # fetches infos for the mentioned user" +
 				"\ndefine [word]    # searches up the definition of a word using The Urban Dictonary" +
 				"\nsay [message]    # gets Weegeebot to say something" +
@@ -662,6 +663,7 @@ bot.on('message', msg => {
 				"\ndatum              # ergibt das aktuelle Datum und die aktuelle Uhrzeit" +
 				"\nspende             # postet einen Link zur Patreon-Seite" +
 				"\neinladung          # zeigt dir den Bot-Einladungslink an" +
+				"\nserverinfo         # postet Informationen für den aktuellen Server" +
 				"\nsag [Nachricht]    # zwingt Weegee, deine Nachricht zu sagen"+
 				"\numfrage [Frage]    # erzeugt eine Umfrage mit zwei Optionen (Ja oder Nein)" +
 				"\nwerist [@Nutzer]   # ergibt Infos für den erwähnten Benutzer"+
@@ -881,7 +883,7 @@ bot.on('message', msg => {
 				msg.channel.send("```md"+
 				`\n${r.whoisEntry} ${msg.mentions.users.first().username}:`+
 				"\n----------"+
-				`\n< ${r.username} > \n ${msg.mentions.users.first().tag }`+	
+				`\n< ${r.username} > \n ${msg.mentions.users.first().tag}`+	
 				`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}`+
 				`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}`+
 				`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}`+
@@ -889,6 +891,19 @@ bot.on('message', msg => {
 				"```");
 			}
 			cmdLog("whois", msg);
+			break;
+		//serverinfo (results in server infos)
+		case r.serverinfo:
+			msg.channel.send("```md"+
+			`\n${r.serverEntry} ${msg.guild.name}:`+
+			"\n----------"+
+			`\n< ${r.membercount} > \n ${msg.guild.memberCount}`+
+			`\n< ${r.serverage} > \n ${msg.guild.createdAt}`+
+			`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}`+
+			`\n< ${r.region} > \n ${msg.guild.region}`+
+			`\n< ${r.serverID} > \n ${msg.guild.id}`+
+			"```");
+			cmdLog("serverinfo", msg);
 			break;
 		//nuke (finally well developed !!1!111!)
 		case r.nuke:
