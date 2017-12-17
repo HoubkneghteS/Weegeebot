@@ -73,42 +73,6 @@ const boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
 	"https://i.imgur.com/na6ss0K.jpg",
 	"https://i.imgur.com/k495Tso.jpg",
 	"https://i.redd.it/8hjwyohojlxz.png"];
-const ecchi = ["http://i.imgur.com/waPnfdJ.png",
-	"http://imgur.com/r/ecchi/8Mj6C",
-	"http://imgur.com/r/ecchi/Z9B4SG4",
-	"http://i.imgur.com/QVVSj42.jpg",
-	"http://i.imgur.com/NVHXS5E.jpg",
-	"https://i.redd.it/pw83j51iho6z.jpg",
-	"http://imgur.com/iKYwY5G",
-	"http://i.imgur.com/TpBtBfy.png",
-	"https://i.redd.it/cjn4qg0xs4bz.jpg",
-	"http://i.imgur.com/BIEXI13.png",
-	"https://cdn.awwni.me/yktf.jpg",
-	"http://i.imgur.com/3PGQgvM.jpg",
-	"https://i.imgur.com/3Dx0NFA.jpg",
-	"https://i.redd.it/lc2q487y92bz.png",
-	"http://i.imgur.com/IepTYs7.jpg",
-	"https://i.imgur.com/hvq7mV6.jpg",
-	"https://i.imgur.com/0mcHOUb.jpg",
-	"http://i.imgur.com/zoBrlhj.jpg",
-	"https://i.redd.it/z2x6fz3695bz.png",
-	"https://i.imgur.com/uKIfOaj.jpg",
-	"https://i.imgur.com/PjutVG8.jpg",
-	"http://i.imgur.com/1M3XgZG.jpg",
-	"http://i.imgur.com/3PGQgvM.jpg",
-	"https://i.imgur.com/3Dx0NFA.jpg",
-	"https://i.imgur.com/7eCCLTM.jpg",
-	"http://i.imgur.com/w2W0pGI.jpg",
-	"https://i.redd.it/1rs4oixj92bz.jpg",
-	"https://i.imgur.com/yQgQGkr.jpg",
-	"https://imgur.com/RLqhc61",
-	"https://i.imgur.com/stYemnb.jpg",
-	"https://i.imgur.com/wL2pHeU.jpg",
-	"https://i.redd.it/n2h3cm64xbbz.jpg",
-	"https://i.redd.it/6fihjk7fhbbz.jpg",
-	"https://cdn.awwni.me/ykjj.jpg",
-	"https://i.redd.it/u8n19klpwbbz.png",
-	"https://i.redd.it/z81q8hwj95bz.jpg"];
 const pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwEQdhsrGE/s1600/cute-penguin1.jpg",
 	"http://images5.fanpop.com/image/photos/26400000/PENGUINS-OF-FACE-MEMES-penguins-of-madagascar-26462995-500-281.png",
 	"http://www.natureart.cz/images/gallery/01-2009-5825.jpg",
@@ -851,7 +815,8 @@ bot.on('message', msg => {
 		//ecchi (anime titties)
 		case "ecchi":
 			if (msg.channel.nsfw == true) {
-				msg.channel.send(rdm(ecchi));
+				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
+					.then(r => msg.channel.send(r.body[Math.floor(Math.random() *100)].file_url));
 			} else {
 				msg.channel.send(r.nsfw);
 			}
