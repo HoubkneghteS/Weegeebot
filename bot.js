@@ -882,7 +882,7 @@ bot.on('message', msg => {
 			else{
 				msg.channel.send("```md"+
 				`\n${r.whoisEntry} ${msg.mentions.users.first().username}:`+
-				"\n----------"+
+				"\n---------------"+
 				`\n< ${r.username} > \n ${msg.mentions.users.first().tag}`+	
 				`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}`+
 				`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}`+
@@ -896,7 +896,7 @@ bot.on('message', msg => {
 		case r.serverinfo:
 			msg.channel.send("```md"+
 			`\n${r.serverEntry} ${msg.guild.name}:`+
-			"\n----------"+
+			"\n---------------"+
 			`\n< ${r.membercount} > \n ${msg.guild.memberCount}`+
 			`\n< ${r.serverage} > \n ${msg.guild.createdAt}`+
 			`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}`+
