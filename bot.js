@@ -532,9 +532,13 @@ bot.on('ready', () => {
 	
 	//logs servercount -- not necessary for standard use
 	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
-	  .set('Authorization', data.botlist)
-	  .send({ server_count: bot.guilds.array().length })
-	  .catch(err => console.error(`Fuck look at this: ${err.body}`));
+		.set('Authorization', data.botlist)
+		.send({ server_count: bot.guilds.size })
+		.catch(err => console.error(`Fuck look at this: ${err.body}`));
+	request.post("https://bots.discord.pw/api/bots/239261914918682624/stats")
+		.set('Authorization', data.botlist2)
+		.send({ server_count: bot.guilds.size })
+		.catch(err => console.error(`Fuck look at this: ${err.body}`));
 });
 
 //Login -- Logs code into Weegeebot (please no touchy)
@@ -1008,7 +1012,7 @@ bot.on('message', msg => {
 		case "botinfo":
 			msg.channel.send(r.botinfo[0] +
 				r.botinfo[1] + " HoubkneghteS, Fniux, JamesTheDemSoc" +
-				"\n**" + bot.guilds.array().length + r.botinfo[2] +
+				"\n**" + bot.guilds.size + r.botinfo[2] +
 				r.botinfo[3] + Math.floor(bot.ping) + " ms");
 			cmdLog("botinfo", msg);
 			break;
