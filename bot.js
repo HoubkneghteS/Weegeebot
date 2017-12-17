@@ -560,7 +560,7 @@ bot.on('message', msg => {
 				"\nrepeat [number] [text] # reapeats a message a certain amount of times```");
 			//nsfw
 			msg.author.send("```ini\nNSFW = You must be in a 'NSFW' channel to use them" +
-				"\necchi  # posts an ecchi picture from imgur" +
+				"\necchi  # posts an ecchi picture from Gelbooru" +
 				"\nass    # results in a ass pic" +
 				"\nboobs  # posts a random boobs picture```");
 			//utility help
@@ -620,7 +620,7 @@ bot.on('message', msg => {
 				"\nwiederhole [Male] [Nachricht] # wiederholt die gleiche Nachricht x-mal```");
 			//NSFW-Hilfe
 			msg.author.send("```ini\nNSFW-Befehle = Man muss in einem 'NSFW'-Kanal sein, um sie zu verwenden" +
-				"\necchi  # postet ein Ecchi-Bild von Imgur" +
+				"\necchi  # postet ein Ecchi-Bild von Gelbooru" +
 				"\narsch  # ergibt ein Bild mit dem weiblichen Arsch" +
 				"\ntitten # postet ein Bild mit Titten!```");
 			//Utility-Hilfe
