@@ -8,6 +8,8 @@ Weegeebot is a collaborated/custom Discord bot designed for a few small servers.
 </a>
 <a href="https://www.patreon.com/Weegeebot/"><img alt="Patreon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Patreon_logo.svg/768px-Patreon_logo.svg.png" title="Patreon" width="40px"></a>
 
+[![Discord Bots](https://discordbots.org/api/widget/239261914918682624.svg)](https://discordbots.org/bot/239261914918682624)
+
 ## Other Stuff:
 
 Using and operating this bot requires a minimal but functioning knowledge in Javascript, Discord APIs, Nodemon, and Node.js. For any forms of support, see this Discord Server. We are a small collaboration and have other priorities in life though, so a response may not always be the quickest possible thing to come, sadly.
