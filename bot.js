@@ -880,10 +880,12 @@ bot.on('message', msg => {
 		case r.whois:
 			if(msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
 			else{
+				var nickname = msg.guild.member(msg.mentions.users.first()).nickname ? msg.guild.member(msg.mentions.users.first()).nickname : r.none;
 				msg.channel.send("```md"+
 				`\n${r.whoisEntry} ${msg.mentions.users.first().username}:`+
 				"\n---------------"+
-				`\n< ${r.username} > \n ${msg.mentions.users.first().tag}`+	
+				`\n< ${r.username} > \n ${msg.mentions.users.first().tag}`+
+				`\n< ${r.nickname} > \n ${nickname}`+	
 				`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}`+
 				`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}`+
 				`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}`+
@@ -1060,7 +1062,7 @@ bot.on('message', msg => {
 			if (arg.length < 2) msg.channel.send(r.msgError);
 			else {
 				msg.delete();
-				msg.channel.send(r.poll1 + add(1, msg)).then((m) => {
+				msg.channel.send(`${r.poll1}: ${add(1, msg)}`).then((m) => {
 					m.react("👍");
 					m.react("👎");
 				});
