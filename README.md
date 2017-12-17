@@ -25,7 +25,7 @@ To use this program, you will need Node.js. Once you get that, type "npm install
 {
 	"key" : "bot token",
 	"name" : "bot name"
-}`
+}
 ```
 **lang.json and pre.json:**
 ```json
@@ -50,15 +50,13 @@ case "command name":
 
 CMan has been created to significantally facilitate the management of Weegeebot during the steps before it's going to be started. It's quite easy to use and requires only to not be run in a read-only folder; the 'help' command summarizes all available commands. You don't even need to save it in the same folder as Weegeebot any may conveniently start it from any position on your computer - however, regard that you need to manually change the path before that.
 
-autorun.dat
+``autorun.dat``
 
 As one of the most important inventions, CMan delivers a powerful tool to liberately configure the start-up process by the file autorun.dat, available in the CMan folder. It follows an example:
-
 ```batch
 start pm2 start bot.js --name="bot-EN"
 start pm2 start %CD%\de\bot-de.js --name="bot-DE" 
 ```
-
 C'Man now processes two commands at once: In the first line, the English bot.js would be startet with the internal name "bot-EN". The same thing is theoretically done by the second comment, only differ by the fact it starts the German JS file and delegates the name "bot-DE" to it. As you see, this already saves you two different commands and a fair amount of time.
 Parameters
 
