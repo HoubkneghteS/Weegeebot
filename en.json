@@ -126,12 +126,11 @@
 	"diceGood": "Nice job. You got ",
 	"botinfo": [
 		"Description",
-		"Weegeebot is a Discord bot that is made using Discord.js since April 2017. Type ``&support`` for more infos.",
+		"Weegeebot is a Discord bot that is made using Discord.js since April 2017. Type '&support' for more infos.",
 		"Developers",
 		"Server Count",
 		"Servers Weegeefied",
-		"Ping",
-		"Uptime"
+		"Ping"
 	],
 	"poll": "poll",
 	"poll1": "Poll",

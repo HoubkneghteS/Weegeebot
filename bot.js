@@ -885,13 +885,13 @@ bot.on('message', msg => {
 		//botinfo (shows bot infos)
 		case "botinfo":
 			msg.channel.send("```md" +
-				"Weegeebot",
+				"\nWeegeebot" +
 				"\n---------------" +
-				`< ${r.botinfo[0]} 📝> \n ${botinfo[1]}` +
-				`< ${r.botinfo[2]} > \n HoubkneghteS, Fniux, JamesTheDemSoc` +
-				`< ${r.botinfo[3]} > \n ${bot.guilds.size} ${r.botinfo[4]}` +
-				`< ${r.botinfo[5]} ⏲️> \n ${bot.ping} ms`,
-				`< ${r.botinfo[6]} > \n ${bot.uptime} ms`);
+				`\n< ${r.botinfo[0]} 📝> \n ${r.botinfo[1]}` +
+				`\n< ${r.botinfo[2]} > \n HoubkneghteS, Fniux, JamesTheDemSoc` +
+				`\n< ${r.botinfo[3]} > \n ${bot.guilds.size} ${r.botinfo[4]}` +
+				`\n< ${r.botinfo[5]} ⏲️> \n ${Math.floor(bot.ping)} ms` +
+				"```");
 			cmdLog("botinfo", msg);
 			break;
 		//nuke (finally well developed !!1!111!)

@@ -126,12 +126,11 @@
 	"diceGood": "Gut gemacht. Du würfelst eine ",
 	"botinfo": [
 		"Beschreibung",
-		"Herr Weegee ist ein Discordbot, der mit Discord.js seit Mai 2017 gemacht wird. Tippe ``&support`` für mehr Infos.",
+		"Herr Weegee ist ein Discordbot, der mit Discord.js seit Mai 2017 gemacht wird. Tippe '&support' für mehr Infos.",
 		"Entwickler",
 		"Serveranzahl",
 		"Server Weegeefiziert",
-		"Ping",
-		"Betriebszeit"
+		"Ping"
 	],
 	"poll": "umfrage",
 	"poll1": "Umfrage",
