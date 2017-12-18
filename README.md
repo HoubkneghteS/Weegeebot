@@ -1,5 +1,5 @@
 # Weegeebot
-Weegeebot is a collaborated/custom Discord bot designed for a few small servers. It has very personalized commands and was designed mostly to be open to change for the few who use it.
+Weegeebot is a custom and open-source Discordbot meant to offer many commands that suit a wide variety of servers and users. 
 
 <a href="https://discord.gg/HudQcWh" target="_blank"><img alt="Discord Server" src="https://discordapp.com/assets/07dca80a102d4149e9736d4b162cff6f.ico" title="Discord Server" width="40px" target="_blank"></a>
 <a href="https://github.com/HoubkneghteS/Weegeebot" target="_blank"><img alt="Github" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" title="Github" width="40px" target="_blank"></a>
@@ -7,6 +7,8 @@ Weegeebot is a collaborated/custom Discord bot designed for a few small servers.
 <a href="https://www.reddit.com/r/weegeebot/"><img alt="Reddit" src="https://www.redditstatic.com/favicon.ico" title="Reddit" width="40px"></a>
 </a>
 <a href="https://www.patreon.com/Weegeebot/"><img alt="Patreon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Patreon_logo.svg/768px-Patreon_logo.svg.png" title="Patreon" width="40px"></a>
+
+[![Discord Bots](https://discordbots.org/api/widget/239261914918682624.svg)](https://discordbots.org/bot/239261914918682624)
 
 ## Other Stuff:
 
