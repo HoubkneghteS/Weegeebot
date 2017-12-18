@@ -5,7 +5,7 @@
 	data = require("./data.json"), //general data
 	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
 	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
-	
+
 var arg, date, sLang, sPre, com; //variables that are used for messages
 
 //arrays for random commands
@@ -208,19 +208,19 @@ const ascii = [
 	"\n              #   #" +
 	"\n               # #" +
 	"\n                #",
-	"\n░░░░░░░░░░▀▀▀██████▄▄▄░░░░░░░░░░"+
-	"\n░░░░░░░░░░░░░░░░░▀▀▀████▄░░░░░░░"+
-	"\n░░░░░░░░░░▄███████▀░░░▀███▄░░░░░"+
-	"\n░░░░░░░░▄███████▀░░░░░░░▀███▄░░░"+
-	"\n░░░░░░▄████████░░░░░░░░░░░███▄░░"+
-	"\n░░░░░██████████▄░░░░░░░░░░░███▌░"+
-	"\n░░░░░▀█████▀░▀███▄░░░░░░░░░▐███░"+
-	"\n░░░░░░░▀█▀░░░░░▀███▄░░░░░░░▐███░"+
-	"\n░░░░░░░░░░░░░░░░░▀███▄░░░░░███▌░"+
-	"\n░░░░▄██▄░░░░░░░░░░░▀███▄░░▐███░░"+
-	"\n░░▄██████▄░░░░░░░░░░░▀███▄███░░░"+
-	"\n░█████▀▀████▄▄░░░░░░░░▄█████░░░░"+
-	"\n░████▀░░░▀▀█████▄▄▄▄█████████▄░░"+
+	"\n░░░░░░░░░░▀▀▀██████▄▄▄░░░░░░░░░░" +
+	"\n░░░░░░░░░░░░░░░░░▀▀▀████▄░░░░░░░" +
+	"\n░░░░░░░░░░▄███████▀░░░▀███▄░░░░░" +
+	"\n░░░░░░░░▄███████▀░░░░░░░▀███▄░░░" +
+	"\n░░░░░░▄████████░░░░░░░░░░░███▄░░" +
+	"\n░░░░░██████████▄░░░░░░░░░░░███▌░" +
+	"\n░░░░░▀█████▀░▀███▄░░░░░░░░░▐███░" +
+	"\n░░░░░░░▀█▀░░░░░▀███▄░░░░░░░▐███░" +
+	"\n░░░░░░░░░░░░░░░░░▀███▄░░░░░███▌░" +
+	"\n░░░░▄██▄░░░░░░░░░░░▀███▄░░▐███░░" +
+	"\n░░▄██████▄░░░░░░░░░░░▀███▄███░░░" +
+	"\n░█████▀▀████▄▄░░░░░░░░▄█████░░░░" +
+	"\n░████▀░░░▀▀█████▄▄▄▄█████████▄░░" +
 	"\n░░▀▀░░░░░░░░░▀▀██████▀▀░░░▀▀██░░",
 	"\n.___. " +
 	"\n{o,o} " +
@@ -411,26 +411,26 @@ const ascii = [
 	"\n░░░░▀▀▀▀█▄▀▄▀▐▄░░" +
 	"\n░░░░░░▐▀░▀░▀░▐▌░░" +
 	"\n░░░░░░█░░░░░░░░█░░",
-	"\n║\\"+
-	"\n║▒\\"+
-	"\n║▒▒\\"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n║░▒║"+
-	"\n▓▓▓▓"+
-	"\n[█▓]"+
-	"\n[█▓]"+
-	"\n[█▓]"+
+	"\n║\\" +
+	"\n║▒\\" +
+	"\n║▒▒\\" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n║░▒║" +
+	"\n▓▓▓▓" +
+	"\n[█▓]" +
+	"\n[█▓]" +
+	"\n[█▓]" +
 	"\n[█▓]"];
 
 //Role Checker -- Checks if a user has a role
 function role(msg, r) {
-	return(msg.member.hasPermission(r)); //returns if member 
+	return (msg.member.hasPermission(r)); //returns if member 
 }
 
 //Console Logbook -- standardizes logbook messages
@@ -467,7 +467,7 @@ function btext(text) {
 function vapor(text) {
 	var startText = [/a/gi, /b/gi, /c/gi, /d/gi, /e/gi, /f/gi, /g/gi, /h/gi, /i/gi, /j/gi, /k/gi, /l/gi, /m/gi, /n/gi, /o/gi, /p/gi, /q/gi, /r/gi, /s/gi, /t/gi, /u/gi, /v/gi, /w/gi, /x/gi, /y/gi, /z/gi, /1/g, /2/g, /3/g, /4/g, /5/g, /6/g, /7/g, /8/g, /9/g, /0/g]; //starting letters
 	var endText = ["ａ", "ｂ", "ｃ", "ｄ", "ｅ", "ｆ", "ｇ", "ｈ", "ｉ", "ｊ", "ｋ", "ｌ", "ｍ", "ｎ", "ｏ", "ｐ", "ｑ", "ｒ", "ｓ", "ｔ", "ｕ", "ｖ", "ｗ", "ｘ", "ｙ", "ｚ", "１", "２", "３", "４", "５", "６", "７", "８", "９", "０"]; //resulting letters
-	
+
 	for (var i = 0; i < startText.length; i++) {
 		text = text.replace(startText[i], endText[i]); //replaces text
 	}
@@ -477,8 +477,8 @@ function vapor(text) {
 //fraktur -- converts text to fraktur
 function fraktur(text) {
 	var startText = [/ä/g, /ö/g, /ü/g, /ß/g, /Ä/g, /Ö/g, /Ü/g, /ẞ/g, /a/g, /b/g, /c/g, /d/g, /e/g, /f/g, /g/g, /h/g, /i/g, /j/g, /k/g, /l/g, /m/g, /n/g, /o/g, /p/g, /q/g, /r/g, /s/g, /t/g, /u/g, /v/g, /w/g, /x/g, /y/g, /z/g, /A/g, /B/g, /C/g, /D/g, /E/g, /F/g, /G/g, /H/g, /I/g, /J/g, /K/g, /L/g, /M/g, /N/g, /O/g, /P/g, /Q/g, /R/g, /S/g, /T/g, /U/g, /V/g, /W/g, /X/g, /Y/g, /Z/g], //starting letters
-	var endText = ["ae", "oe", "ue", "ss", "Ae", "Oe", "Ue", "SS", "𝔞","𝔟","𝔠","𝔡","𝔢","𝔣","𝔤","𝔥","𝔦","𝔧","𝔨","𝔩","𝔪","𝔫","𝔬","𝔭","𝔮","𝔯","𝔰","𝔱","𝔲","𝔳","𝔴","𝔵","𝔶","𝔷", "𝔄","𝔅","ℭ","𝔇","𝔈","𝔉","𝔊","ℌ","ℑ","𝔍","𝔎","𝔏","𝔐","𝔑","𝔒","𝔓","𝔔","ℜ","𝔖","𝔗","𝔘","𝔙","𝔚","𝔛","𝔜","ℨ"]; //resulting letters
-	
+	var endText = ["ae", "oe", "ue", "ss", "Ae", "Oe", "Ue", "SS", "𝔞", "𝔟", "𝔠", "𝔡", "𝔢", "𝔣", "𝔤", "𝔥", "𝔦", "𝔧", "𝔨", "𝔩", "𝔪", "𝔫", "𝔬", "𝔭", "𝔮", "𝔯", "𝔰", "𝔱", "𝔲", "𝔳", "𝔴", "𝔵", "𝔶", "𝔷", "𝔄", "𝔅", "ℭ", "𝔇", "𝔈", "𝔉", "𝔊", "ℌ", "ℑ", "𝔍", "𝔎", "𝔏", "𝔐", "𝔑", "𝔒", "𝔓", "𝔔", "ℜ", "𝔖", "𝔗", "𝔘", "𝔙", "𝔚", "𝔛", "𝔜", "ℨ"]; //resulting letters
+
 	for (var i = 0; i < startText.length; i++) {
 		text = text.replace(startText[i], endText[i]); //replaces text
 	}
@@ -496,7 +496,7 @@ function add(start, msg) {
 bot.on('ready', () => {
 	console.log('Login was successful m8.\n' + 'Serverlist: ' + bot.guilds.array()); //login message inc
 	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, { type: 'WATCHING' }); //watching message
-	
+
 	//logs servercount -- not necessary for standard use
 	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
 		.set('Authorization', data.botlist)
@@ -513,19 +513,19 @@ bot.login(data.key);
 
 //Message Response -- Responds to messages and sets commands or variables
 bot.on('message', msg => {
-	
+
 	if (msg.content == data.reset) process.exit(1);	//restart system
 
 	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
-	
+
 	arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
 	date = new Date(); //current date
 	sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
 	sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
 	com = arg[0].toLowerCase().slice(sPre.length); //command value
-	
-	if(!msg.content.startsWith(sPre)) return;
-	
+
+	if (!msg.content.startsWith(sPre)) return;
+
 	//-------ENGLISH-BOT--------
 	if (sLang == "en") {
 		var r = require("./en.json"); //uses responses from en.json
@@ -533,7 +533,7 @@ bot.on('message', msg => {
 		if (com == "help") {
 			msg.author.send(`*Greetings, ${msg.author.username}. I am Weegeebot, your helpful Discord Bot. Here are my commands:*`);
 			//fun
-			msg.author.send("```ini\nFun = General commands" + 
+			msg.author.send("```ini\nFun = General commands" +
 				"\nascii                  # posts random ascii art" +
 				"\nlenny                  # adds a nice lenny ( ͡° ͜ʖ ͡°)" +
 				"\nroast                  # roasts you as bad as never before seen" +
@@ -635,9 +635,9 @@ bot.on('message', msg => {
 				"\nspende             # postet einen Link zur Patreon-Seite" +
 				"\neinladung          # zeigt dir den Bot-Einladungslink an" +
 				"\nserverinfo         # postet Informationen für den aktuellen Server" +
-				"\nsag [Nachricht]    # zwingt Weegee, deine Nachricht zu sagen"+
+				"\nsag [Nachricht]    # zwingt Weegee, deine Nachricht zu sagen" +
 				"\numfrage [Frage]    # erzeugt eine Umfrage mit zwei Optionen (Ja oder Nein)" +
-				"\nwerist [@Nutzer]   # ergibt Infos für den erwähnten Benutzer"+
+				"\nwerist [@Nutzer]   # ergibt Infos für den erwähnten Benutzer" +
 				"\ndefiniere [Wort]   # findet die Definition deines Wortes mit der Sprachnudel" +
 				"\nrechne [Operation] # rechnet mit Zahlen und Operationen 🔢```" +
 				"\nWähle jetzt einen Befehl aus, sonst wirst du sterben! https://discord.gg/HudQcWh");
@@ -701,12 +701,12 @@ bot.on('message', msg => {
 		//calc - currently pretty basic
 		case r.calc:
 			if (arg[1] != 'ln' && arg.length != 4 || arg[1] == r.help) {
-				msg.channel.send(r.calcHelp[0] + 
+				msg.channel.send(r.calcHelp[0] +
 					"\n```x + y - " + r.calcHelp[1] +
 					"\nx - y - " + r.calcHelp[2] +
 					"\nx * y - " + r.calcHelp[3] +
-					"\nx / y - " +  r.calcHelp[4] + 
-					"\nx ^ y - " + r.calcHelp[5] + 
+					"\nx / y - " + r.calcHelp[4] +
+					"\nx ^ y - " + r.calcHelp[5] +
 					"\nx root y - " + r.calcHelp[6] +
 					"\nln x - " + r.calcHelp[7] + "```\n" + r.calcHelp[8]); //help command
 			} else {
@@ -717,7 +717,7 @@ bot.on('message', msg => {
 					var a = parseFloat(arg[1]);
 					var b = parseFloat(arg[3]);
 					//Operator plucker
-					switch(arg[2]) {
+					switch (arg[2]) {
 						case "+":
 							msg.channel.send(rdm(r.quote) + `\n${a} + ${b} = ${a + b}`); //Addition
 							break;
@@ -804,7 +804,7 @@ bot.on('message', msg => {
 			else {
 				var str1 = parseInt(arg[1]) ^ 2; //strength of army 1
 				var str2 = parseInt(arg[2]) ^ 2; //strength of army 2
-				
+
 				if (Math.floor(Math.random() * (str1 + str2)) <= parseInt(str1)) msg.channel.send(r.victory1);
 				else msg.channel.send(r.victory2);
 				cmdLog("battle", msg);
@@ -819,7 +819,7 @@ bot.on('message', msg => {
 		case "ecchi":
 			if (msg.channel.nsfw == true) {
 				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
-					.then(r => msg.channel.send(r.body[Math.floor(Math.random() *100)].file_url));
+					.then(r => msg.channel.send(r.body[Math.floor(Math.random() * 100)].file_url));
 			} else {
 				msg.channel.send(r.nsfw);
 			}
@@ -850,33 +850,33 @@ bot.on('message', msg => {
 			break;
 		//whois (results in user infos)
 		case r.whois:
-			if(msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
-			else{
+			if (msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
+			else {
 				var nickname = msg.guild.member(msg.mentions.users.first()).nickname ? msg.guild.member(msg.mentions.users.first()).nickname : r.none;
-				msg.channel.send("```md"+
-				`\n${r.whoisEntry} ${msg.mentions.users.first().username}:`+
-				"\n---------------"+
-				`\n< ${r.username} > \n ${msg.mentions.users.first().tag}`+
-				`\n< ${r.nickname} > \n ${nickname}`+	
-				`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}`+
-				`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}`+
-				`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}`+
-				`\n< ${r.userID} > \n ${msg.mentions.users.first().id}`+
-				"```");
+				msg.channel.send("```md" +
+					`\n${r.whoisEntry} ${msg.mentions.users.first().username}:` +
+					"\n---------------" +
+					`\n< ${r.username} > \n ${msg.mentions.users.first().tag}` +
+					`\n< ${r.nickname} > \n ${nickname}` +
+					`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}` +
+					`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}` +
+					`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}` +
+					`\n< ${r.userID} > \n ${msg.mentions.users.first().id}` +
+					"```");
 			}
 			cmdLog("whois", msg);
 			break;
 		//serverinfo (results in server infos)
 		case r.serverinfo:
-			msg.channel.send("```md"+
-			`\n${r.serverEntry} ${msg.guild.name}:`+
-			"\n---------------"+
-			`\n< ${r.membercount} > \n ${msg.guild.memberCount}`+
-			`\n< ${r.serverage} > \n ${msg.guild.createdAt}`+
-			`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}`+
-			`\n< ${r.region} > \n ${msg.guild.region}`+
-			`\n< ${r.serverID} > \n ${msg.guild.id}`+
-			"```");
+			msg.channel.send("```md" +
+				`\n${r.serverEntry} ${msg.guild.name}:` +
+				"\n---------------" +
+				`\n< ${r.membercount} > \n ${msg.guild.memberCount}` +
+				`\n< ${r.serverage} > \n ${msg.guild.createdAt}` +
+				`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}` +
+				`\n< ${r.region} > \n ${msg.guild.region}` +
+				`\n< ${r.serverID} > \n ${msg.guild.id}` +
+				"```");
 			cmdLog("serverinfo", msg);
 			break;
 		//nuke (finally well developed !!1!111!)
@@ -1050,9 +1050,9 @@ bot.on('message', msg => {
 				if (arg[1] > 100) msg.channel.send(r.clearError);
 				else {
 					var msgs = parseInt(arg[1]) ? arg[1] : 2; //determines msgs with default of 2
-					
+
 					msg.delete();
-					msg.channel.fetchMessages({limit: msgs}).then(messages => msg.channel.bulkDelete(messages)); //deletes messages
+					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)); //deletes messages
 					msg.channel.send(msgs + r.clear1); //posts message about deletion
 					cmdLog(msgs + " messages deleted", msg);
 				}
@@ -1134,11 +1134,11 @@ bot.on('message', msg => {
 			if (role(msg, "ADMINISTRATOR")) {
 				if (!arg[1]) return; //ignores messages without an argument
 				if (arg[1].length > 3) msg.channel.send(r.preError);
-				else{
+				else {
 					var newPre = arg[1].replace(/"/g, "\"");
 					pre[msg.guild.id] = newPre;
 					msg.channel.send(r.preChange + newPre + "``");
-					
+
 					//saves prefix data
 					fs.writeFile("./pre.json", JSON.stringify(pre), (err) => {
 						if (err) console.error(err)
