@@ -734,7 +734,7 @@ bot.on('message', msg => {
 							msg.channel.send(rdm(r.quote) + `\n${a} / ${b} = ${a / b}`); //Division
 							break;
 						case "^":
-							msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${parseFloat(Math.pow(a, b))}`); //Power
+							msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${a ** b}`); //Power
 							break;
 						case "root":
 							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(Math.pow(b, 1 / a))}`); //Root
