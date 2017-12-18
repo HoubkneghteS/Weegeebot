@@ -125,10 +125,13 @@
 	"diceBad": "What a failure. You got ",
 	"diceGood": "Nice job. You got ",
 	"botinfo": [
-		"Weegeebot is a Discord Bot made using discord.js since May 2017. Type ``&support`` for more infos.",
-		"\n**The Developers:**",
-		" servers Weegeefied**",
-		"\n**Ping:** "
+		"Description",
+		"Weegeebot is a Discord bot that is made using Discord.js since April 2017. Type ``&support`` for more infos.",
+		"Developers",
+		"Server Count",
+		"Servers Weegeefied",
+		"Ping",
+		"Uptime"
 	],
 	"poll": "poll",
 	"poll1": "Poll",

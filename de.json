@@ -125,10 +125,13 @@
 	"diceBad": "Was für ein Versager bist du? Du würfelst eine ",
 	"diceGood": "Gut gemacht. Du würfelst eine ",
 	"botinfo": [
+		"Beschreibung",
 		"Herr Weegee ist ein Discordbot, der mit Discord.js seit Mai 2017 gemacht wird. Tippe ``&support`` für mehr Infos.",
-		"\n**Die Entwickler:**",
-		" Server Weegeefiziert**",
-		"\n**Ping:** "
+		"Entwickler",
+		"Serveranzahl",
+		"Server Weegeefiziert",
+		"Ping",
+		"Betriebszeit"
 	],
 	"poll": "umfrage",
 	"poll1": "Umfrage",

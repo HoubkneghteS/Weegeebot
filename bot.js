@@ -861,9 +861,9 @@ bot.on('message', msg => {
 					"\n---------------" +
 					`\n< ${r.username} > \n ${msg.mentions.users.first().tag}` +
 					`\n< ${r.nickname} > \n ${nickname}` +
-					`\n< ${r.bot} > \n ${msg.mentions.users.first().bot}` +
-					`\n< ${r.joindate} > \n ${msg.mentions.users.first().createdAt}` +
+					`\n< ${r.bot} 🤖> \n ${msg.mentions.users.first().bot}` +
 					`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}` +
+					`\n< ${r.joindate} 📅> \n ${msg.mentions.users.first().createdAt}` +
 					`\n< ${r.userID} > \n ${msg.mentions.users.first().id}` +
 					"```");
 			}
@@ -874,13 +874,25 @@ bot.on('message', msg => {
 			msg.channel.send("```md" +
 				`\n${r.serverEntry} ${msg.guild.name}:` +
 				"\n---------------" +
-				`\n< ${r.membercount} > \n ${msg.guild.memberCount}` +
-				`\n< ${r.serverage} > \n ${msg.guild.createdAt}` +
+				`\n< ${r.membercount} 🗣️> \n ${msg.guild.memberCount}` +
+				`\n< ${r.serverage} 📅> \n ${msg.guild.createdAt}` +
 				`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}` +
-				`\n< ${r.region} > \n ${msg.guild.region}` +
+				`\n< ${r.region} 🗺️> \n ${msg.guild.region}` +
 				`\n< ${r.serverID} > \n ${msg.guild.id}` +
 				"```");
 			cmdLog("serverinfo", msg);
+			break;
+		//botinfo (shows bot infos)
+		case "botinfo":
+			msg.channel.send("```md" +
+				"Weegeebot",
+				"\n---------------" +
+				`< ${r.botinfo[0]} 📝> \n ${botinfo[1]}` +
+				`< ${r.botinfo[2]} > \n HoubkneghteS, Fniux, JamesTheDemSoc` +
+				`< ${r.botinfo[3]} > \n ${bot.guilds.size} ${r.botinfo[4]}` +
+				`< ${r.botinfo[5]} ⏲️> \n ${bot.ping} ms`,
+				`< ${r.botinfo[6]} > \n ${bot.uptime} ms`);
+			cmdLog("botinfo", msg);
 			break;
 		//nuke (finally well developed !!1!111!)
 		case r.nuke:
@@ -978,14 +990,6 @@ bot.on('message', msg => {
 			msg.delete();
 			msg.channel.send("( ͡° ͜ʖ ͡°( ͡° ͜ʖ ͡°( ͡° ͜ʖ ͡°) ͡° ͜ʖ ͡°) ͡° ͜ʖ ͡°)");
 			cmdLog("lennygang", msg);
-			break;
-		//botinfo (shows bot infos)
-		case "botinfo":
-			msg.channel.send(r.botinfo[0] +
-				r.botinfo[1] + " HoubkneghteS, Fniux, JamesTheDemSoc" +
-				"\n**" + bot.guilds.size + r.botinfo[2] +
-				r.botinfo[3] + Math.floor(bot.ping) + " ms");
-			cmdLog("botinfo", msg);
 			break;
 		//b command
 		case "btext":
