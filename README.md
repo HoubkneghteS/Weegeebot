@@ -71,9 +71,9 @@ An example for a line that starts C'Man with parameters:
 This example would start bot.bat with German language settings and start it in debug and portable mode. Below, you can see the list of available parameters in C'Man:
 
 | -Param    |	Meaning/Impact                                  |
-|---------------------------------------------------------------|
+|-----------|---------------------------------------------------|
 |-de 	    |  Starts C'Man and Weegeebot with German settings. |
-|---------------------------------------------------------------|
+|-----------|---------------------------------------------------|
 -en 	
 
 Starts C'Man and Weegeebot with English settings, default language.
