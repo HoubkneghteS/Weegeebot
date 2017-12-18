@@ -430,7 +430,7 @@ const ascii = [
 
 //Role Checker -- Checks if a user has a role
 function role(msg, r) {
-	return msg.member.hasPermission(r); //returns if member 
+	return msg.member.hasPermission(r); //returns if member has perm
 }
 
 //Console Logbook -- standardizes logbook messages
@@ -495,7 +495,7 @@ function add(start, msg) {
 //Login processes -- Things to do when a login is successful
 bot.on('ready', () => {
 	console.log('Login was successful m8.\n' + 'Serverlist: ' + bot.guilds.array()); //login message inc
-	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, { type: 'WATCHING' }); //watching message
+	bot.user.setGame(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`); //watching message
 
 	//logs servercount -- not necessary for standard use
 	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
