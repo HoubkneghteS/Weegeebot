@@ -1,6 +1,7 @@
 ﻿const Discord = require("discord.js"),
 	bot = new Discord.Client({ disabledEvents:[
-		"TYPING_START"
+		"TYPING_START",
+		"GUILD_SYNC"
 	] }),
 	request = require("snekfetch"), //allows usage of other APIs
 	fs = require("fs"), //file system
