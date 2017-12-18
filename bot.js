@@ -430,7 +430,7 @@ const ascii = [
 
 //Role Checker -- Checks if a user has a role
 function role(msg, r) {
-	return (msg.member.hasPermission(r)); //returns if member 
+	return msg.member.hasPermission(r); //returns if member 
 }
 
 //Console Logbook -- standardizes logbook messages
