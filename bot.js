@@ -494,7 +494,7 @@ function add(start, msg) {
 
 //Login processes -- Things to do when a login is successful
 bot.on('ready', () => {
-	console.log('Login was successful m8.\n' + 'Serverlist: ' + bot.guilds.array()); //login message inc
+	console.log('Login was successful m8\n' + 'Serverlist: ' + bot.guilds.array()); //login message
 	bot.user.setGame(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`); //watching message
 
 	//logs servercount -- not necessary for standard use
