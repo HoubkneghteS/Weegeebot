@@ -4,8 +4,7 @@
 	fs = require("fs"), //file system
 	data = require("./data.json"), //general data
 	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
-	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")),
-	langList = "``en`` (English), ``de`` (Deutsch)"; //list of languages
+	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
 	
 var arg, date, sLang, sPre, com; //variables that are used for messages
 
@@ -477,7 +476,7 @@ function vapor(text) {
 
 //fraktur -- converts text to fraktur
 function fraktur(text) {
-	var startText = [/ä/g, /ö/g, /ü/g, /ß/g, /Ä/g, /Ö/g, /Ü/g, /ẞ/g, /a/g, /b/g, /c/g, /d/g, /e/g, /f/g, /g/g, /h/g, /i/g, /j/g, /k/g, /l/g, /m/g, /n/g, /o/g, /p/g, /q/g, /r/g, /s/g, /t/g, /u/g, /v/g, /w/g, /x/g, /y/g, /z/g, /A/g, /B/g, /C/g, /D/g, /E/g, /F/g, /G/g, /H/g, /I/g, /J/g, /K/g, /L/g, /M/g, /N/g, /O/g, /P/g, /Q/g, /R/g, /S/g, /T/g, /U/g, /V/g, /W/g, /X/g, /Y/g, /Z/g]; //starting letters
+	var startText = [/ä/g, /ö/g, /ü/g, /ß/g, /Ä/g, /Ö/g, /Ü/g, /ẞ/g, /a/g, /b/g, /c/g, /d/g, /e/g, /f/g, /g/g, /h/g, /i/g, /j/g, /k/g, /l/g, /m/g, /n/g, /o/g, /p/g, /q/g, /r/g, /s/g, /t/g, /u/g, /v/g, /w/g, /x/g, /y/g, /z/g, /A/g, /B/g, /C/g, /D/g, /E/g, /F/g, /G/g, /H/g, /I/g, /J/g, /K/g, /L/g, /M/g, /N/g, /O/g, /P/g, /Q/g, /R/g, /S/g, /T/g, /U/g, /V/g, /W/g, /X/g, /Y/g, /Z/g], //starting letters
 	var endText = ["ae", "oe", "ue", "ss", "Ae", "Oe", "Ue", "SS", "𝔞","𝔟","𝔠","𝔡","𝔢","𝔣","𝔤","𝔥","𝔦","𝔧","𝔨","𝔩","𝔪","𝔫","𝔬","𝔭","𝔮","𝔯","𝔰","𝔱","𝔲","𝔳","𝔴","𝔵","𝔶","𝔷", "𝔄","𝔅","ℭ","𝔇","𝔈","𝔉","𝔊","ℌ","ℑ","𝔍","𝔎","𝔏","𝔐","𝔑","𝔒","𝔓","𝔔","ℜ","𝔖","𝔗","𝔘","𝔙","𝔚","𝔛","𝔜","ℨ"]; //resulting letters
 	
 	for (var i = 0; i < startText.length; i++) {
@@ -1122,7 +1121,7 @@ bot.on('message', msg => {
 						msg.channel.send("Weegeebot now speaks English!");
 						break;
 					default:
-						msg.channel.send(langList);
+						msg.channel.send("``en`` (English), ``de`` (Deutsch)");
 				}
 				//saves lang data
 				fs.writeFile("./lang.json", JSON.stringify(lang), (err) => {
