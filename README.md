@@ -73,11 +73,8 @@ This example would start bot.bat with German language settings and start it in d
 | -Param    |	Meaning/Impact                                                  |
 |-----------|-------------------------------------------------------------------|
 |-de 	    |Starts C'Man and Weegeebot with German settings.                   |
-|-----------|-------------------------------------------------------------------|
 |-en 	    |Starts C'Man and Weegeebot with English settings, default language.|
-|-----------|-------------------------------------------------------------------|
--debug 	    |Displays directly the loading steps and decreases some program-internal restrictions to deliver a first hint where an issue may lie.|
-|-----------|-------------------------------------------------------------------|
+|-debug     |Displays directly the loading steps and decreases some program-internal restrictions to deliver a first hint where an issue may lie.|
 
 -direct 	
 
