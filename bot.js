@@ -1,11 +1,13 @@
-﻿const Discord = require("discord.js");
-const bot = new Discord.Client();
-const request = require("snekfetch"); //allows usage of other APIs
-const fs = require("fs"); //file system
-const data = require("./data.json"); //general data
-const lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")); //language data Daenk U adam
-const pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
-const langList = "``en`` (English), ``de`` (Deutsch)"; //list of languages
+﻿const Discord = require("discord.js"),
+	bot = new Discord.Client(),
+	request = require("snekfetch"), //allows usage of other APIs
+	fs = require("fs"), //file system
+	data = require("./data.json"), //general data
+	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
+	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")),
+	langList = "``en`` (English), ``de`` (Deutsch)"; //list of languages
+	
+var arg, date, sLang, sPre, com; //variables that are used for messages
 
 //arrays for random commands
 const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
@@ -127,7 +129,8 @@ const ass = ["https://i.imgur.com/sX6Raen.jpg",
 	"http://i.imgur.com/0SWRNrw.jpg?1",
 	"http://i.imgur.com/u72N1zt.jpg",
 	"http://i.imgur.com/ZmeFH5G.jpg"];
-const cancer = ["https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeline_pic/abe14ab8ffd/818c9b73ece81a8a5b194/med_1470851871_image.jpg",
+const cancer = [
+	"https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeline_pic/abe14ab8ffd/818c9b73ece81a8a5b194/med_1470851871_image.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_2a6dc4_5456948.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_a38706_5518614.jpg",
 	"https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/13187990_1716864618575897_1185520412_n.jpg?ig_cache_key=MTI1MzczMTI2NDY5MTE5NjY3Mw%3D%3D.2",
@@ -428,8 +431,7 @@ const ascii = [
 
 //Role Checker -- Checks if a user has a role
 function role(msg, r) {
-	if (msg.member.hasPermission(r)) return true; //has the role admin or other needed role
-	else return false; //has no role
+	return(msg.member.hasPermission(r)); //returns if member 
 }
 
 //Console Logbook -- standardizes logbook messages
@@ -486,7 +488,9 @@ function fraktur(text) {
 
 //add -- merges arguments into one
 function add(start, msg) {
-	return msg.content.split(" ").slice(start).join(" ").replace(/@everyone/g, "@\u200Beveryone").replace(/@here/g, "@\u200Bhere");
+	return msg.content.split(" ").slice(start).join(" ")
+		.replace(/@everyone/g, "@\u200Beveryone")
+		.replace(/@here/g, "@\u200Bhere");
 }
 
 //Login processes -- Things to do when a login is successful
@@ -514,12 +518,12 @@ bot.on('message', msg => {
 	if (msg.content == data.reset) process.exit(1);	//restart system
 
 	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
-
-	var arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
-		date = new Date(); //current date
-		sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
-		sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
-		com = arg[0].toLowerCase().slice(sPre.length); //command value
+	
+	arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
+	date = new Date(); //current date
+	sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
+	sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
+	com = arg[0].toLowerCase().slice(sPre.length); //command value
 	
 	if(!msg.content.startsWith(sPre)) return;
 	
