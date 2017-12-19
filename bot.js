@@ -12,7 +12,7 @@
 	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
 	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
 
-var arg, date, sLang, sPre, com; //variables that are used for messages
+var arg, date, r, sLang, sPre, com; //variables that are used for messages
 
 //arrays for random commands
 const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
@@ -534,7 +534,7 @@ bot.on('message', msg => {
 
 	//-------ENGLISH-BOT--------
 	if (sLang == "en") {
-		var r = require("./en.json"); //uses responses from en.json
+		r = require("./en.json"); //uses responses from en.json
 		//help (probably the most important command there is)
 		if (com == "help") {
 			msg.author.send(`*Greetings, ${msg.author.username}. I am Weegeebot, your helpful Discord Bot. Here are my commands:*`);
@@ -594,7 +594,7 @@ bot.on('message', msg => {
 
 	//-------DEUTSCHER-BOT------
 	else if (sLang == "de") {
-		var r = require("./de.json"); //nutzt Antworten von de.json
+		r = require("./de.json"); //nutzt Antworten von de.json
 		//hilfe (wohl der wichtigste Befehl)
 		if (com == "help" || com == "hilfe") {
 			msg.author.send(`*Hallo, ${msg.author.username}. Ich bin Herr Weegee, dein treuer Discordbot. Ich habe folgende Befehle:*`);
