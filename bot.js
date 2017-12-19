@@ -952,11 +952,11 @@ bot.on('message', msg => {
 					msg.channel.send(r.avatarError);
 				} else {
 					var url = msg.mentions.users.first().avatarURL.split("?");
-					msg.channel.send(url[1]);
+					msg.channel.send(url[0]);
 				}
 			} else {
 				var url = msg.author.avatarURL.split("?");
-				msg.channel.send(msg.author.avatarURL); //posts author's avatar if there is no argument
+				msg.channel.send(url[0]); //posts author's avatar if there is no argument
 			}
 			cmdLog('avatar', msg);
 			break;
