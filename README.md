@@ -55,29 +55,29 @@ CMan has been created to significantally facilitate the management of Weegeebot 
 ``autorun.dat``
 
 As one of the most important inventions, CMan delivers a powerful tool to liberately configure the start-up process by the file autorun.dat, available in the CMan folder. It follows an example:
-```batch
-start pm2 start bot.js --name="bot-EN"
-start pm2 start %CD%\de\bot-de.js --name="bot-DE" 
+```powershell
+start pm2 start bot.js --name="bot"
 ```
-C'Man now processes two commands at once: In the first line, the English bot.js would be startet with the internal name "bot-EN". The same thing is theoretically done by the second comment, only differ by the fact it starts the German JS file and delegates the name "bot-DE" to it. As you see, this already saves you two different commands and a fair amount of time.
-Parameters
+C'Man now processes two commands at once: In the first line, the English `bot.js` would be started with the internal name "bot".
+
+### Parameters
 
 Parameters allow C'Man to quickly change its behavior before it has been started. Basically, the principle of a C'Man parameter follow the pattern -parameter, with a dash preceeding the name.
 
 An example for a line that starts C'Man with parameters:
 
-`    cman.bat -debug -de -port`
+`cman.bat -debug -de -port`
 
-This example would start bot.bat with German language settings and start it in debug and portable mode. Below, you can see the list of available parameters in C'Man:
+This example would start CMan with German language settings and start it in debug and portable mode. Below, you can see the list of available parameters in C'Man:
 
-| Parameter |	Meaning/Impact                                                  |
-|-----------|-------------------------------------------------------------------|
-|-de 	    |Starts C'Man and Weegeebot with German settings.                   |
-|-en 	    |Starts C'Man and Weegeebot with English settings, default language.|
+| Parameter |	Meaning/Impact                                                    |
+|-----------|--------------------------------------------------------------------|
+|-de 	      |Starts C'Man and Weegeebot with German settings.                    |
+|-en 	      |Starts C'Man and Weegeebot with English settings, default language. |
 |-debug     |Displays directly the loading steps and decreases some program-internal restrictions to deliver a first hint where an issue may lie.|
 |-direct    |Skips the menu and executes autorun.dat directly.|
 |-nodemon   |Default application mode, starts Weegeebot over nodemon.js.|
-|-port 	    |Avoids loading from the `%appdata%` cache and saves all data only in the local CMan instance. Necessary if multiple users need access to C'Man, for example on Dropbox or an FTP server. Note that in this case, C'Man can only started inside the same ordner as Weegeebot is.|
+|-port 	    |Avoids loading from the `%appdata%` cache and saves all data only in the local CMan instance. Necessary if multiple users need access to C'Man, for example on Dropbox or an FTP server. Note that in this case, C'Man can only started inside the same folder as Weegeebot is.|
 
 Another way to apply parameters is by using shortcuts. They allow to attach parameters for the application and are a handy way to manage different modes for Weegeebot.
 
