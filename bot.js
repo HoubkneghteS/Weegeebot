@@ -1,7 +1,10 @@
 ﻿const Discord = require("discord.js"),
 	bot = new Discord.Client({ disabledEvents:[
 		"TYPING_START",
-		"GUILD_SYNC"
+		"GUILD_SYNC",
+		"VOICE_STATE_UPDATE",
+		"VOICE_SERVER_UPDATE",
+		"MESSAGE_REACTION_ADD"
 	] }),
 	request = require("snekfetch"), //allows usage of other APIs
 	fs = require("fs"), //file system
@@ -497,8 +500,8 @@ function add(start, msg) {
 
 //Login processes -- Things to do when a login is successful
 bot.on('ready', () => {
-	console.log('Login was successful m8' + '\nServercount:' + bot.guilds.size + '\nServerlist: ' + bot.guilds.array()); //login message
-	bot.user.setGame(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`); //watching message
+	console.log(`Login was successful m8\nServercount: ${bot.guilds.size}\nServerlist: ${bot.guilds.array()}`); //login message
+	bot.user.setGame(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`); //status message
 
 	//logs servercount -- not necessary for standard use
 	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
