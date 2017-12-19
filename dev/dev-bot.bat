@@ -1,0 +1,1 @@
+nodemon BOT-DEV.js -debug

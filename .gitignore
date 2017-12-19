@@ -66,6 +66,5 @@ CMan/
 *.url
 Area 51/
 .dropbox
-dev/
 .vscode/
 package-lock.json
