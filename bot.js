@@ -951,9 +951,11 @@ bot.on('message', msg => {
 				if (msg.guild.member(msg.mentions.users.first()) == null) { //checks if no user is mentioned
 					msg.channel.send(r.avatarError);
 				} else {
-					msg.channel.send(msg.mentions.users.first().avatarURL);
+					var url = msg.mentions.users.first().avatarURL.split("?");
+					msg.channel.send(url[1]);
 				}
 			} else {
+				var url = msg.author.avatarURL.split("?");
 				msg.channel.send(msg.author.avatarURL); //posts author's avatar if there is no argument
 			}
 			cmdLog('avatar', msg);
