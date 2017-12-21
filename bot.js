@@ -54,13 +54,13 @@ const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-a
 	"https://vignette3.wikia.nocookie.net/thefakegees/images/0/06/Papa_Weegee1.png/revision/latest?cb=20131204012924",
 	"https://i.ytimg.com/vi/5Wk4gVuNMng/maxresdefault.jpg",
 	"http://orig04.deviantart.net/9b0b/f/2009/196/e/a/weegee_and_vegeta_by_auragiratina.png",
-	"https://cdn.discordapp.com/attachments/298993914126270464/358419983270936576/IMG_1732.JPG"];
-const nuke = ["https://upload.wikimedia.org/wikipedia/commons/c/c7/Explosions.jpg",
+	"https://cdn.discordapp.com/attachments/298993914126270464/358419983270936576/IMG_1732.JPG"],
+	nuke = ["https://upload.wikimedia.org/wikipedia/commons/c/c7/Explosions.jpg",
 	"https://upload.wikimedia.org/wikipedia/commons/3/31/NTS_-_BEEF_-_WATUSI.jpg",
 	"http://dailyreckoning.com/dr-content/uploads/2013/11/Nuke-650x360.jpg",
 	"https://i.ytimg.com/vi/6JKUf8GrX3w/maxresdefault.jpg",
-	"https://i.ytimg.com/vi/fNRACDfCYZk/maxresdefault.jpg"];
-const boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
+	"https://i.ytimg.com/vi/fNRACDfCYZk/maxresdefault.jpg"],
+	boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
 	"https://i.imgur.com/5vAhNye.jpg?1",
 	"https://i.imgur.com/3nSy4NI.jpg",
 	"https://i.imgur.com/DlzGBBe.jpg",
@@ -79,8 +79,8 @@ const boobs = ["https://i.imgur.com/FNIQSVc.jpg?1",
 	"https://i.redd.it/bwcz3pztamxz.jpg",
 	"https://i.imgur.com/na6ss0K.jpg",
 	"https://i.imgur.com/k495Tso.jpg",
-	"https://i.redd.it/8hjwyohojlxz.png"];
-const pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwEQdhsrGE/s1600/cute-penguin1.jpg",
+	"https://i.redd.it/8hjwyohojlxz.png"],
+	pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tqwEQdhsrGE/s1600/cute-penguin1.jpg",
 	"http://images5.fanpop.com/image/photos/26400000/PENGUINS-OF-FACE-MEMES-penguins-of-madagascar-26462995-500-281.png",
 	"http://www.natureart.cz/images/gallery/01-2009-5825.jpg",
 	"http://www.desktopwallpaperhd.net/wallpapers/14/0/landscapes-background-penguin-animal-143248.jpg",
@@ -94,8 +94,8 @@ const pengu = ["http://2.bp.blogspot.com/-v-nHXmn-FHw/TgGvoz9_OpI/AAAAAAAADpw/tq
 	"http://wildography.co.uk/wp-content/uploads/2012/11/penguin-chicks-in-snow-hill-island-antartica-by-robert-harding.jpg",
 	"http://tierbildergalerie.com/data/media/96/lustig_pinguin.jpg",
 	"http://www.tierbildergalerie.com/data/media/96/witzige_pinguin.jpg",
-	"http://1.bp.blogspot.com/-b-lDZrTyrAU/Tv293VXBRjI/AAAAAAAAEFA/THo6V_1Vwlg/s1600/Emperor-Penguin-05.jpg"];
-const flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵🔵🔵🔵🔵🔵🔵\n⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪", //finland
+	"http://1.bp.blogspot.com/-b-lDZrTyrAU/Tv293VXBRjI/AAAAAAAAEFA/THo6V_1Vwlg/s1600/Emperor-Penguin-05.jpg"],
+	flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵🔵🔵🔵🔵🔵🔵\n⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪", //finland
 	"🔵🔵🔵🔴🔴🔴🔴🔴🔴\n🔵🔵🔵⚪⚪⚪⚪⚪⚪\n🔵🔵🔵🔴🔴🔴🔴🔴🔴\n⚪⚪⚪⚪⚪⚪⚪⚪⚪\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n⚪⚪⚪⚪⚪⚪⚪⚪⚪", //usa
 	"🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴\n🔵🔵🔵⚪⚪⚪🔴🔴🔴", //france
 	"⚫⚫⚫⚫⚫⚫⚫⚫⚫\n⚫⚫⚫⚫⚫⚫⚫⚫⚫\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n🔴🔴🔴🔴🔴🔴🔴🔴🔴\n🔶🔶🔶🔶🔶🔶🔶🔶🔶\n🔶🔶🔶🔶🔶🔶🔶🔶🔶", //germany
@@ -113,8 +113,8 @@ const flag = ["⚪⚪🔵⚪⚪⚪⚪⚪\n⚪⚪🔵⚪⚪⚪⚪⚪\n🔵🔵�
 	"🔵🔵🔶🔵🔵🔵🔵🔵\n🔵🔵🔶🔵🔵🔵🔵🔵\n🔶🔶🔶🔶🔶🔶🔶🔶\n🔵🔵🔶🔵🔵🔵🔵🔵\n🔵🔵🔶🔵🔵🔵🔵🔵", //sweden
 	"⚪⚪⚪⚪⚪⚪\n⚪⚪⚪⚪⚪⚪\n🔴🔴🔴🔴🔴🔴\n🔴🔴🔴🔴🔴🔴", //poland
 	"⚪⚪⚪⚪⚪⚪⚪⚪\n⚪⚪⚪🔴🔴⚪⚪⚪\n⚪⚪🔴🔴🔴🔴⚪⚪\n⚪⚪🔴🔴🔴🔴⚪⚪\n⚪⚪⚪🔴🔴⚪⚪⚪\n⚪⚪⚪⚪⚪⚪⚪⚪" //japan
-];
-const ass = ["https://i.imgur.com/sX6Raen.jpg",
+],
+	ass = ["https://i.imgur.com/sX6Raen.jpg",
 	"http://i.imgur.com/5Za9QY5.jpg",
 	"https://i.redd.it/2w1g207j39yz.jpg",
 	"https://i.imgur.com/hONKsBo.jpg?1",
@@ -133,8 +133,8 @@ const ass = ["https://i.imgur.com/sX6Raen.jpg",
 	"https://imgur.com/FOPuJ1a",
 	"http://i.imgur.com/0SWRNrw.jpg?1",
 	"http://i.imgur.com/u72N1zt.jpg",
-	"http://i.imgur.com/ZmeFH5G.jpg"];
-const cancer = [
+	"http://i.imgur.com/ZmeFH5G.jpg"],
+	cancer = [
 	"https://coubsecure-s.akamaihd.net/get/b87/p/coub/simple/cw_timeline_pic/abe14ab8ffd/818c9b73ece81a8a5b194/med_1470851871_image.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_2a6dc4_5456948.jpg",
 	"https://new3.fjcdn.com/pictures/Furry_a38706_5518614.jpg",
@@ -173,8 +173,8 @@ const cancer = [
 	"https://img.ifcdn.com/images/1bf0ff8c2e9bfa001672543ee75e442f96b68535b8c08866943ef55ffa653c42_1.jpg",
 	"http://media.japanpowered.com/images/desu-meme.jpg",
 	"https://i.pinimg.com/736x/85/49/9f/85499f071ff46849df2ec5cc668af2a8--google-search-weeaboo-cringe.jpg",
-	"https://i.ytimg.com/vi/5QvgLlFyeok/hqdefault.jpg"];
-const ascii = [
+	"https://i.ytimg.com/vi/5QvgLlFyeok/hqdefault.jpg"],
+	ascii = [
 	"\n░█████░░░░░█████░" +
 	"\n█░░░░░█░░░█░░░░░█" +
 	"\n░░███░░░░░░░███░░█" +
