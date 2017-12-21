@@ -454,9 +454,11 @@ bot.on("error", (e) => console.error(e));
 bot.on("warn", (e) => console.warn(e));
 
 //True or False -- gives two options
-function tf(o1, o2) {
-	if (Math.random() >= 0.5) return o1;
-	else return o2;
+function tf(option1, option2) {
+	let reply = (Math.random() >= 0.5)
+		? option1 //option 1
+		: option2; //option 2
+	return reply;
 }
 
 //mem -- converts to  m e m e t e x t
@@ -1077,7 +1079,7 @@ bot.on('message', msg => {
 			if (role(msg, "MANAGE_MESSAGES")) {
 				if (arg[1] > 100) msg.channel.send(r.clearError);
 				else {
-					var msgs = parseInt(arg[1]) ? arg[1] : 2; //determines msgs with default of 2
+					var msgs = arg[1] ? parseInt(arg[1]) : 2; //determines msgs with default of 2
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)); //deletes messages
