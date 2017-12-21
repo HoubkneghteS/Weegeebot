@@ -37,10 +37,10 @@ bot.on('message', msg => {
 		msg.channel.send("**Commands:** ``b&serverlist``, ``b&eval``, ``b&leave``, ``b&invite``");
 		break;
 	case "serverlist":
-		var length = bot.guilds.size - 1;
-		for(var i = 0; i <= length; i++) {
-			var ida = (!bot.guilds.array()[i]) ? "undefined" : bot.guilds.array()[i].id
-			msg.channel.send("``["+i+"] "+bot.guilds.array()[i] + " - " + ida + "``");
+		var i;
+		for(i in bot.guilds.array()) {
+			var serverId = (!bot.guilds.array()[i]) ? "undefined" : bot.guilds.array()[i].id;
+			msg.channel.send("``["+i+"] "+bot.guilds.array()[i] + " - " + serverId + "``");
 		}
 		break;
 	case "eval":

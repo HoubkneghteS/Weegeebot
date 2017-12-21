@@ -514,6 +514,22 @@ bot.on('ready', () => {
 		.catch(err => console.error(`Fuck look at this: ${err.body}`));
 });
 
+//guild add responce -- logs guild being joined
+bot.on("guildCreate", guild => {
+
+	date = new Date(); //current date
+	console.log(`Bot joined ${guild.name} [${date}]`);
+
+});
+
+//guild delete responce -- logs guild being left
+bot.on("guildDelete", guild => {
+
+	date = new Date(); //current date
+	console.log(`Bot left ${guild.name} [${date}]`);
+
+});
+
 //Login -- Logs code into Weegeebot (please no touchy)
 bot.login(data.key);
 
