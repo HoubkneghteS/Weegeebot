@@ -1026,15 +1026,6 @@ bot.on('message', msg => {
 			}
 			cmdLog("vapor", msg);
 			break;
-		//memetext command
-		case "memetext":
-			if (arg.length < 2) msg.channel.send(mem(r.msgError));
-			else {
-				msg.delete();
-				msg.channel.send(mem(add(1, msg)));
-			}
-			cmdLog("memetext", msg);
-			break;
 		//say (says what you say)
 		case r.say:
 			if (arg.length < 2) msg.channel.send(r.msgError);
