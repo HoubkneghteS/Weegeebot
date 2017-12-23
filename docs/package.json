@@ -1,5 +1,5 @@
 {
-  "name": "Weegeebot",
+  "name": "weegeebot",
   "version": "0.6.0",
   "description": "A custom and open-source discord bot",
   "main": "bot.js",
@@ -17,7 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/HoubkneghteS/Weegeebot.git"
   },
-  "keywords": ["discord", "bot"],
+  "keywords": [
+    "discord",
+    "bot"
+  ],
   "author": "HoubkneghteS",
   "license": "Nolicence",
   "bugs": {
