@@ -631,7 +631,7 @@ bot.on('message', msg => {
 			msg.author.send("```ini\nAdminbefehle = Man braucht Admin-Berechtigungen, um sie zu verwenden" +
 				"\nsprache [de/en]               # wechselt die Sprache zwischen Deutsch und Englisch" +
 				"\nlösche [Nummer]               # löscht Nachrichten" +
-				"\nprefix [Prefix]               # ändert den Bot-Prefix" +
+				"\nprefix [Präfix]               # ändert das Bot-Präfix" +
 				"\nwarn [@Nutzer] [Grund]        # warnt den erwähnten Benutzer, indem dir und ihm eine PN geschickt wird" +
 				"\nbann [@Nutzer] [Grund]        # bannt den Benutzer, und schickt ihm und dir eine Nachricht" +
 				"\nkick [@Nutzer] [Grund]        # kickt den Benutzer; er kann aber sofort zurückkommen" +
