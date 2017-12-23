@@ -58,6 +58,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Custom files
 data.json
 lang.json
 desktop.ini
