@@ -1,4 +1,4 @@
-# Contributor Covenant Code of Conduct
+# Weegeebot stuff
 
 ## Our Pledge
 
