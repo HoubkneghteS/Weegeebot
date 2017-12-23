@@ -1,7 +1,7 @@
 {
   "name": "weegeebot",
   "version": "0.6.0",
-  "description": "A custom and open-source discord bot",
+  "description": "A custom and open-source Discordbot",
   "main": "bot.js",
   "directories": {
     "doc": "docs"
@@ -19,9 +19,11 @@
   },
   "keywords": [
     "discord",
-    "bot"
+    "bot",
+    "discord.js"
   ],
   "author": "HoubkneghteS",
+  "otherAuthor": "Fniux",
   "license": "Nolicence",
   "bugs": {
     "url": "https://github.com/HoubkneghteS/Weegeebot/issues"
