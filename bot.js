@@ -1,11 +1,9 @@
 ﻿const Discord = require("discord.js"),
-	bot = new Discord.Client({ disabledEvents:[
-		"TYPING_START",
-		"GUILD_SYNC",
-		"VOICE_STATE_UPDATE",
-		"VOICE_SERVER_UPDATE",
-		"MESSAGE_REACTION_ADD"
-	] }),
+	bot = new Discord.Client({
+		disabledEvents: [
+			"RESUMED", "GUILD_SYNC", "GUILD_UPDATE", "GUILD_MEMBER_REMOVE", "GUILD_MEMBER_UPDATE", "GUILD_MEMBERS_CHUNK", "GUILD_ROLE_CREATE", "GUILD_ROLE_DELETE", "GUILD_ROLE_UPDATE", "GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "CHANNEL_CREATE", "CHANNEL_DELETE", "CHANNEL_UPDATE", "CHANNEL_PINS_UPDATE", "MESSAGE_DELETE", "MESSAGE_UPDATE", "MESSAGE_DELETE_BULK", "MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE", "MESSAGE_REACTION_REMOVE_ALL", "USER_UPDATE", "USER_NOTE_UPDATE", "USER_SETTINGS_UPDATE", "USER_GUILD_SETTINGS_UPDATE", "PRESENCE_UPDATE", "VOICE_STATE_UPDATE", "TYPING_START", "VOICE_SERVER_UPDATE", "RELATIONSHIP_ADD", "RELATIONSHIP_REMOVE"
+		]
+	}),
 	request = require("snekfetch"), //allows usage of other APIs
 	fs = require("fs"), //file system
 	data = require("./data.json"), //general data
@@ -435,8 +433,8 @@ const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-a
 	"\n[█▓]"];
 
 //Role Checker -- Checks if a user has a role
-function role(msg, r) {
-	return msg.member.hasPermission(r); //returns if member has perm
+function role(msg, role) {
+	return msg.member.hasPermission(role); //returns if member has perm
 }
 
 //Console Logbook -- standardizes logbook messages
@@ -888,6 +886,7 @@ bot.on('message', msg => {
 				`\n< ${r.serverage} 📅> \n ${msg.guild.createdAt}` +
 				`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}` +
 				`\n< ${r.region} 🗺️> \n ${msg.guild.region}` +
+				`\n< ${r.lang} 🗺> \n ${sLang}` +
 				`\n< ${r.serverID} > \n ${msg.guild.id}` +
 				"```");
 			cmdLog("serverinfo", msg);

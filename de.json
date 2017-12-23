@@ -169,6 +169,7 @@
 	"membercount": "Mitgliederanzahl",
 	"owner": "Eigentümer",
 	"region": "Region",
+	"lang": "Sprache",
 	"serverage": "Serveralter",
 	"serverID": "Server-ID"
 }
