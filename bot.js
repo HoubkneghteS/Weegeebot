@@ -865,20 +865,18 @@ bot.on('message', msg => {
 			break;
 		//whois (results in user infos)
 		case r.whois:
-			if (msg.mentions.users.first() == null || arg.length < 2) msg.channel.send(r.whoisError);
-			else {
-				var nickname = msg.guild.member(msg.mentions.users.first()).nickname ? msg.guild.member(msg.mentions.users.first()).nickname : r.none;
-				msg.channel.send("```md" +
-					`\n${r.whoisEntry} ${msg.mentions.users.first().username}:` +
-					"\n---------------" +
-					`\n< ${r.username} > \n ${msg.mentions.users.first().tag}` +
-					`\n< ${r.nickname} > \n ${nickname}` +
-					`\n< ${r.bot} 🤖> \n ${msg.mentions.users.first().bot}` +
-					`\n< ${r.status} > \n ${msg.mentions.users.first().presence.status}` +
-					`\n< ${r.joindate} 📅> \n ${msg.mentions.users.first().createdAt}` +
-					`\n< ${r.userID} > \n ${msg.mentions.users.first().id}` +
-					"```");
-			}
+			var whoIsUser = msg.mentions.users.first() || msg.author;
+			var nickname = msg.guild.member(whoIsUser).nickname || r.none;
+			msg.channel.send("```md" +
+				`\n${r.whoisEntry} ${whoIsUser.username}:` +
+				"\n---------------" +
+				`\n< ${r.username} > \n ${whoIsUser.tag}` +
+				`\n< ${r.nickname} > \n ${nickname}` +
+				`\n< ${r.bot} 🤖> \n ${whoIsUser.bot}` +
+				`\n< ${r.status} > \n ${whoIsUser.presence.status}` +
+				`\n< ${r.joindate} 📅> \n ${whoIsUser.createdAt}` +
+				`\n< ${r.userID} > \n ${whoIsUser.id}` +
+				"```");
 			cmdLog("whois", msg);
 			break;
 		//serverinfo (results in server infos)
