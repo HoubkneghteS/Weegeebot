@@ -1,0 +1,27 @@
+{
+  "name": "Weegeebot",
+  "version": "0.6.0",
+  "description": "A custom and open-source discord bot",
+  "main": "bot.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoubkneghteS/Weegeebot.git"
+  },
+  "keywords": ["discord", "bot"],
+  "author": "HoubkneghteS",
+  "license": "Nolicence",
+  "bugs": {
+    "url": "https://github.com/HoubkneghteS/Weegeebot/issues"
+  },
+  "homepage": "https://github.com/HoubkneghteS/Weegeebot#readme"
+}
