@@ -535,8 +535,8 @@ bot.on('message', msg => {
 
 	arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
 	date = new Date(); //current date
-	sLang = lang[msg.guild.id] ? lang[msg.guild.id] : "en"; //server lang
-	sPre = pre[msg.guild.id] ? pre[msg.guild.id] : data.pre //server prefix
+	sLang = lang[msg.guild.id]  || "en"; //server lang
+	sPre = pre[msg.guild.id] || data.pre //server prefix
 	com = arg[0].toLowerCase().slice(sPre.length); //command value
 
 	if (!msg.content.startsWith(sPre)) return;
@@ -956,16 +956,12 @@ bot.on('message', msg => {
 			break;
 		//avatar
 		case r.avatar:
-			if (arg.length == 2) {
-				if (msg.guild.member(msg.mentions.users.first()) == null) { //checks if no user is mentioned
-					msg.channel.send(r.avatarError);
-				} else {
-					var url = msg.mentions.users.first().avatarURL.split("?");
-					msg.channel.send(url[0]);
-				}
+			if (!msg.mentions.users.first() && arg.length > 1) { //checks if no user is mentioned
+				msg.channel.send(r.avatarError);
 			} else {
-				var url = msg.author.avatarURL.split("?");
-				msg.channel.send(url[0]); //posts author's avatar if there is no argument
+				var userAvatar = msg.mentions.users.first() || msg.author;
+				var url = userAvatar.avatarURL.split("?");
+				msg.channel.send(url[0]);
 			}
 			cmdLog('avatar', msg);
 			break;
@@ -982,7 +978,7 @@ bot.on('message', msg => {
 			break;
 		//dice
 		case r.dice:
-			var maxSides = arg[1] ? arg[1] : 6; //default value is 6
+			var maxSides = arg[1] || 6; //default value is 6
 			var dice = Math.floor(Math.random() * (maxSides)) + 1; //generates dice value
 			if (maxSides < 0) {
 				if (dice > maxSides) msg.channel.send(r.diceBad + `${dice}! 🎲`);
@@ -1070,7 +1066,7 @@ bot.on('message', msg => {
 			if (role(msg, "MANAGE_MESSAGES")) {
 				if (arg[1] > 100) msg.channel.send(r.clearError);
 				else {
-					var msgs = arg[1] ? parseInt(arg[1]) : 2; //determines msgs with default of 2
+					var msgs = parseInt(arg[1]) || 2; //determines msgs with default of 2
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)); //deletes messages
