@@ -170,8 +170,8 @@
 	"lang": "Sprache",
 	"serverage": "Serveralter",
 	"serverID": "Server-ID",
-	"welcome":"Hallo und Willkommen zum Server",
-	"welcomeName":"willkommen",
-	"welcomeSet":"Kanal für Willkommens-Nachrichten wurde festgelegt!",
-	"welcomeReset":"Kanal für Willkommens-Nachrichten wurde entfernt!"
+	"welcome": "Hallo und Willkommen zum Server",
+	"welcomeName": "willkommen",
+	"welcomeSet": "Kanal für Willkommens-Nachrichten wurde festgelegt!",
+	"welcomeReset": "Kanal für Willkommens-Nachrichten wurde entfernt!"
 }
