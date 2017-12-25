@@ -170,8 +170,8 @@
 	"lang": "Language",
 	"serverage": "Server Age",
 	"serverID": "Server ID",
-	"welcome":"Hello and welcome to the server",
-	"welcomeName":"welcome",
-	"welcomeSet":"Channel for welcome messages has been set!",
-	"welcomeReset":"Channel for welcome messages has been reset!"
+	"welcome": "Hello and welcome to the servegit commit -m 'restoring the file I removed by accident'r",
+	"welcomeName": "welcome",
+	"welcomeSet": "Channel for welcome messages has been set!",
+	"welcomeReset": "Channel for welcome messages has been reset!"
 }
