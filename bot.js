@@ -438,7 +438,7 @@ function role(msg, role) {
 	return msg.member.hasPermission(role); //returns if member has perm
 }
 
-//Console Logbook -- standardizes logbook messages
+//Command Logbook -- standardizes logbook messages
 function cmdLog(str, msg) {
 	console.log(`${str} - ${msg.author.username} [${date}] [${sLang}]`);
 }
@@ -538,6 +538,7 @@ bot.on("guildMemberAdd", member => {
 
 	//sends welcome message
 	welcomeGuild.channels.get(welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`);
+	console.log(`${member.user.username} joined ${member.server.name} [${date}] [${sLang}]`); //logbook
 });
 
 //Login -- Logs code into Weegeebot (please no touchy)
