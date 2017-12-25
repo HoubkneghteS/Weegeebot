@@ -845,8 +845,7 @@ bot.on('message', msg => {
 		//ecchi (anime titties)
 		case "ecchi":
 			if (msg.channel.nsfw == true) {
-				var query = add(1, msg).replace(/ /g, "%20") || "boobs%20ass";
-				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=" + query)
+				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
 					.then(r => msg.channel.send(r.body[Math.floor(Math.random() * 100)].file_url));
 			} else {
 				msg.channel.send(r.nsfw);
