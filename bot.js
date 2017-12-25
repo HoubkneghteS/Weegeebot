@@ -8,8 +8,8 @@
 	fs = require("fs"), //file system
 	data = require("./data.json"), //general data
 	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
-	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")); //prefix data
-welcome = JSON.parse(fs.readFileSync("./welcome.json", "utf8")); //welcome data
+	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")), //prefix data
+	welcome = JSON.parse(fs.readFileSync("./welcome.json", "utf8")); //welcome data
 
 var arg, date, r, sLang, sPre, com; //variables that are used for messages
 
@@ -845,7 +845,8 @@ bot.on('message', msg => {
 		//ecchi (anime titties)
 		case "ecchi":
 			if (msg.channel.nsfw == true) {
-				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
+				var query = add(1, msg).replace(/ /g, "%20") || "boobs%20ass";
+				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=" + query)
 					.then(r => msg.channel.send(r.body[Math.floor(Math.random() * 100)].file_url));
 			} else {
 				msg.channel.send(r.nsfw);

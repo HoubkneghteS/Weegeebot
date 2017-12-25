@@ -284,7 +284,7 @@ if not exist "%rundir%\cfg\wincolor.cfg" echo default>>"%rundir%\cfg\wincolor.cf
 if not exist "%rundir%\cfg\graph.cfg" echo console>>"%rundir%\cfg\graph.cfg"
 
 if not exist "%rundir%\import\script\HelloWorld.txt" (
-echo echo Buenos D¡as! >> "%rundir%\import\script\HelloWorld.txt"
+echo echo Buenos Dï¿½as! >> "%rundir%\import\script\HelloWorld.txt"
 echo start "SHED.MOV" "https://www.youtube.com/watch?v=cH-yA8U2XgI" >> "%rundir%\import\script\HelloWorld.txt"
 )
 
@@ -294,7 +294,7 @@ echo ;Initialize your custom command batch here after 'start'! >> "%rundir%\auto
 echo ;Regard that npm modules need to have a previous 'start' command, so instead of 'pm2 start thuglife.js', you need to enter 'start pm2 start thuglife.js'. >> "%rundir%\autorun.dat"
 echo ;This is thought to prevent a batch breakdown and thus an unwanted interruption of C'Man. >> "%rundir%\autorun.dat"
 echo ;_______________________________________________________ >> "%rundir%\autorun.dat"
-echo start pm2 start bot.js --name="bot-EN" >> "%rundir%\autorun.dat"
+echo start pm2 start bot.js --name="Weegeebot" >> "%rundir%\autorun.dat"
 )
 REM WeegeeBot
 if not exist "%rundir%\cfg\weegeebot\mode.cfg" echo pm2>> "%rundir%\cfg\weegeebot\mode.cfg"
@@ -376,10 +376,10 @@ if not "%com%"=="true" set graphmode=console
 
 if not "%debug%"=="true" cls
 if "%debug%"=="true" echo]
-if "%debug%"=="true" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if not "%debug%"=="true" echo C'Man Ver. %ver%   ³
-if "%debug%"=="true" echo C'Man Ver. %ver%   ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%debug%"=="true" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if not "%debug%"=="true" echo C'Man Ver. %ver%   ï¿½
+if "%debug%"=="true" echo C'Man Ver. %ver%   ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 title C'Man %ver%
 REM Choose Color
 if "%color%"=="default" color 0f
@@ -398,7 +398,7 @@ if "%color%"=="santa" color 4e
 if "%color%"=="matrix" color 0a
 if "%color%"=="skyward" color 1e
 set exec=echo]
-set /p exec=¯ 
+set /p exec=ï¿½ 
 
 :ccheck
 REM COMMAND CHECK
@@ -459,7 +459,7 @@ if "%exec%"=="farbe" goto color
 if "%exec%"=="color" goto color
 
 REM credit
-if "%exec%"=="ber" goto about
+if "%exec%"=="ï¿½ber" goto about
 if "%exec%"=="about" goto about
 
 REM nodemon 
@@ -497,7 +497,7 @@ if "%exec%"=="install" goto install
 
 REM digit
 if not "%lang%"=="de" if "%exec%"=="MayTheForceBeWithYou" goto digit
-if "%lang%"=="de" if "%exec%"=="M”geDieMachtMitDirSein" goto digit
+if "%lang%"=="de" if "%exec%"=="Mï¿½geDieMachtMitDirSein" goto digit
 
 REM debug
 if "%exec%"=="debug"=="node" goto start_weegee_debug
@@ -522,90 +522,90 @@ if "%graphmode%"=="window" if not "%lang%"=="de" title Command List
 
 if "%graphmode%"=="window" if "%lang%"=="de" echo Befehlsliste
 if "%graphmode%"=="window" if not "%lang%"=="de" echo Command List
-if "%graphmode%"=="window" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if not "%lang%"=="de" echo ÚÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if not "%lang%"=="de" echo ³                  COMMAND LIST                  º
-if not "%lang%"=="de" echo ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¹
-if not "%lang%"=="de" echo ³about         -  About BotBat for WeegeeBot.    º
-if not "%lang%"=="de" echo ³bot           -  Initializes bot.js.            º
-if not "%graphmode%"=="window" if not "%lang%"=="de" echo ³cls           -  Clears console.                º
-if not "%lang%"=="de" echo ³cmd [on/off]  -  Switch among Windows CMD       º
-if not "%lang%"=="de" echo ³                 and BotBat prompt. Useful in   º
-if not "%lang%"=="de" echo ³                 case of command conflicts.     º
-if not "%lang%"=="de" echo ³color         -  Change console color.          º
-if not "%lang%"=="de" echo ³data          -  Lists all relevant variables.  º
-if not "%lang%"=="de" echo ³restart       -  Restarts Weegeebot using pm2.  º
-if not "%lang%"=="de" echo ³debug         -  Uses node.js instead of        º
-if not "%lang%"=="de" echo ³                 default PM2.                   º
-if not "%lang%"=="de" echo ³                 Useful for debug purposes.     º
-if not "%lang%"=="de" echo ³exe           -  Executes script in import\exe. º
-if not "%lang%"=="de" echo ³exit          -  Determines C'Man cleanly.      º
-if not "%lang%"=="de" echo ³graph         -  Switches to graphical mode.    º
-if not "%lang%"=="de" echo ³install       -  Opens installation menu.       º
-if not "%lang%"=="de" echo ³lang          -  Change language.               º
-if not "%lang%"=="de" echo ³log           -  Shows current logging session. º
-if "%weegeemode%"=="pm2" if not "%lang%"=="de" echo ³monit         -  Monitores all pm2 instances.   º
-if not "%lang%"=="de" echo ³node          -  See 'debug'.                   º
-if not "%lang%"=="de" echo ³nodemon       -  Use nodemon.js to start bot.js,º
-if not "%lang%"=="de" echo ³              -  not recommended.               º
-if not "%lang%"=="de" echo ³path          -  Change server path.            º
-if not "%portable%"=="true" if not "%lang%"=="de" echo ³port          -  Activates portable mode.       º
-if "%portable%"=="true" if not "%lang%"=="de" echo ³port          -  Deactivates portable mode.     º
-if not "%lang%"=="de" echo ³readme        -  Opens ReadMe file.             º
-if not "%lang%"=="de" echo ³reboot        -  Restarts C'Man.                º
-if not "%lang%"=="de" echo ³root          -  Opens server path.             º
-if not "%lang%"=="de" echo ³set           -  Opens settings for C'Man.      º
-if not "%lang%"=="de" echo ³start         -  Executes autorun.dat.          º
-if not "%lang%"=="de" echo ³stop          -  Stops all processes and ter-   º
-if not "%lang%"=="de" echo ³              -  minates C'Man.                 º
-if not "%lang%"=="de" echo ³stopop        -  Like 'stop'; however, C'Man    º
-if not "%lang%"=="de" echo ³              -  stays available.               º
-if not "%lang%"=="de" echo ³support       -  Lists a few ways for support   º
-if not "%lang%"=="de" echo ÀÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if not "%lang%"=="de" echo ï¿½                  COMMAND LIST                  ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹
+if not "%lang%"=="de" echo ï¿½about         -  About BotBat for WeegeeBot.    ï¿½
+if not "%lang%"=="de" echo ï¿½bot           -  Initializes bot.js.            ï¿½
+if not "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½cls           -  Clears console.                ï¿½
+if not "%lang%"=="de" echo ï¿½cmd [on/off]  -  Switch among Windows CMD       ï¿½
+if not "%lang%"=="de" echo ï¿½                 and BotBat prompt. Useful in   ï¿½
+if not "%lang%"=="de" echo ï¿½                 case of command conflicts.     ï¿½
+if not "%lang%"=="de" echo ï¿½color         -  Change console color.          ï¿½
+if not "%lang%"=="de" echo ï¿½data          -  Lists all relevant variables.  ï¿½
+if not "%lang%"=="de" echo ï¿½restart       -  Restarts Weegeebot using pm2.  ï¿½
+if not "%lang%"=="de" echo ï¿½debug         -  Uses node.js instead of        ï¿½
+if not "%lang%"=="de" echo ï¿½                 default PM2.                   ï¿½
+if not "%lang%"=="de" echo ï¿½                 Useful for debug purposes.     ï¿½
+if not "%lang%"=="de" echo ï¿½exe           -  Executes script in import\exe. ï¿½
+if not "%lang%"=="de" echo ï¿½exit          -  Determines C'Man cleanly.      ï¿½
+if not "%lang%"=="de" echo ï¿½graph         -  Switches to graphical mode.    ï¿½
+if not "%lang%"=="de" echo ï¿½install       -  Opens installation menu.       ï¿½
+if not "%lang%"=="de" echo ï¿½lang          -  Change language.               ï¿½
+if not "%lang%"=="de" echo ï¿½log           -  Shows current logging session. ï¿½
+if "%weegeemode%"=="pm2" if not "%lang%"=="de" echo ï¿½monit         -  Monitores all pm2 instances.   ï¿½
+if not "%lang%"=="de" echo ï¿½node          -  See 'debug'.                   ï¿½
+if not "%lang%"=="de" echo ï¿½nodemon       -  Use nodemon.js to start bot.js,ï¿½
+if not "%lang%"=="de" echo ï¿½              -  not recommended.               ï¿½
+if not "%lang%"=="de" echo ï¿½path          -  Change server path.            ï¿½
+if not "%portable%"=="true" if not "%lang%"=="de" echo ï¿½port          -  Activates portable mode.       ï¿½
+if "%portable%"=="true" if not "%lang%"=="de" echo ï¿½port          -  Deactivates portable mode.     ï¿½
+if not "%lang%"=="de" echo ï¿½readme        -  Opens ReadMe file.             ï¿½
+if not "%lang%"=="de" echo ï¿½reboot        -  Restarts C'Man.                ï¿½
+if not "%lang%"=="de" echo ï¿½root          -  Opens server path.             ï¿½
+if not "%lang%"=="de" echo ï¿½set           -  Opens settings for C'Man.      ï¿½
+if not "%lang%"=="de" echo ï¿½start         -  Executes autorun.dat.          ï¿½
+if not "%lang%"=="de" echo ï¿½stop          -  Stops all processes and ter-   ï¿½
+if not "%lang%"=="de" echo ï¿½              -  minates C'Man.                 ï¿½
+if not "%lang%"=="de" echo ï¿½stopop        -  Like 'stop'; however, C'Man    ï¿½
+if not "%lang%"=="de" echo ï¿½              -  stays available.               ï¿½
+if not "%lang%"=="de" echo ï¿½support       -  Lists a few ways for support   ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 
-if "%lang%"=="de" echo ÚÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if "%lang%"=="de" echo ³                     BEFEHLSLISTE                  º
-if "%lang%"=="de" echo ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¹
-if "%lang%"=="de" echo ³bot             -  Initialisiert bot.js.           º
-if not "%graphmode%"=="window" if "%lang%"=="de" echo ³cls             -  Leert Konsole.                  º
-if "%lang%"=="de" echo ³cmd [an/aus]    -  Wechsle zwischen Eingabeauf-    º
-if "%lang%"=="de" echo ³                   forderung und der BotBat-       º
-if "%lang%"=="de" echo ³                   Prompt. Ntzlich, falls Be-     º
-if "%lang%"=="de" echo ³                   Fehlskonflikte bestehen.        º
-if "%lang%"=="de" echo ³daten           -  Listet alle relevanten Variab-  º
-if "%lang%"=="de" echo ³                   len auf.                        º
-if "%lang%"=="de" echo ³debug           -  Nutze node.js statt stan-       º
-if "%lang%"=="de" echo ³                   dardlichem PM2. Ntz-           º
-if "%lang%"=="de" echo ³                   lich fr Debugzwecke.           º
-if "%lang%"=="de" echo ³exe             -  Fhrt Skript in import\exe aus. º
-if "%lang%"=="de" echo ³exit            -  Verl„sst C'Man sauber.          º
-if "%lang%"=="de" echo ³farbe           -  ndert Konsolenfarbe.           º
-if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ³neustart        -  Startet Weegeebot mit PM2 neu.  º
-if "%lang%"=="de" echo ³graph           -  Wechselt zum grafischen Modus.  º
-if "%lang%"=="de" echo ³install         -  ™ffnet Installationsmen.       º
-if "%lang%"=="de" echo ³liesmich        -  ™ffnet LIESMICH-Datei.          º
-if "%lang%"=="de" echo ³log             -  Zeigt aktuellen Loggingverlauf. º
-if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ³monit           -  Gibt einen šberblick ber alle  º
-if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ³                   pm2-Instanzen.                  º
-if "%lang%"=="de" echo ³node            -  Siehe 'debug'.                  º
-if "%lang%"=="de" echo ³nodemon         -  Nutze nodemon.js zum Start,     º
-if "%lang%"=="de" echo ³                   nicht empfohlen.                º
-if "%lang%"=="de" echo ³pfad            -  ndere Betriebspfad.            º
-if "%portable%"=="true" if "%lang%"=="de" echo ³port            -  Deaktiviert Portablemodus.      º
-if not "%portable%"=="true" if "%lang%"=="de" echo ³port            -  Aktiviert Portablemodus.        º
-if "%lang%"=="de" echo ³reboot          -  Startet C'Man neu.              º
-if "%lang%"=="de" echo ³root            -  ™ffnet Serverpfad.              º
-if "%lang%"=="de" echo ³sprache         -  ndere Sprache.                 º
-if "%lang%"=="de" echo ³start           -  Fhrt autorun.dat aus.          º
-if "%lang%"=="de" echo ³stop            -  Stoppt alle Prozesse und been-  º
-if "%lang%"=="de" echo ³                   det C'Man.                      º
-if "%lang%"=="de" echo ³stopop          -  wie 'stop', C'Man bleibt jedoch º
-if "%lang%"=="de" echo ³                   in Betrieb.                     º
-if "%lang%"=="de" echo ³support         -  Listet ein paar Support-Quel-   º
-if "%lang%"=="de" echo ³                   len auf.                        º
-if "%lang%"=="de" echo ³ber            -  šber BotBat fr WeegeeBot.      º
-if "%lang%"=="de" echo ÀÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if "%lang%"=="de" echo ï¿½                     BEFEHLSLISTE                  ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹
+if "%lang%"=="de" echo ï¿½bot             -  Initialisiert bot.js.           ï¿½
+if not "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½cls             -  Leert Konsole.                  ï¿½
+if "%lang%"=="de" echo ï¿½cmd [an/aus]    -  Wechsle zwischen Eingabeauf-    ï¿½
+if "%lang%"=="de" echo ï¿½                   forderung und der BotBat-       ï¿½
+if "%lang%"=="de" echo ï¿½                   Prompt. Nï¿½tzlich, falls Be-     ï¿½
+if "%lang%"=="de" echo ï¿½                   Fehlskonflikte bestehen.        ï¿½
+if "%lang%"=="de" echo ï¿½daten           -  Listet alle relevanten Variab-  ï¿½
+if "%lang%"=="de" echo ï¿½                   len auf.                        ï¿½
+if "%lang%"=="de" echo ï¿½debug           -  Nutze node.js statt stan-       ï¿½
+if "%lang%"=="de" echo ï¿½                   dardlichem PM2. Nï¿½tz-           ï¿½
+if "%lang%"=="de" echo ï¿½                   lich fï¿½r Debugzwecke.           ï¿½
+if "%lang%"=="de" echo ï¿½exe             -  Fï¿½hrt Skript in import\exe aus. ï¿½
+if "%lang%"=="de" echo ï¿½exit            -  Verlï¿½sst C'Man sauber.          ï¿½
+if "%lang%"=="de" echo ï¿½farbe           -  ï¿½ndert Konsolenfarbe.           ï¿½
+if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ï¿½neustart        -  Startet Weegeebot mit PM2 neu.  ï¿½
+if "%lang%"=="de" echo ï¿½graph           -  Wechselt zum grafischen Modus.  ï¿½
+if "%lang%"=="de" echo ï¿½install         -  ï¿½ffnet Installationsmenï¿½.       ï¿½
+if "%lang%"=="de" echo ï¿½liesmich        -  ï¿½ffnet LIESMICH-Datei.          ï¿½
+if "%lang%"=="de" echo ï¿½log             -  Zeigt aktuellen Loggingverlauf. ï¿½
+if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ï¿½monit           -  Gibt einen ï¿½berblick ï¿½ber alle  ï¿½
+if "%weegeemode%"=="pm2" if "%lang%"=="de" echo ï¿½                   pm2-Instanzen.                  ï¿½
+if "%lang%"=="de" echo ï¿½node            -  Siehe 'debug'.                  ï¿½
+if "%lang%"=="de" echo ï¿½nodemon         -  Nutze nodemon.js zum Start,     ï¿½
+if "%lang%"=="de" echo ï¿½                   nicht empfohlen.                ï¿½
+if "%lang%"=="de" echo ï¿½pfad            -  ï¿½ndere Betriebspfad.            ï¿½
+if "%portable%"=="true" if "%lang%"=="de" echo ï¿½port            -  Deaktiviert Portablemodus.      ï¿½
+if not "%portable%"=="true" if "%lang%"=="de" echo ï¿½port            -  Aktiviert Portablemodus.        ï¿½
+if "%lang%"=="de" echo ï¿½reboot          -  Startet C'Man neu.              ï¿½
+if "%lang%"=="de" echo ï¿½root            -  ï¿½ffnet Serverpfad.              ï¿½
+if "%lang%"=="de" echo ï¿½sprache         -  ï¿½ndere Sprache.                 ï¿½
+if "%lang%"=="de" echo ï¿½start           -  Fï¿½hrt autorun.dat aus.          ï¿½
+if "%lang%"=="de" echo ï¿½stop            -  Stoppt alle Prozesse und been-  ï¿½
+if "%lang%"=="de" echo ï¿½                   det C'Man.                      ï¿½
+if "%lang%"=="de" echo ï¿½stopop          -  wie 'stop', C'Man bleibt jedoch ï¿½
+if "%lang%"=="de" echo ï¿½                   in Betrieb.                     ï¿½
+if "%lang%"=="de" echo ï¿½support         -  Listet ein paar Support-Quel-   ï¿½
+if "%lang%"=="de" echo ï¿½                   len auf.                        ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ber            -  ï¿½ber BotBat fï¿½r WeegeeBot.      ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 
 if "%graphmode%"=="window" echo]
 if "%graphmode%"=="window" pause
@@ -632,7 +632,7 @@ goto cmdS
 :cmdOn
 echo.
 if not "%lang%"=="de" echo BotBat is now inferior to the Windows CMD. Return with 'cmd off'.
-if "%lang%"=="de" echo BotBat wurde zugunsten der Eingabeaufforderung untergeordnet. Kehre mit 'cmd aus' zurck.
+if "%lang%"=="de" echo BotBat wurde zugunsten der Eingabeaufforderung untergeordnet. Kehre mit 'cmd aus' zurï¿½ck.
 goto cmdS
 
 :cmdS
@@ -673,8 +673,8 @@ if "%wincolor%"=="pony" color 5f
 if "%wincolor%"=="commie" color 0c
 REM -------------
 if not "%1"=="-sdb" cls
-if not "%debug%"=="true" echo °°°°°°°°°°°°±±±±±±±±±±±±±±±±±±±±±±±²²²²²²²²²²²²º C'Man Version %Ver%   º²²²²²²²²²²²²±±±±±±±±±±±±±±±±±±±±±±±°°°°°°°°°°°°                                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-if "%debug%"=="true" echo ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛº C'Man Version %Ver%   ºÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ                                               ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if not "%debug%"=="true" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ C'Man Version %Ver%   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                               ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
+if "%debug%"=="true" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ûº C'Man Version %Ver%   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                               ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 echo                                                        2016 - 2017
 echo.
 set /a motd=%RANDOM% * 10/32768 +1
@@ -686,63 +686,63 @@ if "%motd%"=="3" if "%lang%"=="de" echo                                         
 if "%motd%"=="4" if "%lang%"=="en" echo                                                  Sponsored by Billy Mays.
 if "%motd%"=="4" if "%lang%"=="de" echo                                               Gesponsert von Marcell D'Avis.
 if "%motd%"=="5" if "%lang%"=="en" echo                                                 Stephen Bannon likes this.
-if "%motd%"=="5" if "%lang%"=="de" echo                                                  Bernd H”cke gef„llt das.
+if "%motd%"=="5" if "%lang%"=="de" echo                                                  Bernd Hï¿½cke gefï¿½llt das.
 if "%motd%"=="6" if "%lang%"=="en" echo Yo dawg, I heard you like catchphrases, so we put catchphrases inside catchphrases so you can read catchphrases while U
 if "%motd%"=="6" if "%lang%"=="en" echo                                                     read catchphrases!
-if "%motd%"=="6" if "%lang%"=="de" echo  Ey Digga, ich hab' geh”rt, dass du Catchphrases magst, also haben wir Catchphrases in Catchphrases reingepackt, damit
-if "%motd%"=="6" if "%lang%"=="de" echo                          du Catchphrases readen kannst, w„hrend du Catchphrases am readen bist!
+if "%motd%"=="6" if "%lang%"=="de" echo  Ey Digga, ich hab' gehï¿½rt, dass du Catchphrases magst, also haben wir Catchphrases in Catchphrases reingepackt, damit
+if "%motd%"=="6" if "%lang%"=="de" echo                          du Catchphrases readen kannst, wï¿½hrend du Catchphrases am readen bist!
 if "%motd%"=="7" if "%lang%"=="en" echo                                      GabeN would still give this batch Steam Greenlight!
-if "%motd%"=="7" if "%lang%"=="de" echo                                  GabeN wrde der Batch immer noch Steam Greenlight geben!
+if "%motd%"=="7" if "%lang%"=="de" echo                                  GabeN wï¿½rde der Batch immer noch Steam Greenlight geben!
 if "%motd%"=="8" if "%lang%"=="en" echo                                                      Made in Kekistan.
 if "%motd%"=="8" if "%lang%"=="de" echo                                                  Hergestellt in Kekistan.
 if "%motd%"=="9" if "%lang%"=="en" echo                                              Michael Rosen would find this noice.
-if "%motd%"=="9" if "%lang%"=="de" echo                      In der Tat, Dr. Klenk hat die Wirkung von C'Man gegen Einh”rner best„tigt.
+if "%motd%"=="9" if "%lang%"=="de" echo                      In der Tat, Dr. Klenk hat die Wirkung von C'Man gegen Einhï¿½rner bestï¿½tigt.
 if "%motd%"=="10" if "%lang%"=="en" echo                                    [s] takes you straight to hell - to Dr. Hax's hell!
-if "%motd%"=="10" if "%lang%"=="de" echo                                 [s] bringt dich sicher in die H”lle - in Dr. Hax's H”lle!
+if "%motd%"=="10" if "%lang%"=="de" echo                                 [s] bringt dich sicher in die Hï¿½lle - in Dr. Hax's Hï¿½lle!
 echo.
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if "%lang%"=="de" echo [1] - Start                 º
-if not "%lang%"=="de" echo [1] - Start                 º
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if "%lang%"=="de" echo [1] - Start                 ï¿½
+if not "%lang%"=="de" echo [1] - Start                 ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¹
 REM 2
-if "%lang%"=="de" echo [2] - Installation          ³
-if not "%lang%"=="de" echo [2] - Install               ³
+if "%lang%"=="de" echo [2] - Installation          ï¿½
+if not "%lang%"=="de" echo [2] - Install               ï¿½
 REM 3
-echo [3] - Details               ³
+echo [3] - Details               ï¿½
 REM 4
-if "%lang%"=="de" echo [4] - CMan-Konsole          ³
-if not "%lang%"=="de" echo [4] - CMan Console          ³
+if "%lang%"=="de" echo [4] - CMan-Konsole          ï¿½
+if not "%lang%"=="de" echo [4] - CMan Console          ï¿½
 REM 5
-if "%lang%"=="de" echo [5] - šber                  ³
-if not "%lang%"=="de" echo [5] - About                 ³
+if "%lang%"=="de" echo [5] - ï¿½ber                  ï¿½
+if not "%lang%"=="de" echo [5] - About                 ï¿½
 REM 6
-if "%lang%"=="de" echo [6] - Beenden               ³
-if not "%lang%"=="de" echo [6] - Exit                  ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+if "%lang%"=="de" echo [6] - Beenden               ï¿½
+if not "%lang%"=="de" echo [6] - Exit                  ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
 REM if Weegeebot is uninstalled
-if "%NW%"=="1" if "%lang%"=="de" echo [w] - Installiere Weegeebot ³
-if "%NW%"=="1" if "%lang%"=="en" echo [w] - Install Weegeebot     ³
+if "%NW%"=="1" if "%lang%"=="de" echo [w] - Installiere Weegeebot ï¿½
+if "%NW%"=="1" if "%lang%"=="en" echo [w] - Install Weegeebot     ï¿½
 REM if Weegeebot is installed
-if "%NW%"=="0" if "%lang%"=="de" echo [w] - Starte Weegeebot      ³
-if "%NW%"=="0" if "%lang%"=="en" echo [w] - Start Weegeebot       ³
+if "%NW%"=="0" if "%lang%"=="de" echo [w] - Starte Weegeebot      ï¿½
+if "%NW%"=="0" if "%lang%"=="en" echo [w] - Start Weegeebot       ï¿½
 
 REM if SRCDS is uninstalled
-if "%NC%"=="1" if "%lang%"=="de" echo [s] - Installiere SRCDS     ³
-if "%NC%"=="1" if "%lang%"=="en" echo [s] - Install SRCDS         ³
+if "%NC%"=="1" if "%lang%"=="de" echo [s] - Installiere SRCDS     ï¿½
+if "%NC%"=="1" if "%lang%"=="en" echo [s] - Install SRCDS         ï¿½
 REM if SRCDS is installed
-if "%NC%"=="0" if "%lang%"=="de" echo [s] - Starte SRCDS          ³
-if "%NC%"=="0" if "%lang%"=="en" echo [s] - Start SRCDS           ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%NC%"=="0" if "%lang%"=="de" echo [s] - Starte SRCDS          ï¿½
+if "%NC%"=="0" if "%lang%"=="en" echo [s] - Start SRCDS           ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%NW%"=="1" if "%lang%"=="de" echo Das ist eine Neuinstallation.
 if "%NW%"=="1" if not "%lang%"=="de" echo This is a new installation.
 
 if "%lang%"=="de" echo Parameter: %1 %2 %3 %4 %5 %6 %7 %8 %9 
 if not "%lang%"=="de" echo Parameters: %1 %2 %3 %4 %5 %6 %7 %8 %9 
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%PING_START%"=="1" if not "%lang%"=="de" echo Script successfully executed!
 if "%PING_START%"=="1" if "%AUTORUN_DEFAULT%"=="true" if not "%lang%"=="de" echo Please configure your %rundir%\autorun.dat file.
 
-if "%PING_START%"=="1" if "%lang%"=="de" echo Skript erfolgreich ausgefhrt!
+if "%PING_START%"=="1" if "%lang%"=="de" echo Skript erfolgreich ausgefï¿½hrt!
 if "%PING_START%"=="1" if "%AUTORUN_DEFAULT%"=="true" if "%lang%"=="de" echo Bitte konfiguriere deine Skriptdatei %rundir%\autorun.dat.
 set exec=-
 set /p exec=
@@ -776,13 +776,13 @@ REM WINDOW
 if "%graphmode%"=="window" if "%lang%"=="de" title Datenblatt
 if "%graphmode%"=="window" if not  "%lang%"=="de" title Data sheet
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if "%lang%"=="de"     echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Datenblatt º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Datasheet º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+if "%graphmode%"=="window" if "%lang%"=="de"     echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Datenblatt ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Datasheet ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if not "%lang%"=="de" echo ([ ] = not given)
 if "%lang%"=="de" echo ([ ] = nicht gegeben)
 echo]
-if not "%graphmode%"=="window" if "%lang%"=="de" echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹DatenblattÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if not "%graphmode%"=="window" if not "%lang%"=="de" echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹Data heetÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+if not "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¹Datenblattï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if not "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¹Data heetï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
 echo]
 
 if "%lang%"=="de" echo Version:             %ver% (%verdate_DE%)
@@ -802,16 +802,16 @@ if not "%portable%"=="true" if not "%lang%"=="de" echo Portable mode:        off
 if not "%portable%"=="true" if "%lang%"=="de" echo Portablemodus:       aus
 REM --
 echo]
-echo Weegeebot³
-echo ÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo Weegeebotï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" echo Version:             %WeegeeVer%
 if not "%lang%"=="de" echo Version:               %WeegeeVer%
 
 if not "%lang%"=="de" echo Mode:                  %weegeemode%
 if "%lang%"=="de" echo Modus:               %weegeemode%
 echo]
-echo SRCDS³
-echo ÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo SRCDSï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 REM Spiel
 if not "%lang%"=="de" if defined game       ( echo Game:                  %game% )        else ( echo Game:                  [ ] )
 if "%lang%"=="de"     if defined game       ( echo Spiel:               %game% )        else ( echo Spiel:               [ ] )
@@ -839,11 +839,11 @@ if not "%lang%"=="de" if defined map        ( echo Map:                   %map% 
 if "%lang%"=="de"     if defined map        ( echo Karte:               %map% )         else ( echo Karte:               [ ] )
 REM maxplayers
 if not "%lang%"=="de" if defined maxplayers ( echo Maximal players:       %maxplayers% )   else ( echo Maximal players:       [ ] )
-if "%lang%"=="de"     if defined maxplayers ( echo Spielerh”chstgrenze: %maxplayers% )   else ( echo Spielerh”chstgrenze: [ ] )
+if "%lang%"=="de"     if defined maxplayers ( echo Spielerhï¿½chstgrenze: %maxplayers% )   else ( echo Spielerhï¿½chstgrenze: [ ] )
 REM workshop
 if not "%lang%"=="de" if defined workshop   (echo Workshop ID:            %workshop%)      else ( echo Workshop ID:           [ ] )
 if "%lang%"=="de"     if defined workshop   (echo Workshop-ID:          %workshop%)      else ( echo Workshop-ID:         [ ] )
-if not "%graphmode%"=="window" echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if not "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 if "%graphmode%"=="window" pause
 if "%graphmode%"=="window" goto set
 goto cmd
@@ -854,11 +854,11 @@ if "%lang%"=="de" echo Folgende Scripts sind vorhanden:
 
 if not "%lang%"=="de" echo Enter the name of the script.
 if not "%lang%"=="de" echo Following scripts are available:
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 dir /b /d %rundir%\import\script
 echo]
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" echo [Gib '.' ein zum Abbrechen]
 if not "%lang%"=="de" echo [Enter '.' to cancel]
 echo]
@@ -886,16 +886,16 @@ goto cmd
 
 :param
 if "%graphmode%"=="window" if "%lang%"=="en " title Parameter transmission
-if "%graphmode%"=="window" if "%lang%"=="de " title Parameterbergabe
+if "%graphmode%"=="window" if "%lang%"=="de " title Parameterï¿½bergabe
 
 if "%lang%"=="en" echo Enter the parameters that shall be transmitted:
-if "%lang%"=="de" echo Gebe die zu bergebenden Parameter ein:
+if "%lang%"=="de" echo Gebe die zu ï¿½bergebenden Parameter ein:
 
 set /p param=
 cls
 
 if "%lang%"=="en" echo Is this correct? (Parameters will be removed after unique execution) [Y/N]:
-if "%lang%"=="de" echo Ist das so richtig? (Parameter werden nach einmaliger Ausfhrung wieder entfernt) [J/N]:
+if "%lang%"=="de" echo Ist das so richtig? (Parameter werden nach einmaliger Ausfï¿½hrung wieder entfernt) [J/N]:
 
 echo %param%
 set /p inp=
@@ -919,24 +919,24 @@ REM -----------------------------------INSTALL----------------------------------
 :install
 if "%graphmode%"=="window" cls
 if "%graphmode%"=="window" title Installation
-if "%graphmode%"=="window" echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Installation º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Installation ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if not "%graphmode%"=="window" if not "%lang%"=="de" echo What'cha wanna get?
 if not "%graphmode%"=="window" if "%lang%"=="de" echo Watt wills'te dir runterholen?
 echo]
 if not "%lang%"=="de" echo [0] - back
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if not "%lang%"=="de" echo [1] - Install Weegeebot by default                    ³
-if not "%lang%"=="de" echo [2] - Install Weegeebot with node.js only             ³
-if not "%lang%"=="de" echo [3] - Install SRCDS for Garry's Mod                   ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if not "%lang%"=="de" echo [1] - Install Weegeebot by default                    ï¿½
+if not "%lang%"=="de" echo [2] - Install Weegeebot with node.js only             ï¿½
+if not "%lang%"=="de" echo [3] - Install SRCDS for Garry's Mod                   ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%lang%"=="de" echo [0] - zurck
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - Installiere Weegeebot mit Standardeinstellungen  ³
-if "%lang%"=="de" echo [2] - Installiere Weegeebot ausschlieálich mit node.js ³
-if "%lang%"=="de" echo [3] - Installiere SRCDS fr Garry's Mod                ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo [0] - zurï¿½ck
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - Installiere Weegeebot mit Standardeinstellungen  ï¿½
+if "%lang%"=="de" echo [2] - Installiere Weegeebot ausschlieï¿½lich mit node.js ï¿½
+if "%lang%"=="de" echo [3] - Installiere SRCDS fï¿½r Garry's Mod                ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 
 set /p inp=
@@ -962,10 +962,10 @@ goto Install_Weegeebot2
 
 :Install_Weegeebot_Download
 cls
-if "%graphmode%"=="window" echo Setup         ³  
-if "%graphmode%"=="window" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" echo Setup         ï¿½  
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%graphmode%"=="window" title bot.js
-if "%lang%"=="de" echo Die fr das Setup notwendige Datei 'bot.js' ist nicht vorhanden. 
+if "%lang%"=="de" echo Die fï¿½r das Setup notwendige Datei 'bot.js' ist nicht vorhanden. 
 if "%lang%"=="de" echo Lade sie herunter und extrahiere den Inhalt in folgenden Ordner:
 
 
@@ -974,18 +974,18 @@ if not "%lang%"=="de" echo Download it and extract the content it into the follo
 echo.
 echo %appdat%\CMan\apps\weegeebot
 echo]
-if "%lang%"=="de" echo [0] - zurck
+if "%lang%"=="de" echo [0] - zurï¿½ck
 if not "%lang%"=="de" echo [0] - back
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if "%lang%"=="de" echo [1] - ™ffne Link
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if "%lang%"=="de" echo [1] - ï¿½ffne Link
 if not "%lang%"=="de" echo [1] - Open link
 
-if "%lang%"=="de" echo [2] - ™ffne Ordner
+if "%lang%"=="de" echo [2] - ï¿½ffne Ordner
 if not "%lang%"=="de" echo [2] - Open folder
 
 if "%lang%"=="de" echo [3] - Fertig!
 if not "%lang%"=="de" echo [3] - Ready!
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set /p Eig=
 if "%Eig%"=="0" if "%graphmode%"=="window" goto install
@@ -1033,8 +1033,8 @@ if "%wincolor%"=="negative" color d0
 if "%wincolor%"=="matrix" color 2f
 if "%wincolor%"=="pony" color 5f
 if "%wincolor%"=="commie" color 0c
-echo Setup         ³  
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+echo Setup         ï¿½  
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" title Installation
 if not "%lang%"=="de" title Setup
 
@@ -1053,29 +1053,29 @@ goto Install_SRCDS2
 
 :Install_SRCDS2
 cls
-echo Setup         ³  
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="de" echo CMan l„dt nun die erforderlichen Daten fr den Server herunter. 
+echo Setup         ï¿½  
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo CMan lï¿½dt nun die erforderlichen Daten fï¿½r den Server herunter. 
 if "%lang%"=="de" echo Dies kann - je nach Internetverbindung - bis zu einer Stunde in Anspruch nehmen.
 if "%lang%"=="de" echo.
-if "%lang%"=="de" echo Siehe hierzu diese Tabelle (Downloadgr”áe: ~3,8 GB, Durchschnittswerte):
+if "%lang%"=="de" echo Siehe hierzu diese Tabelle (Downloadgrï¿½ï¿½e: ~3,8 GB, Durchschnittswerte):
 if "%lang%"=="de" echo.
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo    LTE 250   ³ 2 Minuten 3 Sekunden   ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo    LTE 100   ³ 5 Minuten 9 Sekunden   ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo    VDSL 50   ³ 10 Minuten 19 Sekunden ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo   DSL 16.000 ³ 32 Minuten 16 Sekunden ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo   DSL 6.000  ³ 1 Stunde 25 Minuten    ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo   DSL 1.000  ³ 8 Stunden 24 Minuten   ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo    Dial-Up 56k   6 Tage 9 Stunden     ³
-if "%lang%"=="de" echo      (da kommen DDR-Gefhle auf!)     ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo    LTE 250   ï¿½ 2 Minuten 3 Sekunden   ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo    LTE 100   ï¿½ 5 Minuten 9 Sekunden   ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo    VDSL 50   ï¿½ 10 Minuten 19 Sekunden ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo   DSL 16.000 ï¿½ 32 Minuten 16 Sekunden ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo   DSL 6.000  ï¿½ 1 Stunde 25 Minuten    ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo   DSL 1.000  ï¿½ 8 Stunden 24 Minuten   ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo    Dial-Up 56k   6 Tage 9 Stunden     ï¿½
+if "%lang%"=="de" echo      (da kommen DDR-Gefï¿½hle auf!)     ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" echo.
 if "%lang%"=="de" echo Der Download kann jederzeit beendet und wieder fortgesetzt werden.
 
@@ -1084,22 +1084,22 @@ if not "%lang%"=="de" echo This may take - depending on your internet connection
 if not "%lang%"=="de" echo.
 if not "%lang%"=="de" echo See this table (download size: ~3,8 GB, average values):
 if not "%lang%"=="de" echo.
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if not "%lang%"=="de" echo    LTE 250   ³ 2 minutes 3 seconds    ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo    LTE 100   ³ 5 minutes 9 seconds    ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo    VDSL 50   ³ 10 minutes 19 seconds  ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo   DSL 16.000 ³ 32 minutes 16 seconds  ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo   DSL 6.000  ³ 1 hour 25 minutes      ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo   DSL 1.000  ³ 8 hours 24 minutes     ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if not "%lang%"=="de" echo    Dial-Up 56k   6 days 9 hours       ³
-if not "%lang%"=="de" echo (Average internet speed in Minnesota) ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if not "%lang%"=="de" echo    LTE 250   ï¿½ 2 minutes 3 seconds    ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo    LTE 100   ï¿½ 5 minutes 9 seconds    ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo    VDSL 50   ï¿½ 10 minutes 19 seconds  ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo   DSL 16.000 ï¿½ 32 minutes 16 seconds  ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo   DSL 6.000  ï¿½ 1 hour 25 minutes      ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo   DSL 1.000  ï¿½ 8 hours 24 minutes     ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if not "%lang%"=="de" echo    Dial-Up 56k   6 days 9 hours       ï¿½
+if not "%lang%"=="de" echo (Average internet speed in Minnesota) ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if not "%lang%"=="de" echo.
 if not "%lang%"=="de" echo The download process can always be intervented and continued later.
 pause >nul
@@ -1112,10 +1112,10 @@ goto Install_SRCDS4
 :Install_SRCDS_Download
 color 1f
 cls
-echo Setup         ³  
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+echo Setup         ï¿½  
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 title SteamCMD
-if "%lang%"=="de" echo Die fr das Setup notwendige Datei 'steamcmd.exe' ist nicht vorhanden. 
+if "%lang%"=="de" echo Die fï¿½r das Setup notwendige Datei 'steamcmd.exe' ist nicht vorhanden. 
 if "%lang%"=="de" echo Lade sie herunter und verschiebe sie in folgenden Ordner:
 
 
@@ -1124,16 +1124,16 @@ if not "%lang%"=="de" echo Download it and move it into the following folder:
 echo.
 echo %appdat%\CMan\apps
 echo.
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-if "%lang%"=="de" echo [1] - ™ffne Link
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»
+if "%lang%"=="de" echo [1] - ï¿½ffne Link
 if not "%lang%"=="de" echo [1] - Open link
 
-if "%lang%"=="de" echo [2] - ™ffne Ordner
+if "%lang%"=="de" echo [2] - ï¿½ffne Ordner
 if not "%lang%"=="de" echo [2] - Open folder
 
 if "%lang%"=="de" echo [3] - Fertig!
 if not "%lang%"=="de" echo [3] - Ready!
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set /p Eig=
 if "%Eig%"=="1" start https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip
@@ -1177,19 +1177,19 @@ if "%graphmode%"=="window" if "%lang%"=="de" title Sprachsetup
 
 if "%graphmode%"=="window" if not "%lang%"=="de" echo Language Setup
 if "%graphmode%"=="window" if "%lang%"=="de" echo Sprachsetup
-if "%graphmode%"=="window" echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if not "%lang%"=="de" echo There can be only one:
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if not "%lang%"=="de" echo [de] - German   ³
-if not "%lang%"=="de" echo [en] - English  ³
-if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if not "%lang%"=="de" echo [de] - German   ï¿½
+if not "%lang%"=="de" echo [en] - English  ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if "%lang%"=="de" echo Es kann nur eine(n) geben:
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [de] - Deutsch  ³
-if "%lang%"=="de" echo [en] - Englisch ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [de] - Deutsch  ï¿½
+if "%lang%"=="de" echo [en] - Englisch ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 set /p inp=
 if "%inp%"=="de" goto langSetup_de
 if "%inp%"=="en" goto langSetup_en
@@ -1235,7 +1235,7 @@ if "%AUTORUN_DEFAULTCHECK%"==";[Default]" set AUTORUN_DEFAULT=true
 if not "%graphmode%"=="window" if not "%lang%"=="de" echo Script successfully executed!
 if not "%graphmode%"=="window" if "%AUTORUN_DEFAULT%"=="true" if not "%lang%"=="de" echo Please configure your %rundir%\autorun.dat file.
 
-if not "%graphmode%"=="window" if "%lang%"=="de" echo Skript erfolgreich ausgefhrt!
+if not "%graphmode%"=="window" if "%lang%"=="de" echo Skript erfolgreich ausgefï¿½hrt!
 if not "%graphmode%"=="window" if "%AUTORUN_DEFAULT%"=="true" if "%lang%"=="de" echo Bitte konfiguriere deine Skriptdatei %rundir%\autorun.dat.
 set PING_START=1
 if "%graphmode%"=="window" goto Menu_Alt
@@ -1387,36 +1387,36 @@ if /I %donttouchmeimsteril% EQU 4 echo Michael Joran rulez >> "%rundir%\TMP"
 if /I %donttouchmeimsteril% EQU 5 echo Hitler didn't do anything wrong >> "%rundir%\TMP"
 if /I %donttouchmeimsteril% EQU 6 echo 666 ILLUMINADI COMFIAMD >> "%rundir%\TMP"
 if /I %donttouchmeimsteril% EQU 7 (
-echo ...............................................................................,~''::::::::',::::::::::::::::::::²',>> "%rundir%\TMP"
-echo ...............................................................................²::::::,-~'''îîî''''~~--~'''î'''-,:²>> "%rundir%\TMP"
-echo ...............................................................................'²:::::²: : : : : : : : : : : : : ²,'>> "%rundir%\TMP"
-echo ...............................................................................²:::::²: : :-~~---: : : -----: ²>> "%rundir%\TMP"
-echo ..............................................................................(î''~-': : : :'îø: ',: :²: :ø-: :²>> "%rundir%\TMP"
-echo ...............................................................................'''~-,²: : : : : : ~---': : : :,'>> "%rundir%\TMP"
-echo ...................................................................................²,: : : : : :-~~--: : ::/>> "%rundir%\TMP"
+echo ...............................................................................,~''::::::::',::::::::::::::::::::ï¿½',>> "%rundir%\TMP"
+echo ...............................................................................ï¿½::::::,-~'''ï¿½ï¿½ï¿½''''~~--~'''ï¿½'''-,:ï¿½>> "%rundir%\TMP"
+echo ...............................................................................'ï¿½:::::ï¿½: : : : : : : : : : : : : ï¿½,'>> "%rundir%\TMP"
+echo ...............................................................................ï¿½:::::ï¿½: : :-~~---: : : -----: ï¿½>> "%rundir%\TMP"
+echo ..............................................................................(ï¿½''~-': : : :'ï¿½ï¿½: ',: :ï¿½: :ï¿½-: :ï¿½>> "%rundir%\TMP"
+echo ...............................................................................'''~-,ï¿½: : : : : : ~---': : : :,'>> "%rundir%\TMP"
+echo ...................................................................................ï¿½,: : : : : :-~~--: : ::/>> "%rundir%\TMP"
 echo ..............................................................................,-''\':\: :'~""_: : : : : _,-'>> "%rundir%\TMP"
-echo ........................................................................__"-';;;;;\:''-,: : : :'~---~''/²>> "%rundir%\TMP"
+echo ........................................................................__"-';;;;;\:''-,: : : :'~---~''/ï¿½>> "%rundir%\TMP"
 echo ...............................................................__"-~'';;;;;;/;;;;;;;\: :\: : :____/: :',__>> "%rundir%\TMP"
-echo ..................................................."-~~~''''î;;;;;;;;;;;;;;;;;;;;;;;;;',. .''-,:²:::::::². . ²;;;;''-"__>> "%rundir%\TMP"
-echo ................................................../;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;;;;;\. . .''²::::::::². .,';;;;;;;;;;''-">> "%rundir%\TMP"
-echo ................................................,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;²;;;;;;;;;;;\. . .\:::::,'. ./²;;;;;;;;;;;;;²>> "%rundir%\TMP"
-echo .............................................,-'';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\;;;;;;;;;;;',: : :²îî². . .²;;;;;;;;;,';;²>> "%rundir%\TMP"
-echo ..........................................."-";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;',;;;;;;;;;;;\. . ²:::². . .'',;;;;;;;;²;;/>> "%rundir%\TMP"
-echo ........................................../;;;;;;;;;;;;;;;;;;;;;;;;;;²;;;;;;;;;;;;;;\;;;;;;;;;;;\. .²:::². . . ²;;;;;;;;²/>> "%rundir%\TMP"
-echo ......................................../;;,-';;;;;;;;;;;;;;;;;;;;;;,';;;;;;;;;;;;;;;;;,;;;;;;;;;;². .\:/. . . .²;;;;;;;;²>> "%rundir%\TMP"
-echo ......................................./;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'',: ²;². . . . \;;;;;;;²>> "%rundir%\TMP"
-echo ...................................."~'';;;;;;;;;;;;;;;;;;;;;,-'';;;;;;;;;;;;;;;;;;;;;;;;;;\;;;;;;;;².²;². . . . .²;;;;;;;²>> "%rundir%\TMP"
-echo ................................"~'';;;;;;;;;;;;;;;;;;;;;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;',;;;;;;² ²:². . . . ²\;;;;;;;²>> "%rundir%\TMP"
-echo ...............................,';;;;;;;;;;;;;;;;;;;;;;;;/;;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;² ²:². . . .'²;;',;;;;;²>> "%rundir%\TMP"
-echo ..............................²;,-';;;;;;;;;;;;;;;;;;;,-';;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;² ²:². . .,';;;;;',;;;;²_>> "%rundir%\TMP"
-echo ............................../;;;;;;;;;;;;;;;;;,-'_;;;;;;,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;²;;;;².²:². . .²;;;;;;;²;;;;²''''~-">> "%rundir%\TMP"
-echo ............................/;;;;;;;;;;;;;;;;;;/î'',;;;,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;² ²:². . ./;;;;;;;;²;;;²;;;;;;²-""__>> "%rundir%\TMP"
-echo ........................../;;;;;;;;;;;;;;;;;,-'...²;;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;² ²:²._,-';;;;;;;;;²;;;;²;;;;;;;;;;;'''-"_>> "%rundir%\TMP"
-echo ......................../;;;;;;;;;;;;;;;;,-'....,';;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;².²:²::::'''~--~'''²²;;;;;²;;;;;;;;;;,-~''''~--"______>> "%rundir%\TMP"
-echo ......................,';;;;;;;;;;;;;;;;,'....../;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;².²:²::::::::::::::²;;;;;',;;;;;;;;;''-,: : : : : :'''~-,:'''~~--">> "%rundir%\TMP"
-echo ...................../;;;;;;;;;;;;;;;,-'......,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;²:²:²::::::::::::::',;;;;;;²î''''~--""-~---""___"-~~'''__''~-\>> "%rundir%\TMP"
-echo ..................,-';;;;;;;;;;;;;;;,'......../ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;²:²:²:::::::::::::::²;;;;;>> "%rundir%\TMP"
-echo MD............./;;;;;;;;;;;;;;;;/.......,-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;²:²:²:::::::::::::::²;;;>> "%rundir%\TMP"
+echo ..................................................."-~~~''''ï¿½;;;;;;;;;;;;;;;;;;;;;;;;;',. .''-,:ï¿½:::::::ï¿½. . ï¿½;;;;''-"__>> "%rundir%\TMP"
+echo ................................................../;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;;;;;\. . .''ï¿½::::::::ï¿½. .,';;;;;;;;;;''-">> "%rundir%\TMP"
+echo ................................................,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½;;;;;;;;;;;\. . .\:::::,'. ./ï¿½;;;;;;;;;;;;;ï¿½>> "%rundir%\TMP"
+echo .............................................,-'';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\;;;;;;;;;;;',: : :ï¿½ï¿½ï¿½. . .ï¿½;;;;;;;;;,';;ï¿½>> "%rundir%\TMP"
+echo ..........................................."-";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;',;;;;;;;;;;;\. . ï¿½:::ï¿½. . .'',;;;;;;;;ï¿½;;/>> "%rundir%\TMP"
+echo ........................................../;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½;;;;;;;;;;;;;;\;;;;;;;;;;;\. .ï¿½:::ï¿½. . . ï¿½;;;;;;;;ï¿½/>> "%rundir%\TMP"
+echo ......................................../;;,-';;;;;;;;;;;;;;;;;;;;;;,';;;;;;;;;;;;;;;;;,;;;;;;;;;;ï¿½. .\:/. . . .ï¿½;;;;;;;;ï¿½>> "%rundir%\TMP"
+echo ......................................./;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'',: ï¿½;ï¿½. . . . \;;;;;;;ï¿½>> "%rundir%\TMP"
+echo ...................................."~'';;;;;;;;;;;;;;;;;;;;;,-'';;;;;;;;;;;;;;;;;;;;;;;;;;\;;;;;;;;ï¿½.ï¿½;ï¿½. . . . .ï¿½;;;;;;;ï¿½>> "%rundir%\TMP"
+echo ................................"~'';;;;;;;;;;;;;;;;;;;;;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;',;;;;;;ï¿½ ï¿½:ï¿½. . . . ï¿½\;;;;;;;ï¿½>> "%rundir%\TMP"
+echo ...............................,';;;;;;;;;;;;;;;;;;;;;;;;/;;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;;ï¿½ ï¿½:ï¿½. . . .'ï¿½;;',;;;;;ï¿½>> "%rundir%\TMP"
+echo ..............................ï¿½;,-';;;;;;;;;;;;;;;;;;;,-';;;,-';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;;;ï¿½ ï¿½:ï¿½. . .,';;;;;',;;;;ï¿½_>> "%rundir%\TMP"
+echo ............................../;;;;;;;;;;;;;;;;;,-'_;;;;;;,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½;;;;ï¿½.ï¿½:ï¿½. . .ï¿½;;;;;;;ï¿½;;;;ï¿½''''~-">> "%rundir%\TMP"
+echo ............................/;;;;;;;;;;;;;;;;;;/ï¿½'',;;;,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;;ï¿½ ï¿½:ï¿½. . ./;;;;;;;;ï¿½;;;ï¿½;;;;;;ï¿½-""__>> "%rundir%\TMP"
+echo ........................../;;;;;;;;;;;;;;;;;,-'...ï¿½;;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½ ï¿½:ï¿½._,-';;;;;;;;;ï¿½;;;;ï¿½;;;;;;;;;;;'''-"_>> "%rundir%\TMP"
+echo ......................../;;;;;;;;;;;;;;;;,-'....,';;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½.ï¿½:ï¿½::::'''~--~'''ï¿½ï¿½;;;;;ï¿½;;;;;;;;;;,-~''''~--"______>> "%rundir%\TMP"
+echo ......................,';;;;;;;;;;;;;;;;,'....../;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½.ï¿½:ï¿½::::::::::::::ï¿½;;;;;',;;;;;;;;;''-,: : : : : :'''~-,:'''~~--">> "%rundir%\TMP"
+echo ...................../;;;;;;;;;;;;;;;,-'......,';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½:ï¿½:ï¿½::::::::::::::',;;;;;;ï¿½ï¿½''''~--""-~---""___"-~~'''__''~-\>> "%rundir%\TMP"
+echo ..................,-';;;;;;;;;;;;;;;,'......../ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½:ï¿½:ï¿½:::::::::::::::ï¿½;;;;;>> "%rundir%\TMP"
+echo MD............./;;;;;;;;;;;;;;;;/.......,-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ï¿½:ï¿½:ï¿½:::::::::::::::ï¿½;;;>> "%rundir%\TMP"
 )
 if /I %donttouchmeimsteril% EQU 8 echo Mission failed, we're gotta do it next time. >> "%rundir%\TMP"
 if /I %donttouchmeimsteril% EQU 9 echo https://www.youtube.com/watch?v=LkzIMTbqrjM >> "%rundir%\TMP"
@@ -1430,29 +1430,29 @@ REM ----------------------------------------------------------------------------
 cls
 if "%lang%"=="de" title Details
 if "%lang%"=="en" title Details
-echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Details º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Details ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back                     
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - C'Man-Einstellungen    ³
-if "%lang%"=="de" echo [2] - Servereinstellungen    ³
-if "%lang%"=="de" echo [3] - Werkzeuge              ³
-REM if "%lang%"=="de" echo [7] - Reset                  ³
-if "%lang%"=="de" echo [4] - Weegeebot              ³
-if "%lang%"=="de" echo [5] - SRCDS                  ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - C'Man-Einstellungen    ï¿½
+if "%lang%"=="de" echo [2] - Servereinstellungen    ï¿½
+if "%lang%"=="de" echo [3] - Werkzeuge              ï¿½
+REM if "%lang%"=="de" echo [7] - Reset                  ï¿½
+if "%lang%"=="de" echo [4] - Weegeebot              ï¿½
+if "%lang%"=="de" echo [5] - SRCDS                  ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - C'Man settings           ³
-if "%lang%"=="en" echo [2] - Server settings          ³
-if "%lang%"=="en" echo [3] - Tools                    ³
-REM if "%lang%"=="en" echo [7] - Reset                    ³
-if "%lang%"=="en" echo [4] - Weegeebot                ³
-if "%lang%"=="en" echo [5] - SRCDS                    ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - C'Man settings           ï¿½
+if "%lang%"=="en" echo [2] - Server settings          ï¿½
+if "%lang%"=="en" echo [3] - Tools                    ï¿½
+REM if "%lang%"=="en" echo [7] - Reset                    ï¿½
+if "%lang%"=="en" echo [4] - Weegeebot                ï¿½
+if "%lang%"=="en" echo [5] - SRCDS                    ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 
@@ -1484,20 +1484,20 @@ if "%lang%"=="en" title C'Man Settings
 cls
 if "%lang%"=="de" echo C'Man-Einstellungen
 if "%lang%"=="en" echo C'Man Settings
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back    
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - Sprache                                 ³
-if "%lang%"=="de" echo [2] - Farbe                                   ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - Language                                     ³
-if "%lang%"=="en" echo [2] - Color                                        ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - Sprache                                 ï¿½
+if "%lang%"=="de" echo [2] - Farbe                                   ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - Language                                     ï¿½
+if "%lang%"=="en" echo [2] - Color                                        ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set exec=-
 set /p exec=
@@ -1512,69 +1512,69 @@ if "%graphmode%"=="window" if not "%lang%"=="de" title Color
 if "%graphmode%"=="window" if "%lang%"=="de" title Farbe
 if "%graphmode%"=="window" if not "%lang%"=="de" echo Color
 if "%graphmode%"=="window" if "%lang%"=="de" echo Farbe
-if "%graphmode%"=="window" echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if not "%graphmode%"=="window" if not "%lang%"=="de" echo Be colormatic:
-if not "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄª
-if "%color%"=="default" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Classic   ³  ³
-if not "%color%"=="default" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Classic   ³   ³
-if "%color%"=="snowwhite" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Snow White³   ³
-if not "%color%"=="snowwhite" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Snow White³  ³
-if "%color%"=="matrix" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix    ³  ³
-if not "%color%"=="matrix" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix    ³   ³
-if "%color%"=="santa" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Santa     ³  ³
-if not "%color%"=="santa" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Santa     ³   ³
-if "%color%"=="skyward" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Skyward   ³  ³
-if not "%color%"=="skyward" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Skyward   ³   ³
-if not "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if not "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äª
+if "%color%"=="default" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Classic   ï¿½  ï¿½
+if not "%color%"=="default" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Classic   ï¿½   ï¿½
+if "%color%"=="snowwhite" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Snow Whiteï¿½   ï¿½
+if not "%color%"=="snowwhite" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Snow Whiteï¿½  ï¿½
+if "%color%"=="matrix" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix    ï¿½  ï¿½
+if not "%color%"=="matrix" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix    ï¿½   ï¿½
+if "%color%"=="santa" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Santa     ï¿½  ï¿½
+if not "%color%"=="santa" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Santa     ï¿½   ï¿½
+if "%color%"=="skyward" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Skyward   ï¿½  ï¿½
+if not "%color%"=="skyward" if not "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Skyward   ï¿½   ï¿½
+if not "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if not "%graphmode%"=="window" if "%lang%"=="de" echo Sei farbenfroh:
-if not "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
-if "%color%"=="default" if not "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Klassisch       ³  ³
-if not "%color%"=="default" if not "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Klassisch       ³   ³
-if "%color%"=="snowwhite" if not "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Schneewittchen  ³  ³
-if not "%color%"=="snowwhite" if not "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Schneewittchen  ³   ³
-if "%color%"=="matrix" if not "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ³  ³
-if not "%color%"=="matrix" if not "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ³   ³
-if "%color%"=="santa" if not "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Weihnachten     ³  ³
-if not "%color%"=="santa" if not "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Weihnachten     ³   ³
-if "%color%"=="skyward" if not "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Himmelw„rts     ³  ³
-if not "%color%"=="skyward" if not "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Himmelw„rts     ³   ³
-if not "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if not "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%color%"=="default" if not "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Klassisch       ï¿½  ï¿½
+if not "%color%"=="default" if not "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Klassisch       ï¿½   ï¿½
+if "%color%"=="snowwhite" if not "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Schneewittchen  ï¿½  ï¿½
+if not "%color%"=="snowwhite" if not "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Schneewittchen  ï¿½   ï¿½
+if "%color%"=="matrix" if not "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ï¿½  ï¿½
+if not "%color%"=="matrix" if not "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ï¿½   ï¿½
+if "%color%"=="santa" if not "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Weihnachten     ï¿½  ï¿½
+if not "%color%"=="santa" if not "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Weihnachten     ï¿½   ï¿½
+if "%color%"=="skyward" if not "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Himmelwï¿½rts     ï¿½  ï¿½
+if not "%color%"=="skyward" if not "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Himmelwï¿½rts     ï¿½   ï¿½
+if not "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM EN-Window
 if "%graphmode%"=="window" if not "%lang%"=="de" echo Be colormatic:
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 REM EN-unchecked
-if not "%wincolor%"=="default"      if "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Default               ³   ³
-if "%wincolor%"=="default"          if "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Default               ³  ³
-if not "%wincolor%"=="negative"     if "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Negative              ³   ³
-if "%wincolor%"=="negative"         if "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Negative              ³  ³
-if not "%wincolor%"=="matrix"       if "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix                ³   ³
-if "%wincolor%"=="matrix"           if "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix                ³  ³
-if not "%wincolor%"=="pony"         if "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Pony                  ³   ³
-if "%wincolor%"=="pony"             if "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Pony                  ³  ³
-if not "%wincolor%"=="commie"       if "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Stalin's Payback      ³   ³
-if "%wincolor%"=="commie"           if "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Stalin's Payback      ³  ³
+if not "%wincolor%"=="default"      if "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Default               ï¿½   ï¿½
+if "%wincolor%"=="default"          if "%graphmode%"=="window" if not "%lang%"=="de" echo [1] - Default               ï¿½  ï¿½
+if not "%wincolor%"=="negative"     if "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Negative              ï¿½   ï¿½
+if "%wincolor%"=="negative"         if "%graphmode%"=="window" if not "%lang%"=="de" echo [2] - Negative              ï¿½  ï¿½
+if not "%wincolor%"=="matrix"       if "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix                ï¿½   ï¿½
+if "%wincolor%"=="matrix"           if "%graphmode%"=="window" if not "%lang%"=="de" echo [3] - Matrix                ï¿½  ï¿½
+if not "%wincolor%"=="pony"         if "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Pony                  ï¿½   ï¿½
+if "%wincolor%"=="pony"             if "%graphmode%"=="window" if not "%lang%"=="de" echo [4] - Pony                  ï¿½  ï¿½
+if not "%wincolor%"=="commie"       if "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Stalin's Payback      ï¿½   ï¿½
+if "%wincolor%"=="commie"           if "%graphmode%"=="window" if not "%lang%"=="de" echo [5] - Stalin's Payback      ï¿½  ï¿½
 
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM DE-Window
 if "%graphmode%"=="window" if "%lang%"=="de" echo Sei farbenfroh:
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 REM DE-unchecked
-if not "%wincolor%"=="default"      if "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Standard        ³   ³
-if "%wincolor%"=="default"          if "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Standard        ³  ³
-if not "%wincolor%"=="negative"     if "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Verdreht        ³   ³
-if "%wincolor%"=="negative"         if "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Verdreht        ³  ³
-if not "%wincolor%"=="matrix"       if "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ³   ³
-if "%wincolor%"=="matrix"           if "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ³  ³
-if not "%wincolor%"=="pony"         if "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Pony            ³   ³
-if "%wincolor%"=="pony"             if "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Pony            ³  ³
-if not "%wincolor%"=="commie"       if "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Honeckers Rache ³   ³
-if "%wincolor%"=="commie"           if "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Honeckers Rache ³  ³
+if not "%wincolor%"=="default"      if "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Standard        ï¿½   ï¿½
+if "%wincolor%"=="default"          if "%graphmode%"=="window" if "%lang%"=="de" echo [1] - Standard        ï¿½  ï¿½
+if not "%wincolor%"=="negative"     if "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Verdreht        ï¿½   ï¿½
+if "%wincolor%"=="negative"         if "%graphmode%"=="window" if "%lang%"=="de" echo [2] - Verdreht        ï¿½  ï¿½
+if not "%wincolor%"=="matrix"       if "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ï¿½   ï¿½
+if "%wincolor%"=="matrix"           if "%graphmode%"=="window" if "%lang%"=="de" echo [3] - Matrix          ï¿½  ï¿½
+if not "%wincolor%"=="pony"         if "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Pony            ï¿½   ï¿½
+if "%wincolor%"=="pony"             if "%graphmode%"=="window" if "%lang%"=="de" echo [4] - Pony            ï¿½  ï¿½
+if not "%wincolor%"=="commie"       if "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Honeckers Rache ï¿½   ï¿½
+if "%wincolor%"=="commie"           if "%graphmode%"=="window" if "%lang%"=="de" echo [5] - Honeckers Rache ï¿½  ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set /p inp=
 
@@ -1606,26 +1606,26 @@ if "%lang%"=="en" title Server settings
 cls
 if "%lang%"=="de" echo Servereinstellungen
 if "%lang%"=="en" echo Server settings
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back    
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - ndere Serverpfad                       ³
-if "%lang%"=="de" echo [2] - Portablemodus                           ³
-if "%lang%"=="de" echo [3] - Neueinrichtung                          ³
-if "%lang%"=="de" echo [4] - ndere Betriebsvariable                 ³
-if "%lang%"=="de" echo [5] - Reset                                   ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - Change server path                           ³
-if "%lang%"=="en" echo [2] - Portable mode                                ³
-if "%lang%"=="en" echo [3] - New establishment                            ³
-if "%lang%"=="en" echo [4] - Change operating variable                    ³
-if "%lang%"=="en" echo [5] - Reset                                        ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - ï¿½ndere Serverpfad                       ï¿½
+if "%lang%"=="de" echo [2] - Portablemodus                           ï¿½
+if "%lang%"=="de" echo [3] - Neueinrichtung                          ï¿½
+if "%lang%"=="de" echo [4] - ï¿½ndere Betriebsvariable                 ï¿½
+if "%lang%"=="de" echo [5] - Reset                                   ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - Change server path                           ï¿½
+if "%lang%"=="en" echo [2] - Portable mode                                ï¿½
+if "%lang%"=="en" echo [3] - New establishment                            ï¿½
+if "%lang%"=="en" echo [4] - Change operating variable                    ï¿½
+if "%lang%"=="en" echo [5] - Reset                                        ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set exec=-
 set /p exec=
@@ -1652,16 +1652,16 @@ if "%lang%"=="en " if not "%Eig%"=="Y" goto Men
 if "%lang%"=="de " if not "%Eig%"=="J" goto Men
 
 cd 
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 @echo on
 cd /D %pathe%
 attrib -R "CMan"
 del /q /s /f "CMan"
 rmdir /q /s "CMan\"
 @echo off
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo CMan will now be closed. Restart it to re-setup the configuration.
-if "%lang%"=="de" echo CMan schlieát sich nun. Starte es erneut, um die Konfiguration wiederaufzusetzen.
+if "%lang%"=="de" echo CMan schlieï¿½t sich nun. Starte es erneut, um die Konfiguration wiederaufzusetzen.
 pause >nul
 exit
 
@@ -1669,11 +1669,11 @@ exit
 :path
 REM                 WINDOW
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM                 INPUT
 if not "%lang%"=="de" echo Enter the new path [C'Man will be restarted after that!]:
@@ -1684,11 +1684,11 @@ REM                 WINDOW
 if "%graphmode%"=="window" if not "%lang%"=="de" Server path
 if "%graphmode%"=="window" if "%lang%"=="de" Serverpfad
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM                 INPUT
 if not "%lang%"=="de" echo Is this correct? [Y/N]
@@ -1696,7 +1696,7 @@ if not "%lang%"=="de" echo (You may leave with '0'):
 if "%lang%"=="de" echo Ist das richtig? [J/N]
 if "%lang%"=="de" echo (Du kannst mit '0' abbrechen):
 if not "%graphmode%"=="window" echo]
-if "%graphmode%"=="window" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo %inp%
 set /p Eig=
 if not "%graphmode%"=="window" if "%Eig%"=="0" goto cmd
@@ -1707,11 +1707,11 @@ REM                 WINDOW
 if "%graphmode%"=="window" if not "%lang%"=="de" title Server path
 if "%graphmode%"=="window" if "%lang%"=="de" title Serverpfad
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Server path   ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Serverpfad    ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM                 INPUT
 if not "%lang%"=="de" echo Should the old content be copied to the new path? [Y/N]
@@ -1725,7 +1725,7 @@ if "%Eig%"=="J" set COPY=true
 if "%Eig%"=="N" set COPY=false
 
 :path2
-if "%graphmode%"=="window" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if "%graphmode%"=="window" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 REM if copy
 if "%COPY%"=="true" md "%inp%"
 if "%COPY%"=="true" xcopy /E "%checkdir%" "%inp%"
@@ -1746,17 +1746,17 @@ REM                 WINDOW
 if "%graphmode%"=="window" if not "%lang%"=="de" title Portable mode
 if "%graphmode%"=="window" if "%lang%"=="de" title Portablemodus
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Portable mode ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Portable mode ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo Portablemodus ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Portablemodus ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM                 CONSOLE
 if not "%portable%"=="true" if not "%lang%"=="de" echo Do you want to activate the portable mode (requires reboot!)? [Y/N]
-if not "%portable%"=="true" if "%lang%"=="de" echo M”chstest du den Portablemodus aktivieren (erfordert Neustart!)? [J/N]
+if not "%portable%"=="true" if "%lang%"=="de" echo Mï¿½chstest du den Portablemodus aktivieren (erfordert Neustart!)? [J/N]
 if "%portable%"=="true" if not "%lang%"=="de" echo Do you want to deactivate the portable mode (requires reboot!)? [Y/N]
-if "%portable%"=="true" if "%lang%"=="de" echo M”chstest du den Portablemodus deaktivieren (erfordert Neustart)? [J/N]
+if "%portable%"=="true" if "%lang%"=="de" echo Mï¿½chstest du den Portablemodus deaktivieren (erfordert Neustart)? [J/N]
 
 if not "%portable%"=="true" if not "%lang%"=="de" echo Regard that C'Man needs to be in the same folder as the server if in portable mode.
 if not "%portable%"=="true" if "%lang%"=="de" echo Beachte, dass C'Man im Portablemodus im selben Ordner wie der Server sein muss.
@@ -1783,24 +1783,24 @@ cls
 if "%lang%"=="de" title Werkzeuge
 if not "%lang%"=="de" title Tools
 
-if "%lang%"=="de" echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Werkzeuge º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-if not "%lang%"=="de" echo ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±º Tools º±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Werkzeuge ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Tools ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back    
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - Datenblatt                              ³
-if "%lang%"=="de" echo [2] - Stoppe alle Prozesse                    ³
-if "%weegeemode%"=="pm2" if "%lang%"=="de" echo [3] - šberwache alle PM2-Prozesse             ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - Datenblatt                              ï¿½
+if "%lang%"=="de" echo [2] - Stoppe alle Prozesse                    ï¿½
+if "%weegeemode%"=="pm2" if "%lang%"=="de" echo [3] - ï¿½berwache alle PM2-Prozesse             ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - Data sheet                                   ³
-if "%lang%"=="en" echo [2] - Stop all processes                           ³
-if "%weegeemode%"=="pm2" if "%lang%"=="en" echo [3] - Monit all processes                          ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - Data sheet                                   ï¿½
+if "%lang%"=="en" echo [2] - Stop all processes                           ï¿½
+if "%weegeemode%"=="pm2" if "%lang%"=="en" echo [3] - Monit all processes                          ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set inp=_
 set /p inp=
@@ -1818,20 +1818,20 @@ if "%lang%"=="en" title Weegeebot Settings
 cls
 if "%lang%"=="de" echo Weegeebot-Einstellungen
 if "%lang%"=="en" echo Weegeebot Settings
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back    
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - Installiere Weegeebot                   ³
-if "%lang%"=="de" echo [2] - Startmodus                              ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - Install Weegeebot                            ³
-if "%lang%"=="en" echo [2] - Start mode                                   ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - Installiere Weegeebot                   ï¿½
+if "%lang%"=="de" echo [2] - Startmodus                              ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - Install Weegeebot                            ï¿½
+if "%lang%"=="en" echo [2] - Start mode                                   ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set inp=_
 set /p inp=
@@ -1846,41 +1846,41 @@ REM                 WINDOW
 if "%graphmode%"=="window" if not "%lang%"=="de" title Weegeebot mode
 if "%graphmode%"=="window" if "%lang%"=="de" title Weegeebotmodus
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if "%lang%"=="de" echo Weegeebotmodus ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Weegeebotmodus ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Weegeebot mode ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Weegeebot mode ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 REM                 CONSOLE
 
 if not "%lang%"=="de" echo Choose the mode Weegeebot shall be started:
-if "%lang%"=="de" echo W„hle den Modus aus, in welchem Weegeebot gestartet werden soll:
+if "%lang%"=="de" echo Wï¿½hle den Modus aus, in welchem Weegeebot gestartet werden soll:
 echo]
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 REM EN
-if not "%weegeemode%"=="pm2"      if "%lang%"=="en" echo [1] - PM2 (default)   ³   ³
-if "%weegeemode%"=="pm2"          if "%lang%"=="en" echo [1] - PM2 (default)   ³  ³
-if not "%weegeemode%"=="node"     if "%lang%"=="en" echo [2] - node (failsafe) ³   ³
-if "%weegeemode%"=="node"         if "%lang%"=="en" echo [2] - node (failsafe) ³  ³
-if not "%weegeemode%"=="nodemon"  if "%lang%"=="en" echo [3] - nodemon         ³   ³
-if "%weegeemode%"=="nodemon"      if "%lang%"=="en" echo [3] - nodemon         ³  ³
+if not "%weegeemode%"=="pm2"      if "%lang%"=="en" echo [1] - PM2 (default)   ï¿½   ï¿½
+if "%weegeemode%"=="pm2"          if "%lang%"=="en" echo [1] - PM2 (default)   ï¿½  ï¿½
+if not "%weegeemode%"=="node"     if "%lang%"=="en" echo [2] - node (failsafe) ï¿½   ï¿½
+if "%weegeemode%"=="node"         if "%lang%"=="en" echo [2] - node (failsafe) ï¿½  ï¿½
+if not "%weegeemode%"=="nodemon"  if "%lang%"=="en" echo [3] - nodemon         ï¿½   ï¿½
+if "%weegeemode%"=="nodemon"      if "%lang%"=="en" echo [3] - nodemon         ï¿½  ï¿½
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 REM DE
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 REM EN
-if not "%weegeemode%"=="pm2"      if "%lang%"=="de" echo [1] - PM2 (Standard)  ³   ³
-if "%weegeemode%"=="pm2"          if "%lang%"=="de" echo [1] - PM2 (Standard)  ³  ³
-if not "%weegeemode%"=="node"     if "%lang%"=="de" echo [2] - node (sicher)   ³   ³
-if "%weegeemode%"=="node"         if "%lang%"=="de" echo [2] - node (sicher)   ³  ³
-if not "%weegeemode%"=="nodemon"  if "%lang%"=="de" echo [3] - nodemon         ³   ³
-if "%weegeemode%"=="nodemon"      if "%lang%"=="de" echo [3] - nodemon         ³  ³
+if not "%weegeemode%"=="pm2"      if "%lang%"=="de" echo [1] - PM2 (Standard)  ï¿½   ï¿½
+if "%weegeemode%"=="pm2"          if "%lang%"=="de" echo [1] - PM2 (Standard)  ï¿½  ï¿½
+if not "%weegeemode%"=="node"     if "%lang%"=="de" echo [2] - node (sicher)   ï¿½   ï¿½
+if "%weegeemode%"=="node"         if "%lang%"=="de" echo [2] - node (sicher)   ï¿½  ï¿½
+if not "%weegeemode%"=="nodemon"  if "%lang%"=="de" echo [3] - nodemon         ï¿½   ï¿½
+if "%weegeemode%"=="nodemon"      if "%lang%"=="de" echo [3] - nodemon         ï¿½  ï¿½
 
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set /p inp=
 if exist "%rundir%\cfg\weegeebot\mode.cfg" del /q "%rundir%\cfg\weegeebot\mode.cfg"
@@ -1907,26 +1907,26 @@ if "%lang%"=="en" title SRCDS Settings
 cls
 if "%lang%"=="de" echo SRCDS-Einstellungen
 if "%lang%"=="en" echo SRCDS Settings
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 REM 0
-if "%lang%"=="de" echo [0] - zurck                 
+if "%lang%"=="de" echo [0] - zurï¿½ck                 
 if "%lang%"=="en" echo [0] - back    
 REM -
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo [1] - ndere Betriebsvariable                 ³
-if "%lang%"=="de" echo [2] - Installiere SRCDS fr Garry's Mod       ³
-if "%lang%"=="de" echo [3] - Richte SRCDS fr Garry's Mod ein        ³
-if "%lang%"=="de" echo [4] - Update SRCDS fr Garry's Mod            ³
-if "%lang%"=="de" echo [5] - Verwerte GMod-AddOn                     ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="en" echo [1] - Change operating variable                    ³
-if "%lang%"=="en" echo [2] - Install SRCDS for Garry's Mod                ³
-if "%lang%"=="en" echo [3] - Configure SRCDS for Garry's Mod              ³
-if "%lang%"=="en" echo [4] - Update SRCDS for Garry's Mod                 ³
-if "%lang%"=="en" echo [5] - Utilize Add-on                               ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo [1] - ï¿½ndere Betriebsvariable                 ï¿½
+if "%lang%"=="de" echo [2] - Installiere SRCDS fï¿½r Garry's Mod       ï¿½
+if "%lang%"=="de" echo [3] - Richte SRCDS fï¿½r Garry's Mod ein        ï¿½
+if "%lang%"=="de" echo [4] - Update SRCDS fï¿½r Garry's Mod            ï¿½
+if "%lang%"=="de" echo [5] - Verwerte GMod-AddOn                     ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="en" echo [1] - Change operating variable                    ï¿½
+if "%lang%"=="en" echo [2] - Install SRCDS for Garry's Mod                ï¿½
+if "%lang%"=="en" echo [3] - Configure SRCDS for Garry's Mod              ï¿½
+if "%lang%"=="en" echo [4] - Update SRCDS for Garry's Mod                 ï¿½
+if "%lang%"=="en" echo [5] - Utilize Add-on                               ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set inp=_
 set /p inp=
@@ -1946,42 +1946,42 @@ if "%lang%"=="de" title Betriebsvariablen
 
 if "%lang%"=="en" echo Operating variables
 if "%lang%"=="de" echo Betriebsvariablen
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo [0] - back
-if "%lang%"=="de" echo [0] - zurck
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+if "%lang%"=="de" echo [0] - zurï¿½ck
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 
-if "%lang%"=="en" echo [1] - Host name     ³
-if "%lang%"=="de" echo [1] - Hostname      ³
+if "%lang%"=="en" echo [1] - Host name     ï¿½
+if "%lang%"=="de" echo [1] - Hostname      ï¿½
 
-if "%lang%"=="en" echo [2] - GSL token     ³
-if "%lang%"=="de" echo [2] - GSL-Token     ³
+if "%lang%"=="en" echo [2] - GSL token     ï¿½
+if "%lang%"=="de" echo [2] - GSL-Token     ï¿½
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´
 
-if "%lang%"=="en" echo [3] - Console mode  ³
-if "%lang%"=="de" echo [3] - Konsolenmodus ³
+if "%lang%"=="en" echo [3] - Console mode  ï¿½
+if "%lang%"=="de" echo [3] - Konsolenmodus ï¿½
 
-if "%lang%"=="en" echo [4] - Gamemode      ³
-if "%lang%"=="de" echo [4] - Spielmodus    ³
+if "%lang%"=="en" echo [4] - Gamemode      ï¿½
+if "%lang%"=="de" echo [4] - Spielmodus    ï¿½
 
-if "%lang%"=="en" echo [5] - IP            ³
-if "%lang%"=="de" echo [5] - IP            ³
+if "%lang%"=="en" echo [5] - IP            ï¿½
+if "%lang%"=="de" echo [5] - IP            ï¿½
 
-if "%lang%"=="en" echo [6] - Map           ³
-if "%lang%"=="de" echo [6] - Karte         ³       
+if "%lang%"=="en" echo [6] - Map           ï¿½
+if "%lang%"=="de" echo [6] - Karte         ï¿½       
 
-if "%lang%"=="en" echo [7] - Max. players  ³
-if "%lang%"=="de" echo [7] - Max. Spieler  ³
+if "%lang%"=="en" echo [7] - Max. players  ï¿½
+if "%lang%"=="de" echo [7] - Max. Spieler  ï¿½
 
-if "%lang%"=="en" echo [8] - Workshop      ³
-if "%lang%"=="de" echo [8] - Workshop      ³
+if "%lang%"=="en" echo [8] - Workshop      ï¿½
+if "%lang%"=="de" echo [8] - Workshop      ï¿½
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set inp=_
 set /p inp=
@@ -2005,13 +2005,13 @@ cls
 if "%lang%"=="en" title Host name
 if "%lang%"=="de" title Hostname
 
-if "%lang%"=="en" echo Host Name ³
-if "%lang%"=="de" echo Hostname  ³
-echo ÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Host Name ï¿½
+if "%lang%"=="de" echo Hostname  ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if defined host if "%lang%"=="en" echo Current host name:
 if defined host if "%lang%"=="de" echo Derzeitiger Servername: 
 if defined host echo %host%
-if defined host echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined host echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new server name:
 if "%lang%"=="de" echo Gib den neuen Servernamen ein:
 set /p host=
@@ -2028,13 +2028,13 @@ cls
 if "%lang%"=="en" title GSL Token
 if "%lang%"=="de" title GSL-Token
 
-if "%lang%"=="en" echo Game Server Login Token ³
-if "%lang%"=="de" echo Game Server Login-Token ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Game Server Login Token ï¿½
+if "%lang%"=="de" echo Game Server Login-Token ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if defined gsl if "%lang%"=="en" echo Current GSL token:
 if defined gsl if "%lang%"=="de" echo Derzeitiger GSL-Token: 
 if defined gsl echo %gsl%
-if defined gsl echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined gsl echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new Game Server Login token:
 if "%lang%"=="de" echo Gib den neuen GSL-Token ein:
 
@@ -2051,28 +2051,28 @@ cls
 if "%lang%"=="en" title Console mode
 if "%lang%"=="de" title Konsolenmodus
 
-if "%lang%"=="en" echo Console mode  ³
-if "%lang%"=="de" echo Konsolenmodus ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Console mode  ï¿½
+if "%lang%"=="de" echo Konsolenmodus ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo.
 if "%lang%"=="en" echo Set console mode:
 if "%lang%"=="de" echo Setze Konsolenmodus:
 
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
-if "%scon%"=="true"     if "%lang%"=="en" echo [1] - On ³  ³
-if not "%scon%"=="true" if "%lang%"=="en" echo [1] - On ³   ³
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%scon%"=="true"     if "%lang%"=="en" echo [1] - On ï¿½  ï¿½
+if not "%scon%"=="true" if "%lang%"=="en" echo [1] - On ï¿½   ï¿½
 
-if "%scon%"=="true"     if "%lang%"=="en" echo [2] - Off³   ³
-if not "%scon%"=="true" if "%lang%"=="en" echo [2] - Off³  ³
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%scon%"=="true"     if "%lang%"=="en" echo [2] - Offï¿½   ï¿½
+if not "%scon%"=="true" if "%lang%"=="en" echo [2] - Offï¿½  ï¿½
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÂÄÄÄ¿
-if "%scon%"=="true"     if "%lang%"=="de" echo [1] - An ³  ³
-if not "%scon%"=="true" if "%lang%"=="de" echo [1] - An ³   ³
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%scon%"=="true"     if "%lang%"=="de" echo [1] - An ï¿½  ï¿½
+if not "%scon%"=="true" if "%lang%"=="de" echo [1] - An ï¿½   ï¿½
 
-if "%scon%"=="true"     if "%lang%"=="de" echo [2] - Aus³   ³
-if not "%scon%"=="true"  if "%lang%"=="de" echo [2] - Aus³  ³
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÁÄÄÄÙ
+if "%scon%"=="true"     if "%lang%"=="de" echo [2] - Ausï¿½   ï¿½
+if not "%scon%"=="true"  if "%lang%"=="de" echo [2] - Ausï¿½  ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 set inp=_
 set /p inp=
@@ -2091,13 +2091,13 @@ cls
 if "%lang%"=="en" title Gamemode
 if "%lang%"=="de" title Spielmodus
 
-if "%lang%"=="en" echo Gamemode   ³
-if "%lang%"=="de" echo Spielmodus ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Gamemode   ï¿½
+if "%lang%"=="de" echo Spielmodus ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if defined gamemode if "%lang%"=="en" echo Current game mode:
 if defined gamemode if "%lang%"=="de" echo Derzeitiger Spielmodus: 
 if defined gamemode echo %gamemode%
-if defined gamemode echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined gamemode echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new game mode:
 if "%lang%"=="de" echo Gib den neuen Spielmodus ein:
 
@@ -2115,13 +2115,13 @@ cls
 if "%lang%"=="en" title IP
 if "%lang%"=="de" title IP
 
-if "%lang%"=="en" echo IP ³
-if "%lang%"=="de" echo IP ³
-echo ÄÄÄÙ
+if "%lang%"=="en" echo IP ï¿½
+if "%lang%"=="de" echo IP ï¿½
+echo ï¿½ï¿½ï¿½ï¿½
 
 if defined ip if "%lang%"=="en" echo Current IP: %ip%
 if defined ip if "%lang%"=="de" echo Derzeitige IP: %ip%
-if defined ip echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined ip echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new IP:
 if "%lang%"=="de" echo Gib die neue IP ein:
 
@@ -2138,13 +2138,13 @@ cls
 if "%lang%"=="en" title Map
 if "%lang%"=="de" title Karte
 
-if "%lang%"=="en" echo Map   ³
-if "%lang%"=="de" echo Karte ³
-echo ÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Map   ï¿½
+if "%lang%"=="de" echo Karte ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if defined map if "%lang%"=="en" echo Current map: %map%
 if defined map if "%lang%"=="de" echo Derzeitige Karte: %map%
-if defined map echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined map echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new map:
 if "%lang%"=="de" echo Gib die neue Karte ein:
 
@@ -2159,15 +2159,15 @@ goto Var_SRCDS
 :Var_SRCDS_maxplayers
 cls
 if "%lang%"=="en" title Maximum players
-if "%lang%"=="de" title Spielerh”chstzahl
+if "%lang%"=="de" title Spielerhï¿½chstzahl
 
-if "%lang%"=="en" echo Maximum players   ³
-if "%lang%"=="de" echo Spielerh”chstzahl ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Maximum players   ï¿½
+if "%lang%"=="de" echo Spielerhï¿½chstzahl ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if defined maxplayers if "%lang%"=="en" echo Current value: %maxplayers%
 if defined maxplayers if "%lang%"=="de" echo Derzeitiger Wert: %maxplayers%
-if defined maxplayers echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined maxplayers echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new value:
 if "%lang%"=="de" echo Gib den neuen Wert ein:
 
@@ -2184,13 +2184,13 @@ cls
 if "%lang%"=="en" title Workshop ID
 if "%lang%"=="de" title Workshop-ID
 
-if "%lang%"=="en" echo Workshop ID ³
-if "%lang%"=="de" echo Workshop-ID ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Workshop ID ï¿½
+if "%lang%"=="de" echo Workshop-ID ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if defined workshop if "%lang%"=="en" echo Current ID: %workshop%
 if defined workshop if "%lang%"=="de" echo Derzeitige ID: %workshop%
-if defined workshop echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if defined workshop echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo Enter the new ID:
 if "%lang%"=="de" echo Gib die neue ID ein:
 
@@ -2208,14 +2208,14 @@ REM                 WINDOW
 if "%graphmode%"=="window" if not "%lang%"=="de" title Setup
 if "%graphmode%"=="window" if "%lang%"=="de" title Setup
 if "%graphmode%"=="window" cls
-if "%graphmode%"=="window" if not "%lang%"=="de" echo Setup         ³  
-if "%graphmode%"=="window" if not "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if not "%lang%"=="de" echo Setup         ï¿½  
+if "%graphmode%"=="window" if not "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-if "%graphmode%"=="window" if "%lang%"=="de" echo Setup         ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Setup         ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="de" echo Gib bitte deinen GSL-Token ein.
-if "%lang%"=="de" echo Dieser ist notwendig, um sich gegenber Steam zu verifizieren.
+if "%lang%"=="de" echo Dieser ist notwendig, um sich gegenï¿½ber Steam zu verifizieren.
 
 if "%lang%"=="en" echo Please enter your GSL token.
 if "%lang%"=="en" echo This is necesarry to verify the server for Steam.
@@ -2234,11 +2234,11 @@ echo %maxplayers% >> "%rundir%\cfg\garrysmod\maxplayers.cfg"
 del /q ip.cfg
 echo %ip% >> "%rundir%\cfg\garrysmod\ip.cfg"
 cls
-if "%graphmode%"=="window" if "%lang%"=="de" echo Setup         ³  
-if "%graphmode%"=="window" if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%graphmode%"=="window" if "%lang%"=="de" echo Setup         ï¿½  
+if "%graphmode%"=="window" if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="de" echo Gib deine Kollektionsnummer ein.
-if "%lang%"=="de" echo L„uft dein Server als Vanillaserver (also ohne Kollektion), lass das Feld leer.
+if "%lang%"=="de" echo Lï¿½uft dein Server als Vanillaserver (also ohne Kollektion), lass das Feld leer.
 
 if not "%lang%"=="de" echo Enter your collection number.
 if not "%lang%"=="de" echo If your server runs as a vanilla server, keep the field empty.
@@ -2246,8 +2246,8 @@ set /p workshop=
 echo %workshop% > "%rundir%\cfg\garrysmod\workshop.cfg"
 if "%debug%"=="true" pause
 cls
-if "%lang%"=="de" echo Erfolg - Viel Spaá mit dem neuen GMod-Server! 
-if "%lang%"=="de" echo Weitere Einstellungen k”nnen gegebenenfalls sp„ter ge„ndert werden.
+if "%lang%"=="de" echo Erfolg - Viel Spaï¿½ mit dem neuen GMod-Server! 
+if "%lang%"=="de" echo Weitere Einstellungen kï¿½nnen gegebenenfalls spï¿½ter geï¿½ndert werden.
 
 if not "%lang%"=="de" echo Great, Success - have a lot of fun with your new GMod server!
 if not "%lang%"=="de" echo Further settings can be changed later.
@@ -2258,26 +2258,26 @@ goto Ini
 :Addon_SRCDS
 cls
 if "%lang%"=="en" title Add-on Menu
-if "%lang%"=="de" title AddOn-Men
+if "%lang%"=="de" title AddOn-Menï¿½
 
 if "%lang%"=="en" echo Add-on Menu
-if "%lang%"=="de" echo AddOn-Men
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+if "%lang%"=="de" echo AddOn-Menï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo [0] - back
-if "%lang%"=="de" echo [0] - zurck
+if "%lang%"=="de" echo [0] - zurï¿½ck
 REM ---
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 REM 1
-REM if "%lang%"=="en" echo [1] - Extract Add-on ³
-REM if "%lang%"=="de" echo [1] - Entpacke AddOn ³
+REM if "%lang%"=="en" echo [1] - Extract Add-on ï¿½
+REM if "%lang%"=="de" echo [1] - Entpacke AddOn ï¿½
 REM 1
-if "%lang%"=="en" echo [1] - Upload Add-on  ³
-if "%lang%"=="de" echo [1] - Lade AddOn hoch³
+if "%lang%"=="en" echo [1] - Upload Add-on  ï¿½
+if "%lang%"=="de" echo [1] - Lade AddOn hochï¿½
 REM ---
-if "%lang%"=="en" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-if "%lang%"=="de" echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 REM .
 set /p Eig=
 if "%Eig%"=="0" goto srcdsset
@@ -2292,26 +2292,26 @@ if "%lang%"=="de" title Entpackungssetup
 
 if "%lang%"=="en" echo Unpacking Setup
 if "%lang%"=="de" echo Entpackungssetup
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if "%lang%"=="en" echo IMPORTANT: The GMad Extractor must be available in the apps folder!
 if "%lang%"=="de" echo WICHTIG: Der GMad Extractor muss im apps-Ordner vorhanden sein!
 
 if "%lang%"=="en" echo Work through the steps below if this is not the case.
 if "%lang%"=="de" echo Arbeite die unteren Schritte ab, falls das nicht der Fall ist.
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="en" echo [0] - back
-if "%lang%"=="de" echo [0] - zurck
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+if "%lang%"=="de" echo [0] - zurï¿½ck
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 if "%lang%"=="en" echo [1] - Open download link
-if "%lang%"=="de" echo [1] - ™ffne Downloadlink
+if "%lang%"=="de" echo [1] - ï¿½ffne Downloadlink
 
 if "%lang%"=="en" echo [2] - Open apps folder
-if "%lang%"=="de" echo [2] - ™ffne apps-Ordner
+if "%lang%"=="de" echo [2] - ï¿½ffne apps-Ordner
 
 if "%lang%"=="en" echo [3] - Open apps folder
-if "%lang%"=="de" echo [3] - ™ffne apps-Ordner
+if "%lang%"=="de" echo [3] - ï¿½ffne apps-Ordner
 
 set /p Eig=
 if "%Eig%"=="0" goto Addon_SRCDS
@@ -2324,32 +2324,32 @@ cls
 if "%lang%"=="en" title Upload Setup
 if "%lang%"=="de" title Hochladesetup
 
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo Enter the path of the folder where the addon data has been saved:
 if "%lang%"=="de" echo Gib den Pfad des Ordners ein, in dem die AddOn-Daten gespeichert sind:
 set /p fold=
 cls
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo Now enter the output path of the .gma file:
 if "%lang%"=="de" echo Gib nun den Ausgabepfad der .gma-Datei ein:
 set /p out=
 cls
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo Enter the name of the .gma file that shall be created:
 if "%lang%"=="de" echo Gib den Namen der zu erstellenden .gma-Datei ein:
 set /p datn=
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 %steam%\GarrysMod\bin\gmad.exe create -folder "%fold%" -out "%out%\%datn%"
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 REM Color
 if "%wincolor%"=="default" color 1f
 if "%wincolor%"=="negative" color d0
@@ -2359,35 +2359,35 @@ if "%wincolor%"=="commie" color 0c
 pause
 cls
 
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo Enter the path of the folder where the icon is saved:
 if "%lang%"=="de" echo Gib den Pfad des Ordners ein, in dem das Icon gespeichert ist:
 set /p out2=
 cls
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo Now enter the name of the icon (jpg format, 512x512!):
 if "%lang%"=="de" echo Gib nun den Namen des Icons ein (jpg-Format, 512x512!):
 set /p datn2=
 cls
 
-if "%lang%"=="en" echo Upload Setup  ³
-if "%lang%"=="de" echo Hochladesetup ³
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+if "%lang%"=="en" echo Upload Setup  ï¿½
+if "%lang%"=="de" echo Hochladesetup ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 echo]
 if "%lang%"=="en" echo The Addon will now be published! Do you want to continue? [Y/N]
-if "%lang%"=="de" echo Das AddOn wird nun ver”ffentlicht! M”chtest du fortfahren? [J/N]
+if "%lang%"=="de" echo Das AddOn wird nun verï¿½ffentlicht! Mï¿½chtest du fortfahren? [J/N]
 set /p Eig=
 if "%lang%"=="en" if not "%Eig%"=="Y" goto srcdsset
 if "%lang%"=="de" if not "%Eig%"=="J" goto srcdsset
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 %steam%\GarrysMod\bin\gmpublish.exe create -addon "%out%\%datn%" -icon "%out2%\%datn2%"
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 REM Color
 if "%wincolor%"=="default" color 1f
 if "%wincolor%"=="negative" color d0
@@ -2404,36 +2404,36 @@ REM ----------------------------------------------------------------------------
 :about
 cls
 color 4e
-echo C'Man Version %ver% [Ieniça]                                                                           
+echo C'Man Version %ver% [Ieniï¿½a]                                                                           
 
-echo ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ                                                                   °°°°°°°°°°°°°°°°°°°°°°°°°°°
-if not "%lang%"=="de" echo Credits                                                                              ÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍ
-if "%lang%"=="de" echo Danksagung                                                                           ÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍ
-echo                                                                                        º                         º
-echo ÄÄÄÄÄÄÄÄÄÄ                                                                             º                         º
-if not "%lang%"=="de" echo  Developers                                                                          º     °°°°°°°°°°°°°°°     º
-if "%lang%"=="de" echo  Entwickler                                                                          º     °°°°°°°°°°°°°°      º
-echo ÄÄÄÄÄÄÄÄÄÄ                                                                             º     °±±±±±±±±±±±°°°     º
-echo Fniux           -   Till Diegeler                                                      º    °±±°°°°°°°°°°°°      º
-echo JamesTheDemSoc  -   James Hyun                                                         º    °±±°                 º
-echo HoubkneghteS    -   Adam Simons                                                        º    °±±°       ÛÛÛ  ÛÛÛ  º
-echo Retro           -   Lucas Sundermann                                                   º    °±±°        ² ²² ²   º
-echo Nekhar          -   Kazou Takashiro                                                    º    °±±°        ² ²² ²   º
-echo                                                                                        º    °±±°        ±    ±   º
-echo                                                                                        º    °±±°        °    °   º
-if not "%lang%"=="de" echo Special thanks to:                                                                     º    °±±°                 º
-if "%lang%"=="de" echo Besonderen Dank an:                                                                    º    °±±°                 º
-echo                                                                                        º    °±±°°°°°°°°°°°°      º
-echo                                                                                        º    °°±±±±±±±±±±±°°°     º
-echo Bramblewhisker                                                                         º     °°°°°°°°°°°°°°      º
-echo Leaf                                                                                   º                         º
-echo ÄÄÄÄÄÄÄÄÄÄ                                                                             º                         º
-if not "%lang%"=="de" echo This batch is published under Unlicense and hence Public Domain.                     ÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍ
-if "%lang%"=="de" echo Diese Batch wird unter Unlicense und damit Public Domain ver”ffentlicht.             ÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍ
-echo ÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°                                              °°°°°°°°°°°°°°°°°°°°°°°°°°°
-echo C'Man     ³ 1. Feb 2016 - 26. Aug 2017. °                                              
-echo Weegeebot ³ 2017.                       °
-echo ÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ°
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                                                   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if not "%lang%"=="de" echo Credits                                                                              ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo Danksagung                                                                           ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+echo                                                                                        ï¿½                         ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                                                             ï¿½                         ï¿½
+if not "%lang%"=="de" echo  Developers                                                                          ï¿½     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     ï¿½
+if "%lang%"=="de" echo  Entwickler                                                                          ï¿½     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                                                             ï¿½     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     ï¿½
+echo Fniux           -   Till Diegeler                                                      ï¿½    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      ï¿½
+echo JamesTheDemSoc  -   James Hyun                                                         ï¿½    ï¿½ï¿½ï¿½ï¿½                 ï¿½
+echo HoubkneghteS    -   Adam Simons                                                        ï¿½    ï¿½ï¿½ï¿½ï¿½       ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½  ï¿½
+echo Retro           -   Lucas Sundermann                                                   ï¿½    ï¿½ï¿½ï¿½ï¿½        ï¿½ ï¿½ï¿½ ï¿½   ï¿½
+echo Nekhar          -   Kazou Takashiro                                                    ï¿½    ï¿½ï¿½ï¿½ï¿½        ï¿½ ï¿½ï¿½ ï¿½   ï¿½
+echo                                                                                        ï¿½    ï¿½ï¿½ï¿½ï¿½        ï¿½    ï¿½   ï¿½
+echo                                                                                        ï¿½    ï¿½ï¿½ï¿½ï¿½        ï¿½    ï¿½   ï¿½
+if not "%lang%"=="de" echo Special thanks to:                                                                     ï¿½    ï¿½ï¿½ï¿½ï¿½                 ï¿½
+if "%lang%"=="de" echo Besonderen Dank an:                                                                    ï¿½    ï¿½ï¿½ï¿½ï¿½                 ï¿½
+echo                                                                                        ï¿½    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      ï¿½
+echo                                                                                        ï¿½    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     ï¿½
+echo Bramblewhisker                                                                         ï¿½     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      ï¿½
+echo Leaf                                                                                   ï¿½                         ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                                                                             ï¿½                         ï¿½
+if not "%lang%"=="de" echo This batch is published under Unlicense and hence Public Domain.                     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo Diese Batch wird unter Unlicense und damit Public Domain verï¿½ffentlicht.             ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°                                              ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+echo C'Man     ï¿½ 1. Feb 2016 - 26. Aug 2017. ï¿½                                              
+echo Weegeebot ï¿½ 2017.                       ï¿½
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°
 echo]
 echo Made in Germany.
 pause
@@ -2444,19 +2444,19 @@ goto cmd
 :support
 echo.
 echo Support
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" echo Sourceforge-Projektseite:
 if not "%lang%"=="de" echo Sourceforge Project Page:
 echo https://sourceforge.net/projects/weegeebot/
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if "%lang%"=="de" echo Discord-Server:
 if not "%lang%"=="de" echo Discord Server:
 echo https://discord.gg/xfpDKsf
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
-if "%lang%"=="de" echo ...oder spende ber Patreon!  
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+if "%lang%"=="de" echo ...oder spende ï¿½ber Patreon!  
 if not "%lang%"=="de" echo ...or donate via Patreon!  
 echo https://www.patreon.com/Weegeebot
-echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 goto cmd
 
 :exit
