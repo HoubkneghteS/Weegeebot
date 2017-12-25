@@ -171,5 +171,9 @@
 	"region": "Region",
 	"lang": "Sprache",
 	"serverage": "Serveralter",
-	"serverID": "Server-ID"
+	"serverID": "Server-ID",
+	"welcome":"Hallo und Willkommen zum Server",
+	"welcomeName":"willkommen",
+	"welcomeSet":"Kanal für Willkommens-Nachrichten wurde eingestellt!",
+	"welcomeReset":"Kanal für Willkommens-Nachrichten wurde entfernt!"
 }

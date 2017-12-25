@@ -8,7 +8,8 @@
 	fs = require("fs"), //file system
 	data = require("./data.json"), //general data
 	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
-	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8"));
+	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")); //prefix data
+welcome = JSON.parse(fs.readFileSync("./welcome.json", "utf8")); //welcome data
 
 var arg, date, r, sLang, sPre, com; //variables that are used for messages
 
@@ -519,6 +520,24 @@ bot.on("guildCreate", guild => {
 bot.on("guildDelete", guild => {
 	date = new Date(); //current date
 	console.log(`Bot left ${guild.name} [${date}]`);
+});
+
+//welcome data -- sends welcome messages for users
+bot.on("guildMemberAdd", member => {
+	var welcomeGuild = member.guild;
+	if (!welcome[welcomeGuild.id]) return;
+
+	date = new Date(); //current date
+	sLang = lang[welcomeGuild.id] || "en"; //server lang
+
+	if (sLang == "en") {
+		r = require("./en.json"); //uses replies from en.json
+	} else if (sLang == "de") {
+		r = require("./de.json"); //nutzt Antworten von de.json
+	}
+
+	//sends welcome message
+	welcomeGuild.channels.get(welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`);
 });
 
 //Login -- Logs code into Weegeebot (please no touchy)
@@ -1151,6 +1170,22 @@ bot.on('message', msg => {
 					});
 					cmdLog("pre: " + newPre, msg);
 				}
+			} else msg.channel.send(r.perm);
+			break;
+		case r.welcomeName:
+			if (role(msg, "ADMINISTRATOR")) {
+				if (!welcome[msg.guild.id]) {
+					welcome[msg.guild.id] = msg.channel.id;
+					msg.channel.send(r.welcomeSet);
+				} else {
+					delete welcome[msg.guild.id];
+					msg.channel.send(r.welcomeReset);
+				}
+				//saves welcome data
+				fs.writeFile("./welcome.json", JSON.stringify(welcome), (err) => {
+					if (err) console.error(err)
+				});
+				cmdLog("welcome", msg);
 			} else msg.channel.send(r.perm);
 			break;
 	}
