@@ -538,7 +538,7 @@ bot.on("guildMemberAdd", member => {
 
 	//sends welcome message
 	welcomeGuild.channels.get(welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`);
-	console.log(`${member.user.username} joined ${member.server.name} [${date}] [${sLang}]`); //logbook
+	console.log(`${member.user.username} joined ${member.guild.name} [${date}] [${sLang}]`); //logbook
 });
 
 //Login -- Logs code into Weegeebot (please no touchy)
