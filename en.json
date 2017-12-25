@@ -59,8 +59,6 @@
 	"askError": "Ask me a question please..",
 	"y": "Yes!",
 	"n": "No..",
-	"infoError": "Wrong! Correct syntax: ``&info [pagename]``",
-	"info": "http://youtubepoop.wikia.com/wiki/",
 	"scpError": "Wrong! Correct syntax: ``&scp [number 000-4000]``",
 	"scp": "http://www.scp-wiki.net/scp-",
 	"server": "Weegeebot Discord Server: https://discord.gg/HudQcWh",

@@ -581,12 +581,12 @@ bot.on('message', msg => {
 				"\navatar [@user]         # posts the avatar of that user, or yourself if no user is mentioned" +
 				"\nfraktur [text]         # makes your text into 𝔣𝔯𝔞𝔨𝔱𝔲𝔯" +
 				"\nbtext [message]        # changes all instances of 'b' to the 🅱 emote" +
-				"\ninfo [pagename]        # displays info from that YTP Wiki page" +
 				"\neflag [country]        # displays the flag of a country with emojis" +
 				"\nvapor [message]        # makes your text into a ｖａｐｏｒｔｅｘｔ" +
 				"\nbattle [army1] [army2] # simulates a battle between two armies```");
 			//admin help
 			msg.author.send("```ini\nAdmin = You need the correct role to use them" +
+				"\nwelcome                # decides a channel where the welcome messages shall be posted" +
 				"\nlang  [de/en]          # sets the language, currently only for German or English" +
 				"\nclear [number]         # deletes messages" +
 				"\nprefix [prefix]        # changes the bot prefix" +
@@ -642,11 +642,11 @@ bot.on('message', msg => {
 				"\natomisiere [Ort]        # wirft eine echte Atombombe auf den gegebenen Ort" +
 				"\nvapor [Nachricht]       # macht deine Nachricht zum ｖａｐｏｒｔｅｘｔ" +
 				"\nbtext [Nachricht]       # macht aus allen Bs ein 🅱" +
-				"\ninfo [Seitenname]       # gibt Infos aus einer YTP-Wiki-Seite aus" +
 				"\navatar [@Nutzer]        # postet das Profilbild des erwähnten Benutzers, oder deines, wenn niemand erwähnt wird" +
 				"\nkampf [Armee1] [Armee2] # simuliert einen Kampf zwischen 2 Armeen```");
 			//Adminhilfe
 			msg.author.send("```ini\nAdminbefehle = Man braucht Admin-Berechtigungen, um sie zu verwenden" +
+				"\nwillkommen         # legt einen Kanal fest, wo die Willkommens-Nachrichten gepostet werden sollen" +
 				"\nsprache [de/en]               # wechselt die Sprache zwischen Deutsch und Englisch" +
 				"\nlösche [Nummer]               # löscht Nachrichten" +
 				"\nprefix [Präfix]               # ändert das Bot-Präfix" +
@@ -684,15 +684,6 @@ bot.on('message', msg => {
 		case "test":
 			msg.channel.send(r.test + rdm(r.quote));
 			cmdLog("test", msg);
-			break;
-		//info (ytp wiki pages)
-		case "info":
-			if (arg.length < 2) msg.channel.send(r.infoError);
-			else {
-				var query = msg.content.split(" ").slice(1).join("_");
-				msg.channel.send(r.info + query);
-			}
-			cmdLog("info", msg);
 			break;
 		//scp command
 		case "scp":
