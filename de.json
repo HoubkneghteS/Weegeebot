@@ -174,6 +174,6 @@
 	"serverID": "Server-ID",
 	"welcome":"Hallo und Willkommen zum Server",
 	"welcomeName":"willkommen",
-	"welcomeSet":"Kanal für Willkommens-Nachrichten wurde eingestellt!",
+	"welcomeSet":"Kanal für Willkommens-Nachrichten wurde festgelegt!",
 	"welcomeReset":"Kanal für Willkommens-Nachrichten wurde entfernt!"
 }
