@@ -1,16 +1,19 @@
 @echo off
-echo ==[Weegeebot]==
+echo ==[Weegeebot BETA]==
 title Weegeebot %DATE%
 color 1e
+
+echo Type 'help' for a list of commands:
 
 REM Commands
 :cmd
 
-   set /p exec=
+   set /p exec= "> "
    if "%exec%"=="start" goto start
    if "%exec%"=="restart" goto restart
    if "%exec%"=="tool" goto tool
    if "%exec%"=="install" goto install
+   if "%exec%"=="help" goto help
 
    goto cmd
 
@@ -41,5 +44,15 @@ REM Installing
 
    start npm install discord.js
    echo Installing Discord.js
+
+   goto cmd
+
+REM Help
+:help 
+
+   echo Command list
+   echo -------------------
+   echo start   - starts the bot
+   echo restart - restarts the bot
 
    goto cmd
