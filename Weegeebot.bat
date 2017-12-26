@@ -13,7 +13,7 @@ REM Commands
 
    echo ==[Weegeebot BETA]==
    if "%lang%"=="en" echo Type 'help' for a list of commands:
-   if "%lang%"=="de" echo Gib 'hilfe' ein fÅr eine Befehlsliste:
+   if "%lang%"=="de" echo Gib 'hilfe' ein f√ºr eine Befehlsliste:
 
 REM Commands
 :cmd
@@ -42,7 +42,7 @@ REM Normal bot
 
    start pm2 start %~dp0\bot.js --name="Weegeebot"
    if "%lang%"=="en" echo Script started!
-   if "%lang%"=="de" echo Skript erfolgreich ausgefÅhrt!
+   if "%lang%"=="de" echo Skript erfolgreich ausgef√ºhrt!
    goto cmd
 
 REM Restart
@@ -58,7 +58,7 @@ REM Tool bot
 
    start node %~dp0tools\BOT-DEV.js -debug
    if "%lang%"=="en" echo Tool-Bot started!
-   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefÅhrt!
+   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgef√ºhrt!
 
    goto cmd
 
