@@ -57,7 +57,8 @@ REM Tool bot
 :tool
 
    start node %~dp0tools\BOT-DEV.js -debug
-   echo Tool bot started!
+   if "%lang%"=="en" echo Tool-Bot started!
+   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefÅhrt!
 
    goto cmd
 
