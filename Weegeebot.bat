@@ -54,5 +54,7 @@ REM Help
    echo -------------------
    echo start   - starts the bot
    echo restart - restarts the bot
+   echo install - installs discord.js
+   echo tool    - starts tool bot
 
    goto cmd
