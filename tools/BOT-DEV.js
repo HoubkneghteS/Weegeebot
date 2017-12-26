@@ -52,4 +52,9 @@ bot.on('message', msg => {
 		bot.guilds.get(arg[1]).channels.array()[1].createInvite()
 			.then(invite => msg.channel.send(invite.url));
 		break;
+	case "avatar":
+		bot.user.avatar.setAvatar(arg[1])
+			.then(msg.channel.send("Avatar changed!"))
+			.catch(console.error);
+		break;
 }});

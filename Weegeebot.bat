@@ -34,7 +34,7 @@ REM Restart
 REM Tool bot
 :tool
 
-   start node %~dp0tools\BOT-DEV.js
+   start node %~dp0tools\BOT-DEV.js -debug
    echo Tool bot started!
 
    goto cmd
