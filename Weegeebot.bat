@@ -42,7 +42,7 @@ REM Normal bot
 
    start pm2 start %~dp0\bot.js --name="Weegeebot"
    if "%lang%"=="en" echo Script started!
-   if "%lang%"=="de" echo Skript erfolgreich ausgef¸hrt!
+   if "%lang%"=="de" echo Skript erfolgreich ausgefÅhrt!
    goto cmd
 
 REM Restart
