@@ -13,7 +13,7 @@ REM Commands
 
    echo ==[Weegeebot BETA]==
    if "%lang%"=="en" echo Type 'help' for a list of commands:
-   if "%lang%"=="de" echo Gib 'hilfe' ein für eine Befehlsliste:
+   if "%lang%"=="de" echo Gib 'hilfe' ein fr eine Befehlsliste:
 
 REM Commands
 :cmd
