@@ -76,23 +76,23 @@ REM Help
 
    if "%lang%"=="en" (
       echo Command list
-      echo -------------------
-      echo start   - starts the bot
-      echo restart - restarts the bot
-      echo install - installs discord.js
-      echo tool    - starts tool bot
-      echo de      - changes language
-      echo to German
+      echo _______________________
+      echo ? start   - starts the bot
+      echo ? restart - restarts the bot
+      echo ? install - installs discord.js
+      echo ? tool    - starts tool bot
+      echo ? de      - changes language
+      echo ? to German
    )
    if "%lang%"=="de" (
       echo Befehlsliste
-      echo -------------------
-      echo start    - startet den Bot
-      echo neustart - startet den Bot neu
-      echo install  - installiert discord.js
-      echo tool     - startet den Tool-Bot
-      echo en       - stellt Sprache auf
-      echo Englisch um
+      echo _______________________
+      echo ? start    - startet den Bot
+      echo ? neustart - startet den Bot neu
+      echo ? install  - installiert discord.js
+      echo ? tool     - startet den Tool-Bot
+      echo ? en       - stellt Sprache auf
+      echo ? Englisch um
    )
 
    goto cmd
