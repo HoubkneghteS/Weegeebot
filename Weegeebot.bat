@@ -25,7 +25,7 @@ REM Commands
       if "%exec%"=="tool" goto tool
       if "%exec%"=="install" goto install
       if "%exec%"=="help" goto help
-      if "%exec%"=="de" goto deutsch
+      if "%exec%"=="lang" goto lang
    )
    if "%lang%"=="de" (
       if "%exec%"=="start" goto start
@@ -33,7 +33,7 @@ REM Commands
       if "%exec%"=="tool" goto tool
       if "%exec%"=="install" goto install
       if "%exec%"=="hilfe" goto help
-      if "%exec%"=="en" goto english
+      if "%exec%"=="sprache" goto lang
    )
    goto cmd
 
@@ -77,39 +77,52 @@ REM Help
    if "%lang%"=="en" (
       echo Command list
       echo _______________________
-      echo ? start   - starts the bot
-      echo ? restart - restarts the bot
-      echo ? install - installs discord.js
-      echo ? tool    - starts tool bot
-      echo ? de      - changes language
-      echo ? to German
+      echo ³ start   - starts the bot
+      echo ³ restart - restarts the bot
+      echo ³ install - installs discord.js
+      echo ³ tool    - starts tool bot
+      echo ³ lang    - changes language
    )
    if "%lang%"=="de" (
       echo Befehlsliste
       echo _______________________
-      echo ? start    - startet den Bot
-      echo ? neustart - startet den Bot neu
-      echo ? install  - installiert discord.js
-      echo ? tool     - startet den Tool-Bot
-      echo ? en       - stellt Sprache auf
-      echo ? Englisch um
+      echo ³ start    - startet den Bot
+      echo ³ neustart - startet den Bot neu
+      echo ³ install  - installiert discord.js
+      echo ³ tool     - startet den Tool-Bot
+      echo ³ sprache  - „ndert Sprache
    )
 
    goto cmd
 
+REM List of languages
+:lang
+
+   cls
+
+   if "%lang%"=="en" echo Language List:
+   if "%lang%"=="de" echo Sprachliste:
+   echo _______________________
+   echo [en] - English
+   echo [de] - Deutsch
+
+   set /p inp=
+   if "%inp%"=="en" goto enLang
+   if "%inp%"=="de" goto deLang
+
+REM English language
+:enLang
+
+   set lang=en
+   echo en>"%~dp0\settings\lang.cfg"
+
+   goto init
+
 REM German language
-:deutsch
+:deLang
 
    set lang=de
 
    echo de>"%~dp0\settings\lang.cfg"
-
-   goto init
-
-REM English language
-:english
-
-   set lang=en
-   echo en>"%~dp0\settings\lang.cfg"
 
    goto init
