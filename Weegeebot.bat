@@ -18,7 +18,7 @@ REM Commands
 
    echo ==[Weegeebot BETA]==
    if "%lang%"=="en" echo Type 'help' for a list of commands:
-   if "%lang%"=="de" echo Gib 'hilfe' ein f√ºr eine Befehlsliste:
+   if "%lang%"=="de" echo Gib 'hilfe' ein fÅr eine Befehlsliste:
 
 REM Commands
 :cmd
@@ -50,7 +50,7 @@ REM Normal bot
    if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="Weegeebot"
    if "%start%"=="node" start node bot
    if "%lang%"=="en" echo Script started!
-   if "%lang%"=="de" echo Skript erfolgreich ausgef√ºhrt!
+   if "%lang%"=="de" echo Skript erfolgreich ausgefÅhrt!
    goto cmd
 
 REM Restart
@@ -66,7 +66,7 @@ REM Tool bot
 
    start node %~dp0tools\BOT-DEV.js -debug
    if "%lang%"=="en" echo Tool-Bot started!
-   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgef√ºhrt!
+   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefÅhrt!
 
    goto cmd
 
@@ -85,22 +85,22 @@ REM Help
    if "%lang%"=="en" (
       echo Command list
       echo _______________________
-      echo ‚îÇ start   - starts the bot
-      echo ‚îÇ restart - restarts the bot
-      echo ‚îÇ install - installs discord.js
-      echo ‚îÇ tool    - starts tool bot
-      echo ‚îÇ lang    - changes language
-      echo ‚îÇ mode    - changes start mode
+      echo ≥ start   - starts the bot
+      echo ≥ restart - restarts the bot
+      echo ≥ install - installs discord.js
+      echo ≥ tool    - starts tool bot
+      echo ≥ lang    - changes language
+      echo ≥ mode    - changes start mode
    )
    if "%lang%"=="de" (
       echo Befehlsliste
       echo _______________________
-      echo ‚îÇ start    - startet den Bot
-      echo ‚îÇ neustart - startet den Bot neu
-      echo ‚îÇ install  - installiert discord.js
-      echo ‚îÇ tool     - startet den Tool-Bot
-      echo ‚îÇ sprache  - √§ndert Sprache
-      echo ‚îÇ modus    - √§ndert Startmodus
+      echo ≥ start    - startet den Bot
+      echo ≥ neustart - startet den Bot neu
+      echo ≥ install  - installiert discord.js
+      echo ≥ tool     - startet den Tool-Bot
+      echo ≥ sprache  - Ñndert Sprache
+      echo ≥ modus    - Ñndert Startmodus
    )
 
    goto cmd
