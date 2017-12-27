@@ -5,6 +5,7 @@ if not exist "%~dp0\settings\lang.cfg" (
    md "%~dp0\settings"
    echo en>"%~dp0\settings\lang.cfg"
 )
+
 if exist "%~dp0\settings\start.cfg" set /p start=<"%~dp0\settings\start.cfg"
 if not exist "%~dp0\settings\start.cfg" (
    echo pm2>"%~dp0\settings\start.cfg"
