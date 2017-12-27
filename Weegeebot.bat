@@ -5,6 +5,10 @@ if not exist "%~dp0\settings\lang.cfg" (
    md "%~dp0\settings"
    echo en>"%~dp0\settings\lang.cfg"
 )
+if exist "%~dp0\settings\start.cfg" set /p start=<"%~dp0\settings\start.cfg"
+if not exist "%~dp0\settings\start.cfg" (
+   echo pm2>"%~dp0\settings\start.cfg"
+)
 color 1e
 
 REM Commands
@@ -26,6 +30,7 @@ REM Commands
       if "%exec%"=="install" goto install
       if "%exec%"=="help" goto help
       if "%exec%"=="lang" goto lang
+      if "%exec%"=="mode" goto mode
    )
    if "%lang%"=="de" (
       if "%exec%"=="start" goto start
@@ -34,13 +39,15 @@ REM Commands
       if "%exec%"=="install" goto install
       if "%exec%"=="hilfe" goto help
       if "%exec%"=="sprache" goto lang
+      if "%exec%"=="modus" goto mode
    )
    goto cmd
 
 REM Normal bot
 :start
 
-   start pm2 start %~dp0\bot.js --name="Weegeebot"
+   if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="Weegeebot"
+   if "%start%"=="node" start node bot
    if "%lang%"=="en" echo Script started!
    if "%lang%"=="de" echo Skript erfolgreich ausgefhrt!
    goto cmd
@@ -82,6 +89,7 @@ REM Help
       echo ³ install - installs discord.js
       echo ³ tool    - starts tool bot
       echo ³ lang    - changes language
+      echo ³ mode    - changes start mode
    )
    if "%lang%"=="de" (
       echo Befehlsliste
@@ -91,6 +99,7 @@ REM Help
       echo ³ install  - installiert discord.js
       echo ³ tool     - startet den Tool-Bot
       echo ³ sprache  - „ndert Sprache
+      echo ³ modus    - „ndert Startmodus
    )
 
    goto cmd
@@ -122,7 +131,37 @@ REM German language
 :deLang
 
    set lang=de
-
    echo de>"%~dp0\settings\lang.cfg"
+
+   goto init
+
+REM Startmode
+:mode
+
+   cls
+
+   if "%lang%"=="en" echo Startup Modes:
+   if "%lang%"=="de" echo Startup-Modi:
+   echo _______________________
+   echo [pm2]  - PM2
+   echo [node] - Node.js
+
+   set /p inp=
+   if "%inp%"=="pm2" goto pm2
+   if "%inp%"=="node" goto node
+
+REM Pm2
+:pm2
+
+   set start=pm2
+   echo pm2>"%~dp0\settings\start.cfg"
+
+   goto init
+
+REM Node.js
+:node
+
+   set start=node
+   echo node>"%~dp0\settings\start.cfg"
 
    goto init
