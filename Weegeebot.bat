@@ -15,7 +15,7 @@ color 1e
 REM Commands
 :init
    cls
-
+   
    echo ==[Weegeebot BETA]==
    if "%lang%"=="en" echo Type 'help' for a list of commands:
    if "%lang%"=="de" echo Gib 'hilfe' ein fÅr eine Befehlsliste:
