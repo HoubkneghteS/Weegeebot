@@ -173,5 +173,6 @@
 	"welcome": "Hallo und Willkommen zum Server",
 	"welcomeName": "willkommen",
 	"welcomeSet": "Kanal für Willkommens-Nachrichten wurde festgelegt!",
-	"welcomeReset": "Kanal für Willkommens-Nachrichten wurde entfernt!"
+	"welcomeReset": "Kanal für Willkommens-Nachrichten wurde entfernt!",
+	"bubble": "blase"
 }

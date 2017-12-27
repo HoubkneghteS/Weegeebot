@@ -173,5 +173,6 @@
 	"welcome": "Hello and welcome to the server",
 	"welcomeName": "welcome",
 	"welcomeSet": "Channel for welcome messages has been set!",
-	"welcomeReset": "Channel for welcome messages has been reset!"
+	"welcomeReset": "Channel for welcome messages has been reset!",
+	"bubble": "bubble"
 }

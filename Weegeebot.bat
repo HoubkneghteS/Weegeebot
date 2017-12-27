@@ -64,7 +64,7 @@ REM Restart
 REM Tool bot
 :tool
 
-   start node %~dp0tools\BOT-DEV.js -debug
+   start nodemon %~dp0tools\BOT-DEV.js
    if "%lang%"=="en" echo Tool-Bot started!
    if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefÅhrt!
 

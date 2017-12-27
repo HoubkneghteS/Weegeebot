@@ -476,6 +476,17 @@ function vapor(text) {
 	return text;
 }
 
+//bubble -- converts text to bubbled text
+function bubble(text) {
+	let startText = [/a/gi, /b/gi, /c/gi, /d/gi, /e/gi, /f/gi, /g/gi, /h/gi, /i/gi, /j/gi, /k/gi, /l/gi, /m/gi, /n/gi, /o/gi, /p/gi, /q/gi, /r/gi, /s/gi, /t/gi, /u/gi, /v/gi, /w/gi, /x/gi, /y/gi, /z/gi], //starting letters
+		endText = ["ⓐ", "ⓑ", "ⓒ", "ⓓ", "ⓔ", "ⓕ", "ⓖ", "ⓗ", "ⓘ", "ⓙ", "ⓚ", "ⓛ", "ⓜ", "ⓝ", "ⓞ", "ⓟ", "ⓠ", "ⓡ", "ⓢ", "ⓣ", "ⓤ", "ⓥ", "ⓦ", "ⓧ", "ⓨ", "ⓩ"]; //resulting letters
+
+	for (var i = 0; i < startText.length; i++) {
+		text = text.replace(startText[i], endText[i]); //replaces text
+	}
+	return text;
+}
+
 //fraktur -- converts text to fraktur
 function fraktur(text) {
 	let startText = [/ä/g, /ö/g, /ü/g, /ß/g, /Ä/g, /Ö/g, /Ü/g, /ẞ/g, /a/g, /b/g, /c/g, /d/g, /e/g, /f/g, /g/g, /h/g, /i/g, /j/g, /k/g, /l/g, /m/g, /n/g, /o/g, /p/g, /q/g, /r/g, /s/g, /t/g, /u/g, /v/g, /w/g, /x/g, /y/g, /z/g, /A/g, /B/g, /C/g, /D/g, /E/g, /F/g, /G/g, /H/g, /I/g, /J/g, /K/g, /L/g, /M/g, /N/g, /O/g, /P/g, /Q/g, /R/g, /S/g, /T/g, /U/g, /V/g, /W/g, /X/g, /Y/g, /Z/g], //starting letters
@@ -1039,6 +1050,15 @@ bot.on('message', msg => {
 				msg.channel.send(vapor(add(1, msg)));
 			}
 			cmdLog("vapor", msg);
+			break;
+		//bubble
+		case r.bubble:
+			if (arg.length < 2) msg.channel.send(bubble(r.msgError));
+			else {
+				msg.delete();
+				msg.channel.send(bubble(add(1, msg)));
+			}
+			cmdLog("bubble", msg);
 			break;
 		//say (says what you say)
 		case r.say:
