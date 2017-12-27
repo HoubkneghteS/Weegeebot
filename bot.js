@@ -1072,8 +1072,7 @@ bot.on('message', msg => {
 					var msgs = parseInt(arg[1]) || 2; //determines msgs with default of 2
 
 					msg.delete();
-					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)); //deletes messages
-					msg.channel.send(msgs + r.clear1); //posts message about deletion
+					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)) //deletes messages
 					cmdLog(msgs + " messages deleted", msg);
 				}
 			} else msg.channel.send(r.perm);
@@ -1083,11 +1082,10 @@ bot.on('message', msg => {
 			if (role(msg, "BAN_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.banError);
 				else {
-					msg.guild.member(msg.mentions.users.first()).ban();
 					msg.mentions.users.first().send(r.ban1 + msg.author.username + r.reason + add(2, msg)); //messages bannee
 					msg.author.send(r.ban2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages banner
+					msg.guild.member(msg.mentions.users.first()).ban();
 				}
-				cmdLog("ban " + arg[1], msg);
 			} else msg.channel.send(r.perm);
 			break;
 		//kick (kicks user from server with no restriction to return)
@@ -1095,9 +1093,9 @@ bot.on('message', msg => {
 			if (role(msg, "KICK_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.kickError);
 				else {
-					msg.guild.member(msg.mentions.users.first()).kick();
 					msg.mentions.users.first().send(r.kick1 + msg.author.username + r.reason + add(2, msg)); //messages kickee
 					msg.author.send(r.kick2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages kicker
+					msg.guild.member(msg.mentions.users.first()).kick();
 				}
 				cmdLog("kick " + arg[1], msg);
 			} else msg.channel.send(r.perm);
