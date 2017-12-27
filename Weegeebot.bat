@@ -47,7 +47,7 @@ REM Commands
 REM Normal bot
 :start
 
-   if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="Weegeebot"
+   if "%start%"=="pm2" start pm2 start %~dp0\bot.js --n="bot" -l="%~dp0\settings\log.txt"
    if "%start%"=="node" start node bot
    if "%lang%"=="en" echo Script started!
    if "%lang%"=="de" echo Skript erfolgreich ausgefÅhrt!
