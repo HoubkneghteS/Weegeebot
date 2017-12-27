@@ -15,10 +15,10 @@ color 1e
 REM Commands
 :init
    cls
-   
+
    echo ==[Weegeebot BETA]==
    if "%lang%"=="en" echo Type 'help' for a list of commands:
-   if "%lang%"=="de" echo Gib 'hilfe' ein fÃ¼r eine Befehlsliste:
+   if "%lang%"=="de" echo Gib 'hilfe' ein fr eine Befehlsliste:
 
 REM Commands
 :cmd
@@ -50,7 +50,7 @@ REM Normal bot
    if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="Weegeebot"
    if "%start%"=="node" start node bot
    if "%lang%"=="en" echo Script started!
-   if "%lang%"=="de" echo Skript erfolgreich ausgefÃ¼hrt!
+   if "%lang%"=="de" echo Skript erfolgreich ausgefhrt!
    goto cmd
 
 REM Restart
@@ -66,7 +66,7 @@ REM Tool bot
 
    start node %~dp0tools\BOT-DEV.js -debug
    if "%lang%"=="en" echo Tool-Bot started!
-   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefÃ¼hrt!
+   if "%lang%"=="de" echo Tool-Bot erfolgreich ausgefhrt!
 
    goto cmd
 
@@ -85,22 +85,22 @@ REM Help
    if "%lang%"=="en" (
       echo Command list
       echo _______________________
-      echo â”‚ start   - starts the bot
-      echo â”‚ restart - restarts the bot
-      echo â”‚ install - installs discord.js
-      echo â”‚ tool    - starts tool bot
-      echo â”‚ lang    - changes language
-      echo â”‚ mode    - changes start mode
+      echo ³ start   - starts the bot
+      echo ³ restart - restarts the bot
+      echo ³ install - installs discord.js
+      echo ³ tool    - starts tool bot
+      echo ³ lang    - changes language
+      echo ³ mode    - changes start mode
    )
    if "%lang%"=="de" (
       echo Befehlsliste
       echo _______________________
-      echo â”‚ start    - startet den Bot
-      echo â”‚ neustart - startet den Bot neu
-      echo â”‚ install  - installiert discord.js
-      echo â”‚ tool     - startet den Tool-Bot
-      echo â”‚ sprache  - Ã¤ndert Sprache
-      echo â”‚ modus    - Ã¤ndert Startmodus
+      echo ³ start    - startet den Bot
+      echo ³ neustart - startet den Bot neu
+      echo ³ install  - installiert discord.js
+      echo ³ tool     - startet den Tool-Bot
+      echo ³ sprache  - „ndert Sprache
+      echo ³ modus    - „ndert Startmodus
    )
 
    goto cmd
@@ -130,7 +130,7 @@ REM English language
 
 REM German language
 :deLang
-
+   
    set lang=de
    echo de>"%~dp0\settings\lang.cfg"
 
