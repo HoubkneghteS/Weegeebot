@@ -28,27 +28,24 @@ REM Commands
    set /p exec= "> "
 
    if "%lang%"=="en" (
-      if "%exec%"=="start" goto start
       if "%exec%"=="restart" goto restart
-      if "%exec%"=="tool" goto tool
-      if "%exec%"=="install" goto install
       if "%exec%"=="help" goto help
       if "%exec%"=="lang" goto lang
       if "%exec%"=="mode" goto mode
       if "%exec%"=="credits" goto credits
    )
    if "%lang%"=="de" (
-      if "%exec%"=="start" goto start
       if "%exec%"=="neustart" goto restart
-      if "%exec%"=="tool" goto tool
-      if "%exec%"=="install" goto install
       if "%exec%"=="hilfe" goto help
       if "%exec%"=="sprache" goto lang
       if "%exec%"=="modus" goto mode
       if "%exec%"=="danksagung" goto credits
    )
 
+   if "%exec%"=="start" goto start
    if "%exec%"=="bot" goto start
+   if "%exec%"=="tool" goto tool
+   if "%exec%"=="install" goto install
 
    goto cmd
 
