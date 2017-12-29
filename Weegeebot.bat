@@ -49,6 +49,7 @@ REM Normal bot
 
    if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="bot" --log="%~dp0\settings\log.txt"
    if "%start%"=="node" start node bot
+   if "%start%"=="nodemon" start nodemon bot
    if "%lang%"=="en" echo Script started!
    if "%lang%"=="de" echo Skript erfolgreich ausgefhrt!
    goto cmd
@@ -142,14 +143,16 @@ REM Startmode
    cls
 
    if "%lang%"=="en" echo Startup Modes:
-   if "%lang%"=="de" echo Startup-Modi:
+   if "%lang%"=="de" echo Ausfhrungsmodi:
    echo _______________________
-   echo [pm2]  - PM2
-   echo [node] - Node.js
+   echo [pm2]     - PM2
+   echo [node]    - Node.js
+   echo [nodemon] - Nodemon
 
    set /p inp=
    if "%inp%"=="pm2" goto pm2
    if "%inp%"=="node" goto node
+   if "%inp%"=="nodemon" goto nodemon
 
 REM Pm2
 :pm2
@@ -164,5 +167,13 @@ REM Node.js
 
    set start=node
    echo node>"%~dp0\settings\start.cfg"
+
+   goto init
+
+REM Nodemon
+:nodemon
+
+   set start=nodemon
+   echo nodemon>"%~dp0\settings\start.cfg"
 
    goto init
