@@ -10,11 +10,12 @@ if exist "%~dp0\settings\start.cfg" set /p start=<"%~dp0\settings\start.cfg"
 if not exist "%~dp0\settings\start.cfg" (
    echo pm2>"%~dp0\settings\start.cfg"
 )
-color 1e
 
 REM Commands
 :init
+
    cls
+   color 1e
 
    echo C'Man BETA
    echo _______________________
