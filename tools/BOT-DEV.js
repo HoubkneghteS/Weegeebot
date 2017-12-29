@@ -8,7 +8,7 @@ const Discord = require("discord.js"),
 	data = require("../data.json"), //general data
 	fs = require("fs"); //file system
 
-	var arg, com; //variables that are used for messages
+var arg, com; //variables that are used for messages
 
 //error handlers
 bot.on("debug", (e) => console.debug(e));

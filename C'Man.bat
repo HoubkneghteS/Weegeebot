@@ -1,5 +1,5 @@
 @echo off
-title Weegeebot %DATE%
+title C'Man %DATE%
 if exist "%~dp0\settings\lang.cfg" set /p lang=<"%~dp0\settings\lang.cfg"
 if not exist "%~dp0\settings\lang.cfg" (
    md "%~dp0\settings"
@@ -16,14 +16,16 @@ REM Commands
 :init
    cls
 
-   echo ==[Weegeebot BETA]==
-   if "%lang%"=="en" echo Type 'help' for a list of commands:
-   if "%lang%"=="de" echo Gib 'hilfe' ein fr eine Befehlsliste:
+   echo C'Man BETA
+   echo _______________________
+   if "%lang%"=="en" echo Type 'help' for a list of commands, and 'start' to start the bot:
+   if "%lang%"=="de" echo Gib 'hilfe' ein fr eine Befehlsliste, und 'start' um den Bot zu starten:
 
 REM Commands
 :cmd
 
    set /p exec= "> "
+
    if "%lang%"=="en" (
       if "%exec%"=="start" goto start
       if "%exec%"=="restart" goto restart
@@ -32,6 +34,7 @@ REM Commands
       if "%exec%"=="help" goto help
       if "%exec%"=="lang" goto lang
       if "%exec%"=="mode" goto mode
+      if "%exec%"=="credits" goto credits
    )
    if "%lang%"=="de" (
       if "%exec%"=="start" goto start
@@ -41,7 +44,11 @@ REM Commands
       if "%exec%"=="hilfe" goto help
       if "%exec%"=="sprache" goto lang
       if "%exec%"=="modus" goto mode
+      if "%exec%"=="danksagung" goto credits
    )
+
+   if "%exec%"=="bot" goto start
+
    goto cmd
 
 REM Normal bot
@@ -92,16 +99,18 @@ REM Help
       echo ³ tool    - starts tool bot
       echo ³ lang    - changes language
       echo ³ mode    - changes start mode
+      echo ³ credits - displays credits
    )
    if "%lang%"=="de" (
       echo Befehlsliste
       echo _______________________
-      echo ³ start    - startet den Bot
-      echo ³ neustart - startet den Bot neu
-      echo ³ install  - installiert discord.js
-      echo ³ tool     - startet den Tool-Bot
-      echo ³ sprache  - „ndert Sprache
-      echo ³ modus    - „ndert Startmodus
+      echo ³ start      - startet den Bot
+      echo ³ neustart   - startet den Bot neu
+      echo ³ install    - installiert discord.js
+      echo ³ tool       - startet den Tool-Bot
+      echo ³ sprache    - „ndert Sprache
+      echo ³ modus      - „ndert Startmodus
+      echo ³ danksagung - zeigt Danksagung an
    )
 
    goto cmd
@@ -176,4 +185,22 @@ REM Nodemon
    set start=nodemon
    echo nodemon>"%~dp0\settings\start.cfg"
 
+   goto init
+
+REM Credits
+:credits
+   
+   cls
+   color 4b
+
+   echo Weegeebot (2017 - )
+   if "%lang%"=="en" echo Developers:
+   if "%lang%"=="de" echo Entwickler:
+   echo _______________________
+   echo HoubkneghteS   - Adam Simons
+   echo Fniux          - Till Diegeler
+   echo JamesTheDemSoc - James Hyun
+   echo _______________________
+
+   pause
    goto init
