@@ -443,7 +443,7 @@ function cmdLog(str, msg) {
 	console.log(`${str} - ${msg.author.username} [${date}] [${sLang}]`);
 }
 
-//Randomizer -- simplifies randomizing process
+//Randomizer -- returns random value in an array
 function rdm(array) {
 	return array[Math.floor(Math.random() * (array.length))];
 }
@@ -588,7 +588,7 @@ bot.on('message', msg => {
 				"\ncancer                 # infects the channel with toxic, cringy pictures and videos" +
 				"\nnuke [place]           # throws a real bomb at the given place!" +
 				"\nscp [number]           # posts an SCP entry! (001-4000)" +
-				"\nroll [number]          # rolls a fair 6-sided-die (or with more sides if you wish)" +
+				"\ndice [number]          # rolls a fair 6-sided-die (or with more sides if you wish)" +
 				"\nask [question]         # asks a yes/no question" +
 				"\navatar [@user]         # posts the avatar of that user, or yourself if no user is mentioned" +
 				"\nfraktur [text]         # makes your text into 𝔣𝔯𝔞𝔨𝔱𝔲𝔯" +
@@ -773,7 +773,7 @@ bot.on('message', msg => {
 							msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${a ** b}`); //Power
 							break;
 						case "root":
-							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(b ** (1 / a))}`); //Root
+							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(b ** (1 / a))}`); //square Root
 							else msg.channel.send(rdm(r.quote) + `\n${a} √ ${b} = ${parseFloat(b ** (1 / a))}`);
 							break;
 					}
