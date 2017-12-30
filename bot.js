@@ -908,7 +908,7 @@ bot.on('message', msg => {
 			msg.channel.send("```md" +
 				`\n${r.serverEntry} ${msg.guild.name}:` +
 				"\n---------------" +
-				`\n< ${r.membercount} 🗣️> \n ${msg.guild.memberCount}` +
+				`\n< ${r.membercount} 🗣> \n ${msg.guild.memberCount}` +
 				`\n< ${r.serverage} 📅> \n ${msg.guild.createdAt}` +
 				`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}` +
 				`\n< ${r.region} 🗺️> \n ${msg.guild.region}` +
@@ -925,7 +925,7 @@ bot.on('message', msg => {
 				`\n< ${r.botinfo[0]} 📝> \n ${r.botinfo[1]}` +
 				`\n< ${r.botinfo[2]} > \n HoubkneghteS, Fniux, JamesTheDemSoc` +
 				`\n< ${r.botinfo[3]} > \n ${bot.guilds.size} ${r.botinfo[4]}` +
-				`\n< ${r.botinfo[5]} ⏲️> \n ${Math.floor(bot.ping)} ms` +
+				`\n< ${r.botinfo[5]} ⏲> \n ${Math.floor(bot.ping)} ms` +
 				"```");
 			cmdLog("botinfo", msg);
 			break;
@@ -959,7 +959,8 @@ bot.on('message', msg => {
 						msg.channel.send(r.nukeRussia);
 						msg.channel.send("http://www.cubanet.org/wp-content/uploads/2015/06/putin-sad.jpg");
 						break;
-					case r.weegee:
+					case "weegee":
+					case "weegeebot":
 						msg.channel.send(r.nukeWeegee);
 						break;
 					case r.me:
