@@ -511,11 +511,11 @@ bot.on('ready', () => {
 	bot.user.setGame(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`); //status message
 
 	//logs servercount -- not necessary for standard use
-	request.post("https://discordbots.org/api/bots/239261914918682624/stats")
+	request.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
 		.set('Authorization', data.botlist)
 		.send({ server_count: bot.guilds.size })
 		.catch(err => console.error(`Fuck look at this: ${err.body}`));
-	request.post("https://bots.discord.pw/api/bots/239261914918682624/stats")
+	request.post(`https://bots.discord.pw/api/bots/${bot.user.id}/stats`)
 		.set('Authorization', data.botlist2)
 		.send({ server_count: bot.guilds.size })
 		.catch(err => console.error(`Fuck look at this: ${err.body}`));
@@ -773,8 +773,8 @@ bot.on('message', msg => {
 							msg.channel.send(rdm(r.quote) + `\n${a} ^ ${b} = ${a ** b}`); //Power
 							break;
 						case "root":
-							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(Math.pow(b, 1 / a))}`); //Root
-							else msg.channel.send(rdm(r.quote) + `\n${a} √ ${b} = ${parseFloat(Math.pow(b, 1 / a))}`);
+							if (a == 2) msg.channel.send(rdm(r.quote) + `\n√${b} = ${parseFloat(b ** (1 / a))}`); //Root
+							else msg.channel.send(rdm(r.quote) + `\n${a} √ ${b} = ${parseFloat(b ** (1 / a))}`);
 							break;
 					}
 
