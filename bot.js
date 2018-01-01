@@ -924,8 +924,9 @@ bot.on('message', msg => {
 				"\n---------------" +
 				`\n< ${r.botinfo[0]} 📝> \n ${r.botinfo[1]}` +
 				`\n< ${r.botinfo[2]} > \n HoubkneghteS, Fniux, JamesTheDemSoc` +
-				`\n< ${r.botinfo[3]} > \n ${bot.guilds.size} ${r.botinfo[4]}` +
-				`\n< ${r.botinfo[5]} ⏲> \n ${Math.floor(bot.ping)} ms` +
+				`\n< ${r.botinfo[3]} > \n Bramble, Leaf, Retro, Kazuo` +
+				`\n< ${r.botinfo[4]} > \n ${bot.guilds.size} ${r.botinfo[5]}` +
+				`\n< ${r.botinfo[6]} ⏲> \n ${Math.floor(bot.ping)} ms` +
 				"```");
 			cmdLog("botinfo", msg);
 			break;
