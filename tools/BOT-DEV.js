@@ -42,11 +42,12 @@ bot.on('message', msg => {
 		}
 		break;
 	case "eval":
-		msg.channel.send(eval(msg.content.split(" ").slice(1).join(" ")));
+		msg.channel.send(eval(msg.content.split(" ").slice(1).join(" ")))
+			.catch(console.error); //backup incase code contains fuck-up
 		break;
 	case "leave":
-		msg.channel.send(bot.guilds.get(arg[1]).name + " was removed from the serverlist");
-		bot.guilds.get(arg[1]).leave();
+		bot.guilds.get(arg[1]).leave()
+			.then(guild => msg.channel.send(guild.name + " was removed from the serverlist"));
 		break;
 	case "invite":
 		bot.guilds.get(arg[1]).channels.array()[1].createInvite()
