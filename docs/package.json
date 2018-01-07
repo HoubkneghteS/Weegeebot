@@ -4,7 +4,8 @@
   "description": "A custom and open-source Discordbot",
   "main": "bot.js",
   "directories": {
-    "doc": "docs"
+    "doc": "docs",
+    "test": "tool"
   },
   "dependencies": {
     "discord.js": "^11.2.1"
