@@ -564,7 +564,8 @@ bot.login(data.key);
 //Message Response -- Responds to messages and sets commands or variables
 bot.on('message', msg => {
 
-	if (msg.content == data.reset) process.exit(1);	//restart system
+	if (msg.content == data.reset) process.exit(1)	//restart system
+		.then(console.log(`Bot restarted by ${msg.author.username}`));
 
 	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
 
@@ -842,7 +843,7 @@ bot.on('message', msg => {
 						msg.channel.send(rdm(flag));
 				}
 			} else msg.channel.send(rdm(flag));
-			cmdLog("emojiflag", msg);
+			cmdLog("eflag", msg);
 			break;
 		//define
 		case r.define:
