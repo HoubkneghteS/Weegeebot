@@ -517,13 +517,13 @@ bot.on('ready', () => {
 
 	//logs servercount -- not necessary for standard use
 	request.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
-		.set('Authorization', data.botlist)
+		.set('Authorization', data.botlist[0])
 		.send({ server_count: bot.guilds.size })
-		.catch(err => console.error(`Fuck look at this: ${err.body}`));
+		.catch(err => console.error("error logging to discordbots.org"));
 	request.post(`https://bots.discord.pw/api/bots/${bot.user.id}/stats`)
-		.set('Authorization', data.botlist2)
+		.set('Authorization', data.botlist[1])
 		.send({ server_count: bot.guilds.size })
-		.catch(err => console.error(`Fuck look at this: ${err.body}`));
+		.catch(err => console.error("error logging to bots.discord.pw"));
 });
 
 //guild add response -- logs guild being joined
