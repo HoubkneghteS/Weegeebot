@@ -619,7 +619,7 @@ bot.on('message', msg => {
 				"\nboobs  # posts a random boobs picture```");
 			//utility help
 			msg.author.send("```ini\nUtility = The very useful commands, without which you cannot live" +
-				"\nbotinfo          # displays infos about the bot" +
+				"\ninfo          # displays infos about the bot" +
 				"\nsupport          # links to ways to get Weegeebot Support" +
 				"\ntest             # tests whether the bot is active" +
 				"\ndate             # posts the date and time" +
@@ -679,7 +679,7 @@ bot.on('message', msg => {
 				"\ntitten # postet ein Bild mit Titten!```");
 			//Utility-Hilfe
 			msg.author.send("```ini\nUtility-Befehle = die ach so nützlichen Befehle, ohne sie kann man einfach nicht leben!" +
-				"\nbotinfo            # ergibt die Botinfos" +
+				"\ninfo            # ergibt die Botinfos" +
 				"\nsupport            # zeigt dir Weegeebots Server und Projektseite an" +
 				"\ntest               # testet, ob Weegeebot aktiv ist oder nicht" +
 				"\ndatum              # ergibt das aktuelle Datum und die aktuelle Uhrzeit" +
@@ -933,7 +933,7 @@ bot.on('message', msg => {
 			cmdLog("serverinfo", msg);
 			break;
 		//botinfo (shows bot infos)
-		case "botinfo":
+		case "info":
 			msg.channel.send("```md" +
 				"\nWeegeebot" +
 				"\n---------------" +
@@ -974,6 +974,10 @@ bot.on('message', msg => {
 					case r.russia:
 						msg.channel.send(r.nukeRussia);
 						msg.channel.send("http://www.cubanet.org/wp-content/uploads/2015/06/putin-sad.jpg");
+						break;
+					case "cafe weegee":
+						msg.channel.send(r.nukeCafe);
+						msg.channel.send("https://cdn.discordapp.com/attachments/383327572206944256/383327716146937867/Cafe_Weegee.png");
 						break;
 					case "weegee":
 					case "weegeebot":
