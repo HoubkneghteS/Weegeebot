@@ -522,8 +522,10 @@ bot.on('ready', () => {
 		.send({ server_count: bot.guilds.size })
 		.catch(err => console.error("error logging to discordbots.org"));
 	request.post(`https://bots.discord.pw/api/bots/${bot.user.id}/stats`)
-		.set('Authorization', data.botlist[1])
-		.send({ server_count: bot.guilds.size })
+		.send({
+			server_count: bot.guilds.size,
+			Authorization: data.botlist[1]
+		})
 		.catch(err => console.error("error logging to bots.discord.pw"));
 });
 
@@ -953,8 +955,8 @@ bot.on('message', msg => {
 			//allows nuking of users
 			if (msg.mentions.users.first() != null) {
 				msg.channel.send(tf(
-					msg.mentions.users.first().username + r.userNuke1 + rdm(nuke),
-					msg.mentions.users.first().username + r.userNuke2
+					msg.mentions.users.first().username + r.userNuke[0] + rdm(nuke),
+					msg.mentions.users.first().username + r.userNuke[1]
 				));
 				//nothing
 			} else if (arg.length < 2) msg.channel.send(r.nukeError);

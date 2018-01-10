@@ -117,8 +117,10 @@
 	"nuke": "atomisiere",
 	"nukeError": "Nein! Du musst einen Ort auswählen!",
 	"nukeHelp": "Dieser Befehl wird so verwendet: ``&atomisiere [Ort]``. Die Folgen deiner Bombadierung hängen von der Zielortung ab >:D",
-	"userNuke1": " ist atomisiert worden!\n",
-	"userNuke2": " ist zu stark!",
+	"userNuke": [
+		" ist atomisiert worden!\n",
+		" ist zu stark!"
+	],
 	"nukeMiss": "Die Bombe hat ihr Ziel verfehlt!",
 	"nukeUSA": "Du hast Trump traurig gemacht :(",
 	"nukeRussia": "Putin beweint den Tod seines Vaterlands.",
