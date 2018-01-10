@@ -877,7 +877,7 @@ bot.on('message', msg => {
 			break;
 		//ecchi (anime titties)
 		case "ecchi":
-			if (msg.channel.nsfw == true) {
+			if (msg.channel.nsfw) {
 				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
 					.then(r => msg.channel.send(r.body[Math.floor(Math.random() * 100)].file_url));
 			} else {
@@ -887,7 +887,7 @@ bot.on('message', msg => {
 			break;
 		//ass
 		case r.ass:
-			if (msg.channel.nsfw == true) {
+			if (msg.channel.nsfw) {
 				msg.channel.send(rdm(ass));
 			} else {
 				msg.channel.send(r.nsfw);
@@ -896,7 +896,7 @@ bot.on('message', msg => {
 			break;
 		//boobs (titties!!!)
 		case r.boobs:
-			if (msg.channel.nsfw == true) {
+			if (msg.channel.nsfw) {
 				msg.channel.send(rdm(boobs));
 			} else {
 				msg.channel.send(r.nsfw);
