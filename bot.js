@@ -978,6 +978,10 @@ bot.on('message', msg => {
 						msg.channel.send(r.nukeRussia);
 						msg.channel.send("http://www.cubanet.org/wp-content/uploads/2015/06/putin-sad.jpg");
 						break;
+					case r.germany:
+						msg.channel.send(r.nukeGermany);
+						msg.channel.send("http://www.newstatesman.com/sites/default/files/styles/nodeimage/public/blogs_2015/06/gettyimages-145479927.jpg?itok=RzDLUzhK");
+						break;
 					case "cafe weegee":
 						msg.channel.send(r.nukeCafe);
 						msg.channel.send("https://cdn.discordapp.com/attachments/383327572206944256/383327716146937867/Cafe_Weegee.png");
