@@ -700,6 +700,7 @@ bot.on('message', msg => {
 		}
 	}
 
+	//all the commands
 	switch (com) {
 		//test (to see if bot is online)
 		case "test":
@@ -861,8 +862,8 @@ bot.on('message', msg => {
 			if (arg.length != 3) msg.channel.send(r.battleError);
 			else if (arg[1] <= 0 || arg[2] <= 0) msg.channel.send(r.battleError1); //if any army lacks soldiers
 			else {
-				var str1 = parseInt(arg[1]) ^ 2; //strength of army 1
-				var str2 = parseInt(arg[2]) ^ 2; //strength of army 2
+				var str1 = parseInt(arg[1]) ** 2, //strength of army 1
+					str2 = parseInt(arg[2]) ** 2; //strength of army 2
 
 				if (Math.floor(Math.random() * (str1 + str2)) <= parseInt(str1)) msg.channel.send(r.victory1);
 				else msg.channel.send(r.victory2);
