@@ -1181,5 +1181,5 @@ bot.on('message', msg => {
 			} else msg.channel.send(r.perm);
 			break;
 	}
-	console.log(`${com} - ${msg.author} [${date}] [${serverLang}]`); //logs commands
+	console.log(`${com} - ${msg.author.username} [${date}] [${serverLang}]`); //logs commands
 });
