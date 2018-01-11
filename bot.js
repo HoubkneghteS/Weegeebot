@@ -11,8 +11,6 @@
 	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")), //prefix data
 	welcome = JSON.parse(fs.readFileSync("./welcome.json", "utf8")); //welcome data
 
-var arg, date, r, sLang, sPre, com; //variables that are used for messages
-
 //arrays for random commands
 const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
 	"http://i0.kym-cdn.com/photos/images/original/000/039/362/Demotivational__Weegee_by_LinkMasterXP.jpg",
@@ -444,11 +442,6 @@ function role(msg, role) {
 	return msg.member.hasPermission(role); //returns if member has perm
 }
 
-//Command Logbook -- standardizes logbook messages
-function cmdLog(str, msg) {
-	console.log(`${str} - ${msg.author.username} [${date}] [${sLang}]`);
-}
-
 //Randomizer -- returns random value in an array
 function rdm(array) {
 	return array[Math.floor(Math.random() * (array.length))];
@@ -546,18 +539,18 @@ bot.on("guildMemberAdd", member => {
 	var welcomeGuild = member.guild;
 	if (!welcome[welcomeGuild.id]) return;
 
-	date = new Date(); //current date
-	sLang = lang[welcomeGuild.id] || "en"; //server lang
+	var date = new Date(), //current date
+		serverLang = lang[welcomeGuild.id] || "en"; //server lang
 
-	if (sLang == "en") {
+	if (serverLang == "en") {
 		r = require("./en.json"); //uses replies from en.json
-	} else if (sLang == "de") {
+	} else if (serverLang == "de") {
 		r = require("./de.json"); //nutzt Antworten von de.json
 	}
 
 	//sends welcome message
 	welcomeGuild.channels.get(welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`)
-		.then(console.log(`${member.user.username} joined ${member.guild.name} [${date}] [${sLang}]`)) //logbook
+		.then(console.log(`${member.user.username} joined ${member.guild.name} [${date}] [${serverLang}]`)) //logbook
 		.catch(console.error);
 });
 
@@ -572,17 +565,17 @@ bot.on('message', msg => {
 
 	if (msg.author.bot || msg.channel.type == "dm") return; //ignores every message without a prefix and messages sent from bots
 
-	arg = msg.content.split(" "); //creates argument values; i.e. arg[1], arg[2], etc.
-	date = new Date(); //current date
-	sLang = lang[msg.guild.id] || "en"; //server lang
-	sPre = pre[msg.guild.id] || data.pre //server prefix
-	com = arg[0].toLowerCase().slice(sPre.length); //command value
+	var arg = msg.content.split(" "), //creates argument values; i.e. arg[1], arg[2], etc.
+		date = new Date(), //current date
+		serverLang = lang[msg.guild.id] || "en",
+		sPre = pre[msg.guild.id] || data.pre, //server prefix
+		com = arg[0].toLowerCase().slice(sPre.length); //command value
 
 	if (!msg.content.startsWith(sPre)) return;
 
 	//-------ENGLISH-BOT--------
-	if (sLang == "en") {
-		r = require("./en.json"); //uses responses from en.json
+	if (serverLang == "en") {
+		var r = require("./en.json"); //uses responses from en.json
 		//help (probably the most important command there is)
 		if (com == "help") {
 			msg.author.send(`*Greetings, ${msg.author.username}. I am Weegeebot, your helpful Discord Bot. Here are my commands:*`);
@@ -636,13 +629,12 @@ bot.on('message', msg => {
 				"\ncalc [operation] # calculates using numbers and operations 🔢```" +
 				"\nNow pick a command, or else you will die! https://discord.gg/HudQcWh");
 			msg.channel.send("The list of commands was sent to you privately via DMs! ✅");
-			cmdLog("help", msg);
 		}
 	}
 
 	//-------DEUTSCHER-BOT------
-	else if (sLang == "de") {
-		r = require("./de.json"); //nutzt Antworten von de.json
+	else if (serverLang == "de") {
+		var r = require("./de.json"); //nutzt Antworten von de.json
 		//hilfe (wohl der wichtigste Befehl)
 		if (com == "help" || com == "hilfe") {
 			msg.author.send(`*Hallo, ${msg.author.username}. Ich bin Herr Weegee, dein treuer Discordbot. Ich habe folgende Befehle:*`);
@@ -696,7 +688,6 @@ bot.on('message', msg => {
 				"\nrechne [Operation] # rechnet mit Zahlen und Operationen 🔢```" +
 				"\nWähle jetzt einen Befehl aus, sonst wirst du sterben! https://discord.gg/HudQcWh");
 			msg.channel.send("Die Befehlsliste wurde privat durch eine PN geschickt! ✅");
-			cmdLog("help", msg);
 		}
 	}
 
@@ -705,44 +696,36 @@ bot.on('message', msg => {
 		//test (to see if bot is online)
 		case "test":
 			msg.channel.send(r.test + rdm(r.quote));
-			cmdLog("test", msg);
 			break;
 		//scp command
 		case "scp":
 			if (arg.length != 2 || arg[1] > 4000 || arg[1] < 0 || arg[1].length < 3) {
 				msg.channel.send(r.scpError);
 			} else msg.channel.send(r.scp + arg[1]);
-			cmdLog("scp", msg);
 			break;
 		//support (links to Weegeebot server)
 		case "support":
 			msg.channel.send(`${r.server}\n${r.project}`);
-			cmdLog("support", msg);
 			break;
 		//ASCII
 		case "ascii":
 			msg.channel.send("```fix\n" + rdm(ascii) + "```");
-			cmdLog("ascii", msg);
 			break;
 		//pengu
 		case "pengu":
 			msg.channel.send(rdm(pengu));
-			cmdLog("pengu", msg);
 			break;
 		//Weegee
 		case "weegee":
 			msg.channel.send(rdm(weegee));
-			cmdLog('weegee', msg);
 			break;
 		//invite (posts invite link)
 		case r.invite:
 			msg.channel.send("https://discordapp.com/oauth2/authorize?client_id=239261914918682624&scope=bot&permissions=0");
-			cmdLog("invite", msg);
 			break;
 		//Patreon
 		case r.donate:
 			msg.channel.send("Patreon: https://www.patreon.com/Weegeebot");
-			cmdLog("donate", msg);
 			break;
 		//calc - currently pretty basic
 		case r.calc:
@@ -788,7 +771,6 @@ bot.on('message', msg => {
 							break;
 					}
 				}
-				cmdLog("calc", msg);
 			}
 			break;
 		//eflag (flags from emojis)
@@ -849,13 +831,11 @@ bot.on('message', msg => {
 						msg.channel.send(rdm(flag));
 				}
 			} else msg.channel.send(rdm(flag));
-			cmdLog("eflag", msg);
 			break;
 		//define
 		case r.define:
 			var query = msg.content.split(" ").slice(1).join("+");
 			msg.channel.send(r.dictionary + query);
-			cmdLog("define", msg);
 			break;
 		//battle (simulated battles between two armies)
 		case r.battle:
@@ -867,13 +847,11 @@ bot.on('message', msg => {
 
 				if (Math.floor(Math.random() * (str1 + str2)) <= parseInt(str1)) msg.channel.send(r.victory1);
 				else msg.channel.send(r.victory2);
-				cmdLog("battle", msg);
 			}
 			break;
 		//cancer
 		case r.cancer:
 			msg.channel.send(rdm(cancer));
-			cmdLog("cancer", msg);
 			break;
 		//ecchi (anime titties)
 		case "ecchi":
@@ -883,7 +861,6 @@ bot.on('message', msg => {
 			} else {
 				msg.channel.send(r.nsfw);
 			}
-			cmdLog("ecchi", msg);
 			break;
 		//ass
 		case r.ass:
@@ -892,7 +869,6 @@ bot.on('message', msg => {
 			} else {
 				msg.channel.send(r.nsfw);
 			}
-			cmdLog("ass", msg);
 			break;
 		//boobs (titties!!!)
 		case r.boobs:
@@ -901,12 +877,10 @@ bot.on('message', msg => {
 			} else {
 				msg.channel.send(r.nsfw);
 			}
-			cmdLog("boobs", msg);
 			break;
 		//date (current date & time)
 		case r.date:
 			msg.channel.send(r.date1 + date);
-			cmdLog("date", msg);
 			break;
 		//whois (results in user infos)
 		case r.whois:
@@ -922,7 +896,6 @@ bot.on('message', msg => {
 				`\n< ${r.joindate} 📅> \n ${whoIsUser.createdAt}` +
 				`\n< ${r.userID} > \n ${whoIsUser.id}` +
 				"```");
-			cmdLog("whois", msg);
 			break;
 		//serverinfo (results in server infos)
 		case r.serverinfo:
@@ -933,10 +906,9 @@ bot.on('message', msg => {
 				`\n< ${r.serverage} 📅> \n ${msg.guild.createdAt}` +
 				`\n< ${r.owner} > \n ${msg.guild.owner.user.tag}` +
 				`\n< ${r.region} 🗺️> \n ${msg.guild.region}` +
-				`\n< ${r.lang} 🗺> \n ${sLang}` +
+				`\n< ${r.lang} 🗺> \n ${serverLang}` +
 				`\n< ${r.serverID} > \n ${msg.guild.id}` +
 				"```");
-			cmdLog("serverinfo", msg);
 			break;
 		//botinfo (shows bot infos)
 		case "info":
@@ -949,7 +921,6 @@ bot.on('message', msg => {
 				`\n< ${r.botinfo[4]} > \n ${bot.guilds.size} ${r.botinfo[5]}` +
 				`\n< ${r.botinfo[6]} ⏲> \n ${Math.floor(bot.ping)} ms` +
 				"```");
-			cmdLog("botinfo", msg);
 			break;
 		//nuke (finally well developed !!1!111!)
 		case r.nuke:
@@ -1001,12 +972,10 @@ bot.on('message', msg => {
 						msg.channel.send(rdm(nuke));
 				}
 			}
-			cmdLog("nuke launched to " + add(1, msg), msg);
 			break;
 		//roast (über-funny jokes)
 		case r.roast1:
 			msg.channel.send(rdm(r.roast));
-			cmdLog('roast', msg);
 			break;
 		//avatar
 		case r.avatar:
@@ -1017,18 +986,15 @@ bot.on('message', msg => {
 				var url = userAvatar.avatarURL.split("?");
 				msg.channel.send(url[0]);
 			}
-			cmdLog('avatar', msg);
 			break;
 		//ask
 		case r.ask:
 			if (arg.length < 2) msg.channel.send(r.askError);
 			else msg.channel.send(tf(r.y, r.n));
-			cmdLog("ask", msg);
 			break;
 		//coinflip (same infrastructure as the &ask command, just different name and response)
 		case r.coin:
 			msg.channel.send(tf(r.heads, r.tails));
-			cmdLog("coin", msg);
 			break;
 		//dice
 		case r.dice:
@@ -1041,19 +1007,16 @@ bot.on('message', msg => {
 				if (dice < maxSides) msg.channel.send(`${r.diceBad} ${dice}! 🎲`);
 				else msg.channel.send(`${r.diceGood} ${dice}! 🎲`);
 			}
-			cmdLog("roll " + dice, msg);
 			break;
 		//lenny ( ͡° ͜ʖ ͡°)
 		case "lenny":
 			msg.delete();
 			msg.channel.send("( ͡° ͜ʖ ͡°)");
-			cmdLog("lenny", msg);
 			break;
 		//lennygang ( ͡° ͜ʖ ͡°)
 		case "lennygang":
 			msg.delete();
 			msg.channel.send("( ͡° ͜ʖ ͡°( ͡° ͜ʖ ͡°( ͡° ͜ʖ ͡°) ͡° ͜ʖ ͡°) ͡° ͜ʖ ͡°)");
-			cmdLog("lennygang", msg);
 			break;
 		//b command
 		case "btext":
@@ -1062,7 +1025,6 @@ bot.on('message', msg => {
 				msg.delete();
 				msg.channel.send(btext(add(1, msg)));
 			}
-			cmdLog("btext", msg);
 			break;
 		//fraktur!!
 		case "fraktur":
@@ -1071,7 +1033,6 @@ bot.on('message', msg => {
 				msg.delete();
 				msg.channel.send(fraktur(add(1, msg)));
 			}
-			cmdLog("fraktur", msg);
 			break;
 		//vapor
 		case "vapor":
@@ -1080,7 +1041,6 @@ bot.on('message', msg => {
 				msg.delete();
 				msg.channel.send(vapor(add(1, msg)));
 			}
-			cmdLog("vapor", msg);
 			break;
 		//bubble
 		case r.bubble:
@@ -1089,7 +1049,6 @@ bot.on('message', msg => {
 				msg.delete();
 				msg.channel.send(bubble(add(1, msg)));
 			}
-			cmdLog("bubble", msg);
 			break;
 		//say (says what you say)
 		case r.say:
@@ -1098,7 +1057,6 @@ bot.on('message', msg => {
 				msg.delete();
 				msg.channel.send(add(1, msg));
 			}
-			cmdLog("say", msg);
 			break;
 		//poll (democracy fuck yeah!)
 		case r.poll:
@@ -1110,7 +1068,6 @@ bot.on('message', msg => {
 					m.react("👎");
 				});
 			}
-			cmdLog("poll", msg);
 			break;
 
 		//-------------ADMIN-COMMANDS--------------
@@ -1124,7 +1081,6 @@ bot.on('message', msg => {
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)) //deletes messages
-					cmdLog(msgs + " messages deleted", msg);
 				}
 			} else msg.channel.send(r.perm);
 			break;
@@ -1148,7 +1104,6 @@ bot.on('message', msg => {
 					msg.author.send(r.kick2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages kicker
 					msg.guild.member(msg.mentions.users.first()).kick();
 				}
-				cmdLog("kick " + arg[1], msg);
 			} else msg.channel.send(r.perm);
 			break;
 		//warn (warns users, sending message both to warnee and warner)
@@ -1159,7 +1114,6 @@ bot.on('message', msg => {
 					msg.mentions.users.first().send(r.warn1 + msg.author.username + r.reason + add(2, msg)); //messages warnee
 					msg.author.send(r.warn2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages warner
 				}
-				cmdLog("warn " + arg[1], msg);
 			} else msg.channel.send(r.perm);
 			break;
 		//repeat (says what you say x times)
@@ -1170,7 +1124,6 @@ bot.on('message', msg => {
 					for (var i = 0; i < arg[1]; i++) {
 						msg.channel.send(m);
 					}
-					cmdLog("repeat", msg);
 				} else msg.channel.send(r.repeatError);
 			} else msg.channel.send(r.perm);
 			break;
@@ -1195,7 +1148,6 @@ bot.on('message', msg => {
 				fs.writeFile("./lang.json", JSON.stringify(lang), (err) => {
 					if (err) console.error(err)
 				});
-				cmdLog("lang: " + arg[1], msg);
 			} else msg.channel.send(r.perm);
 			break;
 		case "prefix":
@@ -1210,7 +1162,6 @@ bot.on('message', msg => {
 					fs.writeFile("./pre.json", JSON.stringify(pre), (err) => {
 						if (err) console.error(err)
 					});
-					cmdLog("pre: " + newPre, msg);
 				}
 			} else msg.channel.send(r.perm);
 			break;
@@ -1227,8 +1178,8 @@ bot.on('message', msg => {
 				fs.writeFile("./welcome.json", JSON.stringify(welcome), (err) => {
 					if (err) console.error(err)
 				});
-				cmdLog("welcome", msg);
 			} else msg.channel.send(r.perm);
 			break;
 	}
+	console.log(`${com} - ${msg.author} [${date}] [${serverLang}]`); //logs commands
 });
