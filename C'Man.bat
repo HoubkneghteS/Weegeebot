@@ -64,7 +64,7 @@ REM Restart
 :restart
 
    if "%start%"=="pm2" start pm2 restart all
-   if "%start%"=="pm2" start forever restartall
+   if "%start%"=="forever" start forever restartall
    if "%lang%"=="en" echo Script restarted!
    if "%lang%"=="de" echo Skript wurde neugestartet!
    goto cmd
