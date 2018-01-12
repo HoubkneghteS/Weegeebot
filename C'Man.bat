@@ -53,7 +53,7 @@ REM Normal bot
 :start
 
    if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="bot"
-   if "%start%"=="pm2" start forever start %~dp0\bot.js
+   if "%start%"=="forever" start forever start %~dp0\bot.js
    if "%start%"=="node" start node bot
    if "%start%"=="nodemon" start nodemon bot
    if "%lang%"=="en" echo Script started!
@@ -63,7 +63,8 @@ REM Normal bot
 REM Restart
 :restart
 
-   start pm2 restart all
+   if "%start%"=="pm2" start pm2 restart all
+   if "%start%"=="pm2" start forever restartall
    if "%lang%"=="en" echo Script restarted!
    if "%lang%"=="de" echo Skript wurde neugestartet!
    goto cmd
