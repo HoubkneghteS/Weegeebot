@@ -52,7 +52,8 @@ REM Commands
 REM Normal bot
 :start
 
-   if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="bot" --log="%~dp0\settings\log.txt"
+   if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="bot"
+   if "%start%"=="pm2" start forever start %~dp0\bot.js
    if "%start%"=="node" start node bot
    if "%start%"=="nodemon" start nodemon bot
    if "%lang%"=="en" echo Script started!
@@ -155,17 +156,27 @@ REM Startmode
    echo [pm2]     - PM2
    echo [node]    - Node.js
    echo [nodemon] - Nodemon
+   echo [forever] - Forever
 
    set /p inp=
    if "%inp%"=="pm2" goto pm2
    if "%inp%"=="node" goto node
    if "%inp%"=="nodemon" goto nodemon
+   if "%inp%"=="forever" goto forever
 
 REM Pm2
 :pm2
 
    set start=pm2
    echo pm2>"%~dp0\settings\start.cfg"
+
+   goto init
+
+REM forever start mode
+:forever
+
+   set start=forever
+   echo forever>"%~dp0\settings\start.cfg"
 
    goto init
 

@@ -524,13 +524,13 @@ bot.on('ready', () => {
 
 //guild add response -- logs guild being joined
 bot.on("guildCreate", guild => {
-	date = new Date(); //current date
+	var date = new Date(); //current date
 	console.log(`Bot joined ${guild.name} [${date}]`);
 });
 
 //guild delete response -- logs guild being left
 bot.on("guildDelete", guild => {
-	date = new Date(); //current date
+	var date = new Date(); //current date
 	console.log(`Bot left ${guild.name} [${date}]`);
 });
 
@@ -1180,6 +1180,6 @@ bot.on('message', msg => {
 				});
 			} else msg.channel.send(r.perm);
 			break;
-	}
+	} 
 	console.log(`${com} - ${msg.author.username} [${date}] [${serverLang}]`); //logs commands
 });
