@@ -606,8 +606,7 @@ bot.on('message', msg => {
 				"\nprefix [prefix]        # changes the bot prefix" +
 				"\nwarn  [@user] [reason] # warns that user, sending both you and them a message" +
 				"\nban   [@user] [reason] # unleashes a banhammer upon that user, sending both you and them a message" +
-				"\nkick  [@user] [reason] # kicks the mentoned user, but he can return" +
-				"\nrepeat [number] [text] # reapeats a message a certain amount of times```");
+				"\nkick  [@user] [reason] # kicks the mentoned user, but he can return```");
 			//nsfw
 			msg.author.send("```ini\nNSFW = You must be in a 'NSFW' channel to use them" +
 				"\necchi  # posts an ecchi picture from Gelbooru" +
@@ -660,13 +659,12 @@ bot.on('message', msg => {
 			//Adminhilfe
 			msg.author.send("```ini\nAdminbefehle = Man braucht Admin-Berechtigungen, um sie zu verwenden" +
 				"\nwillkommen         # legt einen Kanal fest, wo die Willkommens-Nachrichten gepostet werden sollen" +
-				"\nsprache [de/en]               # wechselt die Sprache zwischen Deutsch und Englisch" +
-				"\nlösche [Nummer]               # löscht Nachrichten" +
-				"\nprefix [Präfix]               # ändert das Bot-Präfix" +
-				"\nwarn [@Nutzer] [Grund]        # warnt den erwähnten Benutzer, indem dir und ihm eine PN geschickt wird" +
-				"\nbann [@Nutzer] [Grund]        # bannt den Benutzer, und schickt ihm und dir eine Nachricht" +
-				"\nkick [@Nutzer] [Grund]        # kickt den Benutzer; er kann aber sofort zurückkommen" +
-				"\nwiederhole [Male] [Nachricht] # wiederholt die gleiche Nachricht x-mal```");
+				"\nsprache [de/en]        # wechselt die Sprache zwischen Deutsch und Englisch" +
+				"\nlösche [Nummer]        # löscht Nachrichten" +
+				"\nprefix [Präfix]        # ändert das Bot-Präfix" +
+				"\nwarn [@Nutzer] [Grund] # warnt den erwähnten Benutzer, indem dir und ihm eine PN geschickt wird" +
+				"\nbann [@Nutzer] [Grund] # bannt den Benutzer, und schickt ihm und dir eine Nachricht" +
+				"\nkick [@Nutzer] [Grund] # kickt den Benutzer; er kann aber sofort zurückkommen```");
 			//NSFW-Hilfe
 			msg.author.send("```ini\nNSFW-Befehle = Man muss in einem 'NSFW'-Kanal sein, um sie zu verwenden" +
 				"\necchi  # postet ein Ecchi-Bild von Gelbooru" +
@@ -1081,6 +1079,7 @@ bot.on('message', msg => {
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)) //deletes messages
+						.then(msg.channel.send(`${msgs}${r.clear1}`));
 				}
 			} else msg.channel.send(r.perm);
 			break;
@@ -1114,17 +1113,6 @@ bot.on('message', msg => {
 					msg.mentions.users.first().send(r.warn1 + msg.author.username + r.reason + add(2, msg)); //messages warnee
 					msg.author.send(r.warn2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages warner
 				}
-			} else msg.channel.send(r.perm);
-			break;
-		//repeat (says what you say x times)
-		case r.repeat:
-			if (role(msg, "MANAGE_MESSAGES")) {
-				if (arg[1] <= 51) {
-					var m = add(2, msg);
-					for (var i = 0; i < arg[1]; i++) {
-						msg.channel.send(m);
-					}
-				} else msg.channel.send(r.repeatError);
 			} else msg.channel.send(r.perm);
 			break;
 		//lang (sets language)
