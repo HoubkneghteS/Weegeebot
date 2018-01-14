@@ -508,7 +508,7 @@ function add(start, msg) {
 //Login processes -- Things to do when a login is successful
 bot.on('ready', () => {
 	console.log(`Login was successful m8\nServercount: ${bot.guilds.size}\nServerlist: ${bot.guilds.array()}`); //login message
-	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, {type: "STREAMING"}); //status message
+	bot.user.setActivity(`${data.pre}help | ${bot.guilds.array().length} Servers Weegeefied`, { type: "WATCHING" }); //status message
 
 	//logs servercount -- not necessary for standard use
 	request.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
@@ -1169,6 +1169,6 @@ bot.on('message', msg => {
 				});
 			} else msg.channel.send(r.perm);
 			break;
-	} 
+	}
 	console.log(`${com} - ${msg.author.username} [${date}] [${serverLang}]`); //logs commands
 });
