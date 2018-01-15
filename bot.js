@@ -477,7 +477,7 @@ class TextConverter {
 	undo(text) {
 		var l = this.startText.length;
 		for (var i = l - 1; i >= 0; i--) {
-			text = text.replace(this.startText[i], this.endText[i]); //replaces text
+			text = text.replace(this.endText[i], this.startText[i]); //replaces text
 		}
 		return text;
 	}
