@@ -60,15 +60,12 @@ typings/
 
 # Custom files
 data.json
-lang.json
 desktop.ini
-pre.json
 CMan/
 *.url
 Area 51/
 .dropbox
 .vscode/
 package-lock.json
-welcome.json
 /settings
 config.json
