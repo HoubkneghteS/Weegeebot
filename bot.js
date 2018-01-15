@@ -473,6 +473,14 @@ class TextConverter {
 		}
 		return text;
 	}
+	//deconvert text
+	undo(text) {
+		var l = this.startText.length;
+		for (var i = l - 1; i >= 0; i--) {
+			text = text.replace(this.startText[i], this.endText[i]); //replaces text
+		}
+		return text;
+	}
 }
 
 //btext -- converts to b emoji
