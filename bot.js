@@ -619,7 +619,7 @@ bot.on('message', msg => {
 				"\ndate             # posts the date and time" +
 				"\ninvite           # gets you the bot invite link" +
 				"\ndonate           # posts a link to the Patreon page" +
-				"\nserverinfo       # posts the serverinfo of the current server" +
+				"\nserver           # posts the serverinfo of the current server" +
 				"\nwhois [@user]    # fetches infos for the mentioned user" +
 				"\ndefine [word]    # searches up the definition of a word using The Urban Dictonary" +
 				"\nsay [message]    # gets Weegeebot to say something" +
@@ -677,7 +677,7 @@ bot.on('message', msg => {
 				"\ndatum              # ergibt das aktuelle Datum und die aktuelle Uhrzeit" +
 				"\nspende             # postet einen Link zur Patreon-Seite" +
 				"\neinladung          # zeigt dir den Bot-Einladungslink an" +
-				"\nserverinfo         # postet Informationen für den aktuellen Server" +
+				"\nserver             # postet Informationen für den aktuellen Server" +
 				"\nsag [Nachricht]    # zwingt Weegee, deine Nachricht zu sagen" +
 				"\numfrage [Frage]    # erzeugt eine Umfrage mit zwei Optionen (Ja oder Nein)" +
 				"\nwerist [@Nutzer]   # ergibt Infos für den erwähnten Benutzer" +

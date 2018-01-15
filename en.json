@@ -178,7 +178,7 @@
 	"joindate": "Account Age",
 	"status": "Status",
 	"userID": "User ID",
-	"serverinfo": "serverinfo",
+	"serverinfo": "server",
 	"serverEntry": "Server Infos for",
 	"membercount": "Member Count",
 	"owner": "Owner",
