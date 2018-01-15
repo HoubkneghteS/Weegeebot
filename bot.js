@@ -23,6 +23,7 @@ const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-a
 	"http://orig15.deviantart.net/e348/f/2008/211/f/8/nazi_weegee_by_mehku.jpg",
 	"http://img4.wikia.nocookie.net/__cb20130103160805/thefakegees/images/e/eb/Patreegee.png",
 	"http://orig14.deviantart.net/b6f0/f/2009/166/3/5/weegee_and_misty_by_selenagomez900.jpg",
+	"http://i.ytimg.com/vi/lu2tQ9UZfHc/hqdefault.jpg",
 	"http://oi49.tinypic.com/33pcvo5.jpg",
 	"http://www.mypokecard.com/en/Gallery/my/galery/t7DATAD5VAv.jpg",
 	"http://orig00.deviantart.net/56d6/f/2008/171/2/f/weegee_background_by_wiiario.png",
