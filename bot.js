@@ -1152,11 +1152,11 @@ bot.on('message', msg => {
 			break;
 		case r.welcomeName:
 			if (msg.member.hasPermission("ADMINISTRATOR")) {
-				if (!welcome[msg.guild.id]) {
+				if (!config.welcome[msg.guild.id]) {
 					config.welcome[msg.guild.id] = msg.channel.id;
 					msg.channel.send(r.welcomeSet);
 				} else {
-					delete welcome[msg.guild.id];
+					delete config.welcome[msg.guild.id];
 					msg.channel.send(r.welcomeReset);
 				}
 				//saves welcome data
