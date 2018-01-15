@@ -470,7 +470,7 @@ class TextConverter {
 		this.endText = endText;
 	}
 	//convert text
-	c = function (text) {
+	c(text) {
 		for (var i = 0; i < startText.length; i++) {
 			text = text.replace(startText[i], endText[i]); //replaces text
 		}
