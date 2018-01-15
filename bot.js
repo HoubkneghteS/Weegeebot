@@ -458,15 +458,17 @@ function tf(option1, option2) {
 	return reply;
 }
 
-//because there are tons of text converters why not make a class?
+//text converter -- takes two arrays and converts text from the first into the second
 class TextConverter {
+	//both arguments must be arrays
 	constructor(startText, endText) {
 		this.startText = startText;
 		this.endText = endText;
 	}
 	//convert text
 	c(text) {
-		for (var i = 0; i < this.startText.length; i++) {
+		var l = this.startText.length;
+		for (var i = 0; i < l; i++) {
 			text = text.replace(this.startText[i], this.endText[i]); //replaces text
 		}
 		return text;
@@ -509,9 +511,9 @@ bot.on('ready', () => {
 		.send({ server_count: bot.guilds.size })
 		.catch(err => console.error("error logging to discordbots.org"));
 	request.post(`https://bots.discord.pw/api/bots/${bot.user.id}/stats`)
+		.set('Authorization', data.botlist[1])
 		.send({
-			server_count: bot.guilds.size,
-			Authorization: data.botlist[1]
+			server_count: bot.guilds.size
 		})
 		.catch(err => console.error("error logging to bots.discord.pw"));
 });
