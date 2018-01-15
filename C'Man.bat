@@ -53,7 +53,7 @@ REM Normal bot
 :start
 
    if "%start%"=="pm2" start pm2 start %~dp0\bot.js --name="bot" --log=%~dp0\settings\log.txt
-   if "%start%"=="forever" start forever -l "%~dp0\settings\log.txt" start bot.js
+   if "%start%"=="forever" start forever -l "%~dp0\settings\log.txt" -a start bot.js
    if "%start%"=="node" start node bot
    if "%start%"=="nodemon" start nodemon bot
    if "%lang%"=="en" echo Script started!

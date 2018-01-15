@@ -7,9 +7,7 @@
 	request = require("snekfetch"), //allows usage of other APIs
 	fs = require("fs"), //file system
 	data = require("./data.json"), //general data
-	lang = JSON.parse(fs.readFileSync("./lang.json", "utf8")), //language data Daenk U adam
-	pre = JSON.parse(fs.readFileSync("./pre.json", "utf8")), //prefix data
-	welcome = JSON.parse(fs.readFileSync("./welcome.json", "utf8")); //welcome data
+	config = JSON.parse(fs.readFileSync("./config.json", "utf8")); //server settings data Daenk U adam
 
 //arrays for random commands
 const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-at-stewie-weegee-stare-12424998-640-478.jpg",
@@ -538,13 +536,13 @@ bot.on("guildDelete", guild => {
 //welcome data -- sends welcome messages for users
 bot.on("guildMemberAdd", member => {
 	var welcomeGuild = member.guild;
-	if (!welcome[welcomeGuild.id]) return;
+	if (!config.welcome[welcomeGuild.id]) return;
 
 	var date = new Date(), //current date
-		serverLang = lang[welcomeGuild.id] || "en"; //server lang
+		serverLang = config.lang[welcomeGuild.id] || "en"; //server lang
 
 	if (serverLang == "en") {
-		r = require("./en.json"); //uses replies from en.json
+		r = require("./en.json"); //uses replies from en.jsons
 	} else if (serverLang == "de") {
 		r = require("./de.json"); //nutzt Antworten von de.json
 	}
@@ -568,11 +566,11 @@ bot.on('message', msg => {
 
 	var arg = msg.content.split(" "), //creates argument values; i.e. arg[1], arg[2], etc.
 		date = new Date(), //current date
-		serverLang = lang[msg.guild.id] || "en",
-		sPre = pre[msg.guild.id] || data.pre, //server prefix
-		com = arg[0].toLowerCase().slice(sPre.length); //command value
+		serverLang = config.lang[msg.guild.id] || "en",
+		serverPrefix = config.pre[msg.guild.id] || data.pre, //server prefix
+		com = arg[0].toLowerCase().slice(serverPrefix.length); //command value
 
-	if (!msg.content.startsWith(sPre)) return;
+	if (!msg.content.startsWith(serverPrefix)) return;
 
 	//-------ENGLISH-BOT--------
 	if (serverLang == "en") {
@@ -1123,18 +1121,18 @@ bot.on('message', msg => {
 				if (!arg[1]) return; //ignores messages without an argument
 				switch (arg[1].toLowerCase()) {
 					case "de":
-						lang[msg.guild.id] = "de";
+						config.lang[msg.guild.id] = "de";
 						msg.channel.send("Weegeebot spricht jetzt Deutsch!");
 						break;
 					case "en":
-						lang[msg.guild.id] = "en";
+						config.lang[msg.guild.id] = "en";
 						msg.channel.send("Weegeebot now speaks English!");
 						break;
 					default:
 						msg.channel.send("``en`` (English), ``de`` (Deutsch)");
 				}
 				//saves lang data
-				fs.writeFile("./lang.json", JSON.stringify(lang), (err) => {
+				fs.writeFile("./config.json", JSON.stringify(config), (err) => {
 					if (err) console.error(err)
 				});
 			} else msg.channel.send(r.perm);
@@ -1144,11 +1142,11 @@ bot.on('message', msg => {
 				if (!arg[1] || arg[1].length > 3) msg.channel.send(r.preError);
 				else {
 					var newPre = arg[1].replace(/"/g, "\"");
-					pre[msg.guild.id] = newPre;
+					config.pre[msg.guild.id] = newPre;
 					msg.channel.send(r.preChange + newPre + "``");
 
 					//saves prefix data
-					fs.writeFile("./pre.json", JSON.stringify(pre), (err) => {
+					fs.writeFile("./config.json", JSON.stringify(config), (err) => {
 						if (err) console.error(err)
 					});
 				}
@@ -1157,14 +1155,14 @@ bot.on('message', msg => {
 		case r.welcomeName:
 			if (role(msg, "ADMINISTRATOR")) {
 				if (!welcome[msg.guild.id]) {
-					welcome[msg.guild.id] = msg.channel.id;
+					config.welcome[msg.guild.id] = msg.channel.id;
 					msg.channel.send(r.welcomeSet);
 				} else {
 					delete welcome[msg.guild.id];
 					msg.channel.send(r.welcomeReset);
 				}
 				//saves welcome data
-				fs.writeFile("./welcome.json", JSON.stringify(welcome), (err) => {
+				fs.writeFile("./config.json", JSON.stringify(config), (err) => {
 					if (err) console.error(err)
 				});
 			} else msg.channel.send(r.perm);
