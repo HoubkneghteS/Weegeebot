@@ -466,8 +466,8 @@ class TextConverter {
 	}
 	//convert text
 	c(text) {
-		for (var i = 0; i < startText.length; i++) {
-			text = text.replace(startText[i], endText[i]); //replaces text
+		for (var i = 0; i < this.startText.length; i++) {
+			text = text.replace(this.startText[i], this.endText[i]); //replaces text
 		}
 		return text;
 	}
