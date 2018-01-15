@@ -436,11 +436,6 @@ const weegee = ["http://images2.fanpop.com/image/photos/12400000/weegee-stares-a
 		"\n[█▓]" +
 		"\n[█▓]"];
 
-//Role Checker -- Checks if a user has a role
-function role(msg, role) {
-	return msg.member.hasPermission(role); //returns if member has perm
-}
-
 //Randomizer -- returns random value in an array
 function rdm(array) {
 	return array[Math.floor(Math.random() * (array.length))];
@@ -520,9 +515,7 @@ bot.on('ready', () => {
 		.catch(err => console.error("error logging to discordbots.org"));
 	request.post(`https://bots.discord.pw/api/bots/${bot.user.id}/stats`)
 		.set('Authorization', data.botlist[1])
-		.send({
-			server_count: bot.guilds.size
-		})
+		.send({ server_count: bot.guilds.size })
 		.catch(err => console.error("error logging to bots.discord.pw"));
 });
 
@@ -1076,7 +1069,7 @@ bot.on('message', msg => {
 
 		//clear (deletes set amt. of messages)
 		case r.clear:
-			if (role(msg, "MANAGE_MESSAGES")) {
+			if (msg.member.hasPermission("MANAGE_MESSAGES")) {
 				if (arg[1] > 100) msg.channel.send(r.clearError);
 				else {
 					var msgs = parseInt(arg[1]) || 2; //determines msgs with default of 2
@@ -1089,7 +1082,7 @@ bot.on('message', msg => {
 			break;
 		//banhammer!
 		case r.ban:
-			if (role(msg, "BAN_MEMBERS")) {
+			if (msg.member.hasPermission("BAN_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.banError);
 				else {
 					msg.mentions.users.first().send(r.ban1 + msg.author.username + r.reason + add(2, msg)); //messages bannee
@@ -1100,7 +1093,7 @@ bot.on('message', msg => {
 			break;
 		//kick (kicks user from server with no restriction to return)
 		case r.kick:
-			if (role(msg, "KICK_MEMBERS")) {
+			if (msg.member.hasPermission("KICK_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.kickError);
 				else {
 					msg.mentions.users.first().send(r.kick1 + msg.author.username + r.reason + add(2, msg)); //messages kickee
@@ -1111,7 +1104,7 @@ bot.on('message', msg => {
 			break;
 		//warn (warns users, sending message both to warnee and warner)
 		case r.warn:
-			if (role(msg, "KICK_MEMBERS")) {
+			if (msg.member.hasPermission("KICK_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.warnError);
 				else {
 					msg.mentions.users.first().send(r.warn1 + msg.author.username + r.reason + add(2, msg)); //messages warnee
@@ -1122,7 +1115,7 @@ bot.on('message', msg => {
 		//lang (sets language)
 		case "lang":
 		case "sprache":
-			if (role(msg, "ADMINISTRATOR")) {
+			if (msg.member.hasPermission("ADMINISTRATOR")) {
 				if (!arg[1]) return; //ignores messages without an argument
 				switch (arg[1].toLowerCase()) {
 					case "de":
@@ -1143,7 +1136,7 @@ bot.on('message', msg => {
 			} else msg.channel.send(r.perm);
 			break;
 		case "prefix":
-			if (role(msg, "ADMINISTRATOR")) {
+			if (msg.member.hasPermission("ADMINISTRATOR")) {
 				if (!arg[1] || arg[1].length > 3) msg.channel.send(r.preError);
 				else {
 					var newPre = arg[1].replace(/"/g, "\"");
@@ -1158,7 +1151,7 @@ bot.on('message', msg => {
 			} else msg.channel.send(r.perm);
 			break;
 		case r.welcomeName:
-			if (role(msg, "ADMINISTRATOR")) {
+			if (msg.member.hasPermission("ADMINISTRATOR")) {
 				if (!welcome[msg.guild.id]) {
 					config.welcome[msg.guild.id] = msg.channel.id;
 					msg.channel.send(r.welcomeSet);
