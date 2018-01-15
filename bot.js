@@ -458,11 +458,6 @@ function tf(option1, option2) {
 	return reply;
 }
 
-//btext -- converts to b emoji
-function btext(text) {
-	return text.replace(/b/gi, "🅱");
-}
-
 //because there are tons of text converters why not make a class?
 class TextConverter {
 	constructor(startText, endText) {
@@ -477,6 +472,9 @@ class TextConverter {
 		return text;
 	}
 }
+
+//btext -- converts to b emoji
+const btext = new TextConverter([/b/gi], ["🅱"]);
 
 //vapor -- converts text to vaporwave
 const vapor = new TextConverter(
