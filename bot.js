@@ -540,13 +540,13 @@ bot.on("guildMemberAdd", member => {
 		serverLang = config.lang[welcomeGuild.id] || "en"; //server lang
 
 	if (serverLang == "en") {
-		r = require("./en.json"); //uses replies from en.jsons
+		r = require("./en.json"); //uses replies from en.json
 	} else if (serverLang == "de") {
 		r = require("./de.json"); //nutzt Antworten von de.json
 	}
 
 	//sends welcome message
-	welcomeGuild.channels.get(welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`)
+	welcomeGuild.channels.get(config.welcome[welcomeGuild.id]).send(`${r.welcome} **${welcomeGuild.name}**, ${member.user}!`)
 		.then(console.log(`${member.user.username} joined ${member.guild.name} [${date}] [${serverLang}]`)) //logbook
 		.catch(console.error);
 });
