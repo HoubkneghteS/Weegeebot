@@ -1,5 +1,6 @@
 ﻿{
 	"perm": "Nutzer-Berechtigung reicht nicht aus!",
+	"botPerm": "Bot hat fehlende Berechtigung!",
 	"msgError": "Aber du brauchst eine Nachricht für diesen Befehl",
 	"nsfw": "Nicht in diesem Kanal, du Widerling! https://upload.wikimedia.org/wikipedia/en/d/d5/Pedobear.png",
 	"quote": [
@@ -193,5 +194,7 @@
 	"welcomeName": "willkommen",
 	"welcomeSet": "Kanal für Willkommens-Nachrichten wurde festgelegt!",
 	"welcomeReset": "Kanal für Willkommens-Nachrichten wurde entfernt!",
-	"bubble": "blase"
+	"bubble": "blase",
+	"pleach":"pfleiche",
+	"pleachy":"Süß wie der Pfirsich aber giftig wie die Bleiche\n*Pfirsich-Bleiche*\n**PFLEICHE**"
 }

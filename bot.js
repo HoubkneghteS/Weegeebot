@@ -857,6 +857,7 @@ bot.on('message', msg => {
 		case "ecchi":
 			if (msg.channel.nsfw) {
 				request.get("https://gelbooru.com/index.php?page=dapi&s=post&q=index&json=1&limit=100&tags=boobs%20ass")
+					.catch(msg.channel.send("Gelbooru-API down!"))
 					.then(r => msg.channel.send(r.body[Math.floor(Math.random() * 100)].file_url));
 			} else {
 				msg.channel.send(r.nsfw);
@@ -1069,6 +1070,10 @@ bot.on('message', msg => {
 				});
 			}
 			break;
+		//PLEACH
+		case r.pleach:
+			msg.channel.send(r.pleachy);
+			break;
 
 		//-------------ADMIN-COMMANDS--------------
 
@@ -1081,6 +1086,7 @@ bot.on('message', msg => {
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)) //deletes messages
+						.catch(msg.channel.send(r.botPerm))
 						.then(msg.channel.send(`${msgs}${r.clear1}`));
 				}
 			} else msg.channel.send(r.perm);
@@ -1090,9 +1096,10 @@ bot.on('message', msg => {
 			if (msg.member.hasPermission("BAN_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.banError);
 				else {
-					msg.mentions.users.first().send(r.ban1 + msg.author.username + r.reason + add(2, msg)); //messages bannee
+					msg.mentions.users.first().send; //messages bannee
 					msg.author.send(r.ban2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages banner
-					msg.guild.member(msg.mentions.users.first()).ban();
+					msg.guild.member(msg.mentions.users.first()).ban()
+						.then(member => member.user.send(r.ban1 + msg.author.username + r.reason + add(2, msg))); //messages bannee
 				}
 			} else msg.channel.send(r.perm);
 			break;

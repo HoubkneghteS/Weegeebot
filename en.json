@@ -1,5 +1,6 @@
 ﻿{
 	"perm": "You do not have administrator permission!",
+	"botPerm": "Bot has missing perms!",
 	"msgError": "But you need a message for this command bro",
 	"nsfw": "Not in this channel you fucking perv! https://upload.wikimedia.org/wikipedia/en/d/d5/Pedobear.png",
 	"quote": [
@@ -190,5 +191,7 @@
 	"welcomeName": "welcome",
 	"welcomeSet": "Channel for welcome messages has been set!",
 	"welcomeReset": "Channel for welcome messages has been reset!",
-	"bubble": "bubble"
+	"bubble": "bubble",
+	"pleach":"pleach",
+	"pleachy":"You get the sweetness of a peach but with the effects of bleach\n*PEACH BLEACH*\n**PLEACH**"
 }
