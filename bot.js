@@ -1086,7 +1086,6 @@ bot.on('message', msg => {
 
 					msg.delete();
 					msg.channel.fetchMessages({ limit: msgs }).then(messages => msg.channel.bulkDelete(messages)) //deletes messages
-						.catch(msg.channel.send(r.botPerm))
 						.then(msg.channel.send(`${msgs}${r.clear1}`));
 				}
 			} else msg.channel.send(r.perm);
@@ -1096,10 +1095,9 @@ bot.on('message', msg => {
 			if (msg.member.hasPermission("BAN_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.banError);
 				else {
-					msg.mentions.users.first().send; //messages bannee
-					msg.author.send(r.ban2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages banner
 					msg.guild.member(msg.mentions.users.first()).ban()
-						.then(member => member.user.send(r.ban1 + msg.author.username + r.reason + add(2, msg))); //messages bannee
+						.then(member => member.user.send(r.ban1 + msg.author.username + r.reason + add(2, msg))) //messages bannee
+						.then(msg.author.send(r.ban2 + msg.mentions.users.first() + r.reason + add(2, msg))); //messages banner
 				}
 			} else msg.channel.send(r.perm);
 			break;
@@ -1108,9 +1106,9 @@ bot.on('message', msg => {
 			if (msg.member.hasPermission("KICK_MEMBERS")) {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.kickError);
 				else {
-					msg.mentions.users.first().send(r.kick1 + msg.author.username + r.reason + add(2, msg)); //messages kickee
-					msg.author.send(r.kick2 + msg.mentions.users.first() + r.reason + add(2, msg)); //messages kicker
-					msg.guild.member(msg.mentions.users.first()).kick();
+					msg.guild.member(msg.mentions.users.first()).kick()
+						.then(member => member.user.send(r.kick1 + msg.author.username + r.reason + add(2, msg))) //messages kickee
+						.then(msg.author.send(r.kick2 + msg.mentions.users.first() + r.reason + add(2, msg))); //messages kicker
 				}
 			} else msg.channel.send(r.perm);
 			break;
