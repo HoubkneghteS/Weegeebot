@@ -25,11 +25,12 @@ To use this program, you will need Node.js. Once you get that, type "npm install
 **Data.json:**
 ```json
 {
-	"key" : "bot token",
-	"name" : "bot name"
+	"pre":"&",
+	"key":"your bot's key",
+	"reset":"a password you can message to your bot to make it reset at any time"
 }
 ```
-**lang.json and pre.json:**
+**config.json:**
 ```json
 {}
 ```
@@ -38,14 +39,14 @@ Modifying the code for your own use will also be important. Here are a few simpl
 ```js
 case "command name":
 	msg.channel.send("response");
-	cmdLog("command name", msg);
 	break;
  ```
 A slightly more complex command would be one with two options of response for the bot, to add it, here is the template:
 ```js
 case "command name":
-	msg.channel.send(tf("option1", "option2"));
-	cmdLog("command name", msg);
+	msg.channel.send(tf(
+		"option1",
+		"option2"));
 	break;
 ```
 ## CMan
@@ -70,14 +71,14 @@ An example for a line that starts C'Man with parameters:
 
 This example would start CMan with German language settings and start it in debug and portable mode. Below, you can see the list of available parameters in C'Man:
 
-| Parameter |	Meaning/Impact                                                    |
-|-----------|--------------------------------------------------------------------|
+| Parameter |	Meaning/Impact                                                     |
+|-----------|----------------------------------------------------------------------|
 |-de 	      |Starts C'Man and Weegeebot with German settings.                    |
 |-en 	      |Starts C'Man and Weegeebot with English settings, default language. |
-|-debug     |Displays directly the loading steps and decreases some program-internal restrictions to deliver a first hint where an issue may lie.|
-|-direct    |Skips the menu and executes autorun.dat directly.|
-|-nodemon   |Default application mode, starts Weegeebot over nodemon.js.|
-|-port 	    |Avoids loading from the `%appdata%` cache and saves all data only in the local CMan instance. Necessary if multiple users need access to C'Man, for example on Dropbox or an FTP server. Note that in this case, C'Man can only started inside the same folder as Weegeebot is.|
+|-debug       |Displays directly the loading steps and decreases some program-internal restrictions to deliver a first hint where an issue may lie.|
+|-direct      |Skips the menu and executes autorun.dat directly.|
+|-nodemon     |Default application mode, starts Weegeebot over nodemon.js.|
+|-port 	      |Avoids loading from the `%appdata%` cache and saves all data only in the local CMan instance. Necessary if multiple users need access to C'Man, for example on Dropbox or an FTP server. Note that in this case, C'Man can only started inside the same folder as Weegeebot is.|
 
 Another way to apply parameters is by using shortcuts. They allow to attach parameters for the application and are a handy way to manage different modes for Weegeebot.
 
