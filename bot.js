@@ -607,7 +607,7 @@ bot.on('message', msg => {
 				"\nclear [number]         # deletes messages" +
 				"\nprefix [prefix]        # changes the bot prefix" +
 				"\nwarn  [@user] [reason] # warns that user, sending both you and them a message" +
-				"\nban   [@user] [reason] # unleashes a banhammer upon that user, sending both you and them a message" +
+				"\nban   [@user] [reason] # unleashes a banhammer upon that user" +
 				"\nkick  [@user] [reason] # kicks the mentoned user, but he can return```");
 			//nsfw
 			msg.author.send("```ini\nNSFW = You must be in a 'NSFW' channel to use them" +
@@ -665,7 +665,7 @@ bot.on('message', msg => {
 				"\nlösche [Nummer]        # löscht Nachrichten" +
 				"\nprefix [Präfix]        # ändert das Bot-Präfix" +
 				"\nwarn [@Nutzer] [Grund] # warnt den erwähnten Benutzer, indem dir und ihm eine PN geschickt wird" +
-				"\nbann [@Nutzer] [Grund] # bannt den Benutzer, und schickt ihm und dir eine Nachricht" +
+				"\nbann [@Nutzer] [Grund] # bannt den Benutzer bis in alle Ewigkeit!" +
 				"\nkick [@Nutzer] [Grund] # kickt den Benutzer; er kann aber sofort zurückkommen```");
 			//NSFW-Hilfe
 			msg.author.send("```ini\nNSFW-Befehle = Man muss in einem 'NSFW'-Kanal sein, um sie zu verwenden" +
@@ -1096,7 +1096,6 @@ bot.on('message', msg => {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.banError);
 				else {
 					msg.guild.member(msg.mentions.users.first()).ban()
-						.then(member => member.user.send(r.ban1 + msg.author.username + r.reason + add(2, msg))) //messages bannee
 						.then(msg.author.send(r.ban2 + msg.mentions.users.first() + r.reason + add(2, msg))); //messages banner
 				}
 			} else msg.channel.send(r.perm);
@@ -1107,7 +1106,6 @@ bot.on('message', msg => {
 				if (arg.length < 2 || msg.guild.member(msg.mentions.users.first()) == null) msg.channel.send(r.kickError);
 				else {
 					msg.guild.member(msg.mentions.users.first()).kick()
-						.then(member => member.user.send(r.kick1 + msg.author.username + r.reason + add(2, msg))) //messages kickee
 						.then(msg.author.send(r.kick2 + msg.mentions.users.first() + r.reason + add(2, msg))); //messages kicker
 				}
 			} else msg.channel.send(r.perm);
